@@ -1,9 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { HeartPulse, Users, Megaphone } from "lucide-react";
+import { motion } from "framer-motion";
 
 import workshopImg from "@/assets/workshop.jpg";
 import { Section, SectionHeading } from "@/components/section";
 import { CtaBanner } from "@/components/cta-banner";
+import { FadeUp, StaggerGroup, StaggerItem } from "@/components/motion";
 
 export const Route = createFileRoute("/programs")({
   head: () => ({
@@ -75,25 +77,31 @@ function ProgramsPage() {
   return (
     <>
       <Section className="!pb-12 !pt-20">
-        <SectionHeading
-          eyebrow="Our programs"
-          title="A complete ecosystem for mental wellness."
-          description="Gimble Foundation delivers its mission through three core programs that make mental wellness support accessible, practical, and community-driven for Africans."
-        />
+        <FadeUp>
+          <SectionHeading
+            eyebrow="Our programs"
+            title="A complete ecosystem for mental wellness."
+            description="Gimble Foundation delivers its mission through three core programs that make mental wellness support accessible, practical, and community-driven for Africans."
+          />
+        </FadeUp>
       </Section>
 
       <Section className="!pt-0">
         <div className="space-y-10">
           {programs.map(({ icon: Icon, number, title, intro, initiatives }, idx) => (
-            <article
+            <FadeUp
               key={title}
+              as="article"
               className="grid gap-8 rounded-3xl border border-border bg-card p-8 lg:grid-cols-12 lg:gap-12 lg:p-12"
             >
               <div className="lg:col-span-5">
                 <div className="flex items-center gap-4">
-                  <span className="grid h-14 w-14 place-items-center rounded-2xl bg-primary/10 text-primary">
+                  <motion.span
+                    whileHover={{ rotate: 8, scale: 1.08 }}
+                    className="grid h-14 w-14 place-items-center rounded-2xl bg-primary/10 text-primary"
+                  >
                     <Icon className="h-7 w-7" />
-                  </span>
+                  </motion.span>
                   <span className="font-display text-5xl font-semibold text-secondary">
                     {number}
                   </span>
@@ -104,12 +112,16 @@ function ProgramsPage() {
                 <p className="mt-4 text-foreground/75">{intro}</p>
                 {idx === 2 && (
                   <div className="mt-8 overflow-hidden rounded-2xl border border-border">
-                    <img
+                    <motion.img
                       src={workshopImg}
                       alt="A wellness workshop in a bright community room"
                       loading="lazy"
                       width={1536}
                       height={1024}
+                      initial={{ scale: 1.1 }}
+                      whileInView={{ scale: 1 }}
+                      viewport={{ once: true, margin: "-80px" }}
+                      transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
                       className="h-full w-full object-cover"
                     />
                   </div>
@@ -119,18 +131,19 @@ function ProgramsPage() {
                 <p className="text-xs font-semibold uppercase tracking-[0.18em] text-primary/70">
                   Key initiatives
                 </p>
-                <ul className="mt-4 grid gap-3 sm:grid-cols-2">
+                <StaggerGroup stagger={0.05} className="mt-4 grid gap-3 sm:grid-cols-2" as="ul">
                   {initiatives.map((item) => (
-                    <li
+                    <StaggerItem
                       key={item}
+                      as="li"
                       className="rounded-2xl border border-border bg-background px-4 py-4 text-sm font-medium text-foreground/85"
                     >
                       {item}
-                    </li>
+                    </StaggerItem>
                   ))}
-                </ul>
+                </StaggerGroup>
               </div>
-            </article>
+            </FadeUp>
           ))}
         </div>
       </Section>

@@ -1,9 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Check, X } from "lucide-react";
+import { motion } from "framer-motion";
 
 import heroImg from "@/assets/hero-woman.jpg";
 import { Section, SectionHeading } from "@/components/section";
 import { CtaBanner } from "@/components/cta-banner";
+import { FadeUp, StaggerGroup, StaggerItem, Parallax } from "@/components/motion";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -30,15 +32,21 @@ function AboutPage() {
     <>
       <Section className="!pb-12 !pt-20">
         <div className="grid items-end gap-12 lg:grid-cols-12">
-          <div className="lg:col-span-7">
+          <FadeUp className="lg:col-span-7">
             <SectionHeading
               eyebrow="About Gimble"
               title="A warm, practical place for the everyday weight of life."
               description="Gimble Foundation is a nonprofit mental health organization using technology, education, and community support to help Africans navigate everyday emotional and mental challenges."
             />
-          </div>
-          <div className="lg:col-span-5">
-            <div className="overflow-hidden rounded-4xl border border-border bg-card shadow-lg">
+          </FadeUp>
+          <Parallax offset={30} className="lg:col-span-5">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.96 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true, margin: "-80px" }}
+              transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
+              className="overflow-hidden rounded-4xl border border-border bg-card shadow-lg"
+            >
               <img
                 src={heroImg}
                 alt="Portrait of a calm young African woman in golden light"
@@ -47,14 +55,14 @@ function AboutPage() {
                 height={1280}
                 className="h-full w-full object-cover"
               />
-            </div>
-          </div>
+            </motion.div>
+          </Parallax>
         </div>
       </Section>
 
       <Section className="!pt-0">
-        <div className="grid gap-6 lg:grid-cols-2">
-          <article className="rounded-3xl border border-border bg-card p-8 lg:p-10">
+        <StaggerGroup className="grid gap-6 lg:grid-cols-2">
+          <StaggerItem as="article" className="rounded-3xl border border-border bg-card p-8 lg:p-10">
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-secondary-foreground">
               Vision
             </p>
@@ -62,8 +70,8 @@ function AboutPage() {
               To make mental health support accessible, practical, and
               stigma-free for Africans everywhere.
             </h3>
-          </article>
-          <article className="rounded-3xl border border-border bg-primary p-8 text-primary-foreground lg:p-10">
+          </StaggerItem>
+          <StaggerItem as="article" className="rounded-3xl border border-border bg-primary p-8 text-primary-foreground lg:p-10">
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-secondary">
               Mission
             </p>
@@ -72,17 +80,19 @@ function AboutPage() {
               support through technology, education, partnerships, and
               community programs.
             </h3>
-          </article>
-        </div>
+          </StaggerItem>
+        </StaggerGroup>
       </Section>
 
       {/* We are / are not */}
       <Section className="!pt-0">
-        <SectionHeading
-          eyebrow="How we show up"
-          title="What Gimble is, and what it isn't."
-          description="We're clear about our role. We exist for the early moments, the quiet strain, the in-between."
-        />
+        <FadeUp>
+          <SectionHeading
+            eyebrow="How we show up"
+            title="What Gimble is, and what it isn't."
+            description="We're clear about our role. We exist for the early moments, the quiet strain, the in-between."
+          />
+        </FadeUp>
         <div className="mt-12 grid gap-6 lg:grid-cols-2">
           <div className="rounded-3xl border border-border bg-card p-8">
             <p className="font-display text-sm font-semibold uppercase tracking-[0.18em] text-primary">
