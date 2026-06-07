@@ -1,0 +1,15 @@
+# Gimble Foundation
+
+> Nonprofit mental wellness organization using technology, education, and community to make support accessible, practical, and stigma-free for Africans navigating everyday stress, burnout, anxiety, and emotional strain.
+
+Gimble Foundation runs three programs: the Gimble mobile app (guided wellness journeys, daily check-ins, coping tools), an online community and virtual events, and outreach through campus programs, workplace partnerships, and community workshops across Africa.
+
+## Pages
+
+- [Home](/): Overview of Gimble Foundation's mission and programs.
+- [About](/about): Vision, mission, and how Gimble shows up.
+- [Programs](/programs): Digital Support, Community & Connection, and Outreach & Awareness.
+- [The App](/app): Features of the Gimble mobile app and download links.
+- [Community](/community): Online community, virtual conversations, and webinars.
+- [Get Involved](/get-involved): Partnerships, volunteering, and donations.
+- [Contact](/contact): Reach the Gimble Foundation team.

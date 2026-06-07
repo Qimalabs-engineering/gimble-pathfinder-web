@@ -38,6 +38,23 @@ export const Route = createFileRoute("/")({
         content:
           "Practical, stigma-free mental wellness support for Africans through the Gimble app, community, and outreach.",
       },
+      { property: "og:url", content: "https://gimble-pathfinder-web.lovable.app/" },
+    ],
+    links: [
+      { rel: "canonical", href: "https://gimble-pathfinder-web.lovable.app/" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          name: "Gimble Foundation",
+          url: "https://gimble-pathfinder-web.lovable.app",
+          description:
+            "Nonprofit mental wellness support for Africans through the Gimble app, community, and outreach.",
+        }),
+      },
     ],
   }),
   component: Home,

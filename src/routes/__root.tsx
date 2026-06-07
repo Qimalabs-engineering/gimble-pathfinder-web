@@ -81,15 +81,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         name: "description",
         content:
-          "Gimble Foundation is a nonprofit mental wellness organization using technology, education, and community to make support accessible, practical, and stigma-free for Africans everywhere.",
+          "Practical, stigma-free mental wellness support for Africans through the Gimble app, community, and outreach.",
       },
       { name: "author", content: "Gimble Foundation" },
-      { property: "og:title", content: "Gimble Foundation — Mental wellness for Africans, everyday." },
-      {
-        property: "og:description",
-        content:
-          "Practical, stigma-free mental wellness support for Africans — through the Gimble app, community, and outreach.",
-      },
+      { property: "og:site_name", content: "Gimble Foundation" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
@@ -100,6 +95,21 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         rel: "stylesheet",
         href: "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700;9..144,800&family=DM+Sans:wght@400;500;600;700&display=swap",
+      },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          name: "Gimble Foundation",
+          url: "https://gimble-pathfinder-web.lovable.app",
+          logo: "https://gimble-pathfinder-web.lovable.app/favicon.ico",
+          description:
+            "Nonprofit mental wellness organization using technology, education, and community to make support accessible for Africans.",
+          sameAs: [],
+        }),
       },
     ],
   }),
