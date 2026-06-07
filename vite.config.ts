@@ -9,7 +9,14 @@ import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 // Force Nitro on with the Vercel preset so Vercel builds produce
 // `.vercel/output/` (the Build Output API format) instead of a static `dist/`.
 export default defineConfig({
-  nitro: { preset: "vercel" },
+  nitro: {
+    preset: "vercel",
+    output: {
+      dir: "{{ rootDir }}/.vercel/output",
+      serverDir: "{{ output.dir }}/functions/__server.func",
+      publicDir: "{{ output.dir }}/static/{{ baseURL }}",
+    },
+  },
   tanstackStart: {
     // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
     server: {
