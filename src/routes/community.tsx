@@ -39,7 +39,7 @@ const initiatives = [
   {
     icon: Mic,
     title: "Expert-led webinars",
-    body: "Sessions with psychologists, coaches, and practitioners — practical and relatable.",
+    body: "Sessions with psychologists, coaches, and practitioners: practical and relatable.",
   },
   {
     icon: Trophy,

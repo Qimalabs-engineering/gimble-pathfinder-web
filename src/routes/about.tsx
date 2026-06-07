@@ -80,7 +80,7 @@ function AboutPage() {
       <Section className="!pt-0">
         <SectionHeading
           eyebrow="How we show up"
-          title="What Gimble is — and what it isn't."
+          title="What Gimble is, and what it isn't."
           description="We're clear about our role. We exist for the early moments, the quiet strain, the in-between."
         />
         <div className="mt-12 grid gap-6 lg:grid-cols-2">

@@ -31,7 +31,7 @@ const programs = [
     number: "01",
     title: "Digital Support",
     intro:
-      "The Gimble app is the foundation of our work — our primary tool for delivering mental wellness support at scale. Individuals can access guided support for everyday challenges like stress, burnout, anxiety, and life pressures.",
+      "The Gimble app is the foundation of our work, our primary tool for delivering mental wellness support at scale. Individuals can access guided support for everyday challenges like stress, burnout, anxiety, and life pressures.",
     initiatives: [
       "Guided wellness journeys",
       "Daily emotional check-ins",
@@ -45,7 +45,7 @@ const programs = [
     number: "02",
     title: "Community & Connection",
     intro:
-      "Mental wellness shouldn't be a journey people navigate alone. Through our online community and virtual events, we create safe spaces where individuals learn, connect, share, and support one another — reducing stigma along the way.",
+      "Mental wellness shouldn't be a journey people navigate alone. Through our online community and virtual events, we create safe spaces where individuals learn, connect, share, and support one another, reducing stigma along the way.",
     initiatives: [
       "The Gimble online community",
       "Virtual wellness conversations",
@@ -59,7 +59,7 @@ const programs = [
     number: "03",
     title: "Outreach & Awareness",
     intro:
-      "We take mental wellness education and support directly into communities through physical events, workshops, partnerships, and awareness campaigns — meeting people where they are.",
+      "We take mental wellness education and support directly into communities through physical events, workshops, partnerships, and awareness campaigns, meeting people where they are.",
     initiatives: [
       "Campus wellness programs",
       "Community workshops and wellness events",

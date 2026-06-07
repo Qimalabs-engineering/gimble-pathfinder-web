@@ -9,10 +9,18 @@ import {
   Repeat,
   Activity,
 } from "lucide-react";
+import { motion } from "framer-motion";
 
 import appUserImg from "@/assets/app-user.jpg";
 import { Section, SectionEyebrow, SectionHeading } from "@/components/section";
 import { CtaBanner } from "@/components/cta-banner";
+import {
+  FadeUp,
+  StaggerGroup,
+  StaggerItem,
+  WordReveal,
+  Parallax,
+} from "@/components/motion";
 
 export const Route = createFileRoute("/app")({
   head: () => ({
@@ -38,7 +46,7 @@ const features = [
   {
     icon: Compass,
     title: "Guided wellness journeys",
-    body: "Step-by-step paths for stress, burnout, anxiety, and life transitions — at your own pace.",
+    body: "Step-by-step paths for stress, burnout, anxiety, and life transitions, at your own pace.",
   },
   {
     icon: Heart,
@@ -48,7 +56,7 @@ const features = [
   {
     icon: Sparkles,
     title: "Coping tools and exercises",
-    body: "Breathing, grounding, reframing — practical techniques for the hard moments.",
+    body: "Breathing, grounding, reframing: practical techniques for the hard moments.",
   },
   {
     icon: BookOpen,
@@ -73,20 +81,24 @@ function AppPage() {
       <section className="relative overflow-hidden">
         <div className="mx-auto grid max-w-7xl gap-12 px-4 pb-16 pt-20 sm:px-6 lg:grid-cols-12 lg:px-8">
           <div className="lg:col-span-7">
-            <SectionEyebrow>The Gimble App</SectionEyebrow>
+            <FadeUp>
+              <SectionEyebrow>The Gimble App</SectionEyebrow>
+            </FadeUp>
             <h1 className="mt-5 font-display text-5xl font-semibold leading-[1.05] text-primary sm:text-6xl">
-              A small, calm space — every day.
+              <WordReveal text="A small, calm space, every day." />
             </h1>
-            <p className="mt-6 max-w-xl text-lg leading-relaxed text-foreground/75">
+            <FadeUp delay={0.4} className="mt-6 max-w-xl text-lg leading-relaxed text-foreground/75">
               The Gimble app is publicly accessible. Anyone can download it and
-              start with one small thing — a check-in, a breath, a journal
+              start with one small thing: a check-in, a breath, a journal
               prompt. We're not here to replace therapy; we're here so you can
               manage everyday mental strain earlier and more consistently.
-            </p>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <a
+            </FadeUp>
+            <FadeUp delay={0.55} className="mt-8 flex flex-wrap gap-3">
+              <motion.a
                 href="#"
-                className="inline-flex items-center gap-3 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition hover:opacity-90"
+                whileHover={{ y: -3 }}
+                whileTap={{ scale: 0.97 }}
+                className="inline-flex items-center gap-3 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/20 transition"
               >
                 <Apple className="h-5 w-5" />
                 <span>
@@ -95,10 +107,12 @@ function AppPage() {
                   </span>
                   <span className="block text-base font-semibold leading-none">App Store</span>
                 </span>
-              </a>
-              <a
+              </motion.a>
+              <motion.a
                 href="#"
-                className="inline-flex items-center gap-3 rounded-full bg-secondary px-6 py-3 text-sm font-semibold text-secondary-foreground transition hover:brightness-95"
+                whileHover={{ y: -3 }}
+                whileTap={{ scale: 0.97 }}
+                className="inline-flex items-center gap-3 rounded-full bg-secondary px-6 py-3 text-sm font-semibold text-secondary-foreground shadow-lg shadow-secondary/30 transition"
               >
                 <PlayCircle className="h-5 w-5" />
                 <span>
@@ -107,54 +121,67 @@ function AppPage() {
                   </span>
                   <span className="block text-base font-semibold leading-none">Google Play</span>
                 </span>
-              </a>
-            </div>
-            <p className="mt-4 text-sm text-foreground/60">
-              Coming soon. Join the waitlist via{" "}
-              <a href="/contact" className="underline">
-                contact
-              </a>
-              .
-            </p>
+              </motion.a>
+            </FadeUp>
           </div>
 
           <div className="relative lg:col-span-5">
-            <div className="absolute -right-6 -top-6 hidden h-32 w-32 rounded-full bg-secondary/40 blur-2xl lg:block" />
-            <div className="overflow-hidden rounded-4xl border border-border bg-card shadow-xl">
-              <img
-                src={appUserImg}
-                alt="A man using the Gimble app on a park bench in soft morning light"
-                loading="lazy"
-                width={1280}
-                height={1536}
-                className="h-full w-full object-cover"
-              />
-            </div>
+            <motion.div
+              aria-hidden
+              animate={{ scale: [1, 1.15, 1], opacity: [0.5, 0.8, 0.5] }}
+              transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+              className="absolute -right-6 -top-6 hidden h-32 w-32 rounded-full bg-secondary/40 blur-2xl lg:block"
+            />
+            <Parallax offset={40}>
+              <motion.div
+                initial={{ opacity: 0, scale: 0.95 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
+                className="overflow-hidden rounded-4xl border border-border bg-card shadow-xl"
+              >
+                <img
+                  src={appUserImg}
+                  alt="A man using the Gimble app on a park bench in soft morning light"
+                  loading="lazy"
+                  width={1280}
+                  height={1536}
+                  className="h-full w-full object-cover"
+                />
+              </motion.div>
+            </Parallax>
           </div>
         </div>
       </section>
 
       <Section>
-        <SectionHeading
-          eyebrow="What's inside"
-          title="Tools that meet you where you are."
-        />
-        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <FadeUp>
+          <SectionHeading
+            eyebrow="What's inside"
+            title="Tools that meet you where you are."
+          />
+        </FadeUp>
+        <StaggerGroup className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {features.map(({ icon: Icon, title, body }) => (
-            <div
-              key={title}
-              className="rounded-3xl border border-border bg-card p-7 transition hover:border-primary/30"
-            >
-              <span className="grid h-12 w-12 place-items-center rounded-2xl bg-primary/10 text-primary">
-                <Icon className="h-6 w-6" />
-              </span>
-              <h3 className="mt-5 font-display text-xl font-semibold text-primary">
-                {title}
-              </h3>
-              <p className="mt-2 text-sm leading-relaxed text-foreground/70">{body}</p>
-            </div>
+            <StaggerItem key={title}>
+              <motion.div
+                whileHover={{ y: -6 }}
+                transition={{ type: "spring", stiffness: 260, damping: 22 }}
+                className="h-full rounded-3xl border border-border bg-card p-7 transition hover:border-primary/30 hover:shadow-xl"
+              >
+                <motion.span
+                  whileHover={{ rotate: 6, scale: 1.08 }}
+                  className="grid h-12 w-12 place-items-center rounded-2xl bg-primary/10 text-primary"
+                >
+                  <Icon className="h-6 w-6" />
+                </motion.span>
+                <h3 className="mt-5 font-display text-xl font-semibold text-primary">
+                  {title}
+                </h3>
+                <p className="mt-2 text-sm leading-relaxed text-foreground/70">{body}</p>
+              </motion.div>
+            </StaggerItem>
           ))}
-        </div>
+        </StaggerGroup>
       </Section>
 
       <CtaBanner

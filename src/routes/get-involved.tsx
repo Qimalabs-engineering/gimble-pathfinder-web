@@ -47,7 +47,7 @@ const ways = [
   {
     icon: HandHeart,
     title: "Volunteer",
-    body: "Share your skills — writing, design, facilitation, outreach. We need them all.",
+    body: "Share your skills: writing, design, facilitation, outreach. We need them all.",
     cta: "Volunteer",
   },
   {
