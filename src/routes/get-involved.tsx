@@ -1,9 +1,11 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Building2, GraduationCap, HandHeart, Heart, Briefcase } from "lucide-react";
+import { motion } from "framer-motion";
 
 import workshopImg from "@/assets/workshop.jpg";
 import { Section, SectionHeading } from "@/components/section";
 import { CtaBanner } from "@/components/cta-banner";
+import { FadeUp, StaggerGroup, StaggerItem, Parallax } from "@/components/motion";
 
 export const Route = createFileRoute("/get-involved")({
   head: () => ({
@@ -47,7 +49,7 @@ const ways = [
   {
     icon: HandHeart,
     title: "Volunteer",
-    body: "Share your skills — writing, design, facilitation, outreach. We need them all.",
+    body: "Share your skills: writing, design, facilitation, outreach. We need them all.",
     cta: "Volunteer",
   },
   {
@@ -63,51 +65,66 @@ function GetInvolvedPage() {
     <>
       <Section className="!pt-20">
         <div className="grid items-end gap-12 lg:grid-cols-12">
-          <div className="lg:col-span-7">
+          <FadeUp className="lg:col-span-7">
             <SectionHeading
               eyebrow="Get involved"
               title="Help us reach Africans before the breaking point."
               description="There are many ways to be part of Gimble. Partner with us, volunteer your skills, or contribute to make mental wellness support more accessible."
             />
-          </div>
-          <div className="overflow-hidden rounded-4xl border border-border bg-card shadow-lg lg:col-span-5">
-            <img
-              src={workshopImg}
-              alt="A community wellness workshop"
-              loading="lazy"
-              width={1536}
-              height={1024}
-              className="h-full w-full object-cover"
-            />
-          </div>
+          </FadeUp>
+          <Parallax offset={30} className="lg:col-span-5">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.96 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true, margin: "-80px" }}
+              transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
+              className="overflow-hidden rounded-4xl border border-border bg-card shadow-lg"
+            >
+              <img
+                src={workshopImg}
+                alt="A community wellness workshop"
+                loading="lazy"
+                width={1536}
+                height={1024}
+                className="h-full w-full object-cover"
+              />
+            </motion.div>
+          </Parallax>
         </div>
       </Section>
 
       <Section className="!pt-0">
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <StaggerGroup className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {ways.map(({ icon: Icon, title, body, cta }) => (
-            <div
-              key={title}
-              className="flex flex-col rounded-3xl border border-border bg-card p-7"
-            >
-              <span className="grid h-12 w-12 place-items-center rounded-2xl bg-primary/10 text-primary">
-                <Icon className="h-6 w-6" />
-              </span>
-              <h3 className="mt-5 font-display text-xl font-semibold text-primary">
-                {title}
-              </h3>
-              <p className="mt-2 flex-1 text-sm leading-relaxed text-foreground/70">
-                {body}
-              </p>
-              <Link
-                to="/contact"
-                className="mt-6 inline-flex items-center text-sm font-semibold text-primary hover:text-secondary-foreground"
+            <StaggerItem key={title}>
+              <motion.div
+                whileHover={{ y: -6 }}
+                transition={{ type: "spring", stiffness: 260, damping: 22 }}
+                className="flex h-full flex-col rounded-3xl border border-border bg-card p-7 hover:shadow-xl"
               >
-                {cta} →
-              </Link>
-            </div>
+                <motion.span
+                  whileHover={{ rotate: 8, scale: 1.08 }}
+                  className="grid h-12 w-12 place-items-center rounded-2xl bg-primary/10 text-primary"
+                >
+                  <Icon className="h-6 w-6" />
+                </motion.span>
+                <h3 className="mt-5 font-display text-xl font-semibold text-primary">
+                  {title}
+                </h3>
+                <p className="mt-2 flex-1 text-sm leading-relaxed text-foreground/70">
+                  {body}
+                </p>
+                <Link
+                  to="/contact"
+                  className="group mt-6 inline-flex items-center gap-1 text-sm font-semibold text-primary"
+                >
+                  {cta}
+                  <span className="transition-transform group-hover:translate-x-1.5">→</span>
+                </Link>
+              </motion.div>
+            </StaggerItem>
           ))}
-        </div>
+        </StaggerGroup>
       </Section>
 
       <CtaBanner

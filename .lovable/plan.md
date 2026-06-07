@@ -1,54 +1,45 @@
-# Gimble Foundation Website
+## Goal
+Make the Gimble site feel less AI-generated and more alive.
 
-A warm, human, hopeful multi-page marketing site for Gimble Foundation, built on the brand colors (Gimble Teal `#27615c` and Gimble Green `#9fc031`) with a soft cream/off-white background and deep teal text.
+## 1. Remove the "Coming soon" line
+- `src/routes/app.tsx`: delete the `<p>Coming soon. Join the waitlist via contact.</p>` block under the download buttons.
 
-## Brand & Design System
+## 2. Strip em-dashes (—) from all copy
+The em-dash is the user's main "AI tell." Rewrite affected lines across all route files and shared components, replacing each `—` with a comma, period, colon, or sentence break so the prose still reads naturally. Files to sweep:
+- `src/routes/index.tsx` (hero subhead, helps-with intro, program cards, app preview)
+- `src/routes/about.tsx`
+- `src/routes/programs.tsx`
+- `src/routes/app.tsx` (hero copy + feature descriptions)
+- `src/routes/community.tsx`
+- `src/routes/get-involved.tsx`
+- `src/routes/contact.tsx`
+- `src/components/cta-banner.tsx`, `src/components/site-footer.tsx`, `src/components/site-header.tsx` (if any)
 
-- **Palette**
-  - Gimble Teal `#27615c` — primary (deep, trustworthy)
-  - Gimble Green `#9fc031` — accent (energy, hope)
-  - Soft Teal `#9ec9c4` — supporting (calm surfaces)
-  - Cream `#f7f4ec` — background
-  - Deep Ink `#0f2a28` — body text
-- **Typography**
-  - Display: a warm, rounded retro display (Fraunces or similar) for headings — matches the Gimble logo wordmark feel
-  - Body: Inter / DM Sans for clean readability
-- **Visual motifs**: subtle hexagon/honeycomb pattern (from brand reference) as a quiet background texture; rounded-2xl cards; generous whitespace; soft fades; gentle motion on scroll
-- All colors wired as semantic tokens in `src/styles.css` (oklch); components use tokens only
+Each rewrite is tuned per sentence (not a blind find/replace) so meaning and rhythm are preserved.
 
-## Pages (separate TanStack routes, each with own SEO `head()`)
+## 3. Rich, expressive animations (Framer Motion, already installed)
 
-1. **Home `/`** — Hero with core message ("Mental health support should be accessible before people reach a breaking point."), intro to Gimble, what we help with (stress, burnout, anxiety, etc.) as a chip cloud, three programs preview, app preview section, CTA to download app + join community
-2. **About `/about`** — Who we are, Vision, Mission, what we ARE / are NOT, tone, story
-3. **Programs `/programs`** — The three programs (Digital Support, Community & Connection, Outreach & Awareness) with full key initiatives lists
-4. **The App `/app`** — Gimble app features (guided journeys, check-ins, coping tools, education, habits), mock phone visuals, download CTA (iOS/Android placeholders)
-5. **Community `/community`** — Online community, virtual events, webinars, challenges; signup CTA
-6. **Get Involved `/get-involved`** — Partnerships (NGO, workplace, campus), volunteer, donate
-7. **Contact `/contact`** — Simple form (name/email/message) + email/social links
+Add a small reusable motion primitives file `src/components/motion.tsx` exporting:
+- `FadeUp` — opacity + 24px y translate, spring easing, `whileInView` with `viewport={{ once: true, margin: "-80px" }}`.
+- `StaggerGroup` / `StaggerItem` — parent with `staggerChildren: 0.08`, children with FadeUp behavior.
+- `Reveal` — clip-path / mask reveal for hero headline words.
+- `Parallax` — small `useScroll` + `useTransform` y-shift for hero image and decorative blobs.
 
-## Shared layout
+Apply across the site:
+- **Home hero**: word-by-word reveal on the H1, fade-up on subhead + buttons + trust row (stagger). Parallax drift on hero photo and on the floating "Today, take a breath" card (separate offset so it floats independently). Slow rotating/pulsing HexPattern (CSS keyframes already in stylesheet space).
+- **Helps-with chips**: stagger-in with slight scale (0.9 → 1) as they enter the viewport.
+- **Program cards**: stagger fade-up; on hover use motion `whileHover` with lift + icon scale + arrow translate (richer than current CSS hover).
+- **Core message banner**: blockquote fades up with letter-spacing easing in; HexPattern slow rotate.
+- **App preview + community teaser**: image side slides in from x with parallax; text side fades up staggered.
+- **App page**: hero same treatment; feature grid stagger on scroll, hover lift on cards with icon spin.
+- **Community / Programs / Get Involved / About / Contact**: apply `FadeUp` to section headings and `StaggerGroup` to card grids so every page feels alive.
+- **CtaBanner**: scale-in on viewport entry with subtle background gradient shimmer.
+- **Site header**: on scroll past 24px, animate background opacity + blur + slight shadow (motion `useScroll`).
+- **Page transitions**: light fade on route change via a motion wrapper in `__root.tsx` keyed by `useRouterState().location.pathname`.
 
-- Sticky translucent header with logo wordmark "Gimble" + nav (Home, About, Programs, App, Community, Get Involved, Contact) + "Download App" button
-- Footer: mission tagline, nav links, social, newsletter signup field, copyright
+Respect `prefers-reduced-motion`: motion primitives check the media query and degrade to instant fade.
 
-## Components
-
-- `Header`, `Footer`, `HeroSection`, `ProgramCard`, `StatBadge`, `SectionHeading`, `CTABanner`, `HexPattern` (decorative SVG), `PhoneMockup`
-
-## Technical notes
-
-- TanStack Start file-based routes under `src/routes/`
-- Tailwind v4 tokens defined in `src/styles.css` (`--primary`, `--accent`, `--background`, `--foreground`, plus brand-specific `--teal`, `--green`, `--cream`, `--ink`)
-- Fonts loaded via Google Fonts `<link>` in `__root.tsx` head
-- Light theme only (matches warm/calm tone); no auth, no backend yet — contact form and newsletter are non-functional UI placeholders this pass
-- All section images generated (calm African community/wellness imagery, abstract hexagon textures, app screen mockups)
-- Subtle Framer Motion fade/slide on section reveal
-
-## Out of scope (this pass)
-
-- Functional contact form / newsletter submission (would need Lovable Cloud — can add later)
-- Real app store links
-- CMS for blog/news
-- Donations payment integration
-
-Confirm and I'll build it.
+## Out of scope
+- No copy rewrites beyond what's needed to remove em-dashes.
+- No new sections, images, or routes.
+- No backend or form wiring.

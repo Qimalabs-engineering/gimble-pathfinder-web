@@ -33,7 +33,7 @@ function ContactPage() {
           <SectionHeading
             eyebrow="Contact"
             title="We'd love to hear from you."
-            description="Partnerships, press, volunteering, or just a hello — drop us a note and we'll get back to you."
+            description="Partnerships, press, volunteering, or just a hello. Drop us a note and we'll get back to you."
           />
           <div className="mt-10 space-y-5">
             <div className="flex items-start gap-4">
@@ -56,7 +56,7 @@ function ContactPage() {
               </span>
               <div>
                 <p className="text-sm font-semibold text-primary">Based in</p>
-                <p className="text-sm text-foreground/70">Across Africa — serving the continent.</p>
+                <p className="text-sm text-foreground/70">Across Africa. Serving the continent.</p>
               </div>
             </div>
             <div className="flex items-start gap-4">
