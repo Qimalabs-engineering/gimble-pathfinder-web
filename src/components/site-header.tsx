@@ -2,7 +2,8 @@ import { Link, useRouterState } from "@tanstack/react-router";
 import { Menu, X } from "lucide-react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useEffect, useState } from "react";
-import logoFull from "@/assets/gimble-logo-light.png.asset.json";
+import wordmarkDark from "@/assets/gimble-wordmark-dark.png.asset.json";
+import wordmarkLight from "@/assets/gimble-wordmark-light.png.asset.json";
 import { ThemeToggle } from "@/components/theme-toggle";
 
 
@@ -44,11 +45,18 @@ export function SiteHeader() {
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
         <Link to="/" className="flex items-center group" aria-label="Gimble home">
           <motion.img
-            src={logoFull.url}
+            src={wordmarkDark.url}
             alt="Gimble"
             whileHover={{ scale: 1.04 }}
             transition={{ type: "spring", stiffness: 300, damping: 18 }}
-            className="h-10 w-auto dark:invert dark:brightness-110"
+            className="h-8 w-auto sm:h-9 dark:hidden"
+          />
+          <motion.img
+            src={wordmarkLight.url}
+            alt="Gimble"
+            whileHover={{ scale: 1.04 }}
+            transition={{ type: "spring", stiffness: 300, damping: 18 }}
+            className="hidden h-8 w-auto sm:h-9 dark:block"
           />
         </Link>
 
