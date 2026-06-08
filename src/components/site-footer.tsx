@@ -1,5 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { Instagram, Linkedin, Twitter } from "lucide-react";
+import logoLight from "@/assets/gimble-logo-light.png.asset.json";
+
 
 export function SiteFooter() {
   return (
