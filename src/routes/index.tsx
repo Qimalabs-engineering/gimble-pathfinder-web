@@ -170,8 +170,8 @@ function Home() {
               <motion.div
                 initial={{ opacity: 0, scale: 0.95, y: 20 }}
                 animate={{ opacity: 1, scale: 1, y: 0 }}
-                transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
-                className="relative overflow-hidden rounded-4xl border border-border bg-card shadow-xl"
+                transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1] }}
+                className="relative overflow-hidden rounded-4xl border border-border bg-card shadow-2xl shadow-glow"
               >
                 <img
                   src={heroImg}
@@ -182,6 +182,7 @@ function Home() {
                 />
               </motion.div>
             </Parallax>
+
             <motion.div
               initial={{ opacity: 0, y: 20, scale: 0.9 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
