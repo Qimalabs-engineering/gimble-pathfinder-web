@@ -145,15 +145,15 @@ function Home() {
 
             <FadeUp delay={1} className="mt-12 flex flex-wrap items-center gap-x-8 gap-y-3 text-sm text-foreground/70">
               <div className="flex items-center gap-2">
-                <CheckCircle2 className="h-4 w-4 text-secondary" />
+                <CheckCircle2 className="h-4 w-4 text-highlight" />
                 Mobile-first
               </div>
               <div className="flex items-center gap-2">
-                <CheckCircle2 className="h-4 w-4 text-secondary" />
+                <CheckCircle2 className="h-4 w-4 text-highlight" />
                 Stigma-free
               </div>
               <div className="flex items-center gap-2">
-                <CheckCircle2 className="h-4 w-4 text-secondary" />
+                <CheckCircle2 className="h-4 w-4 text-highlight" />
                 Built for Africa
               </div>
             </FadeUp>
@@ -328,7 +328,7 @@ function Home() {
                 "Build healthier mental habits",
               ].map((f) => (
                 <StaggerItem key={f} as="li" className="flex items-start gap-3">
-                  <CheckCircle2 className="mt-0.5 h-5 w-5 flex-shrink-0 text-secondary" />
+                  <CheckCircle2 className="mt-0.5 h-5 w-5 flex-shrink-0 text-highlight" />
                   <span>{f}</span>
                 </StaggerItem>
               ))}

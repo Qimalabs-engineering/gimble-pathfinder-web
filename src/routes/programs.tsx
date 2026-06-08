@@ -102,7 +102,7 @@ function ProgramsPage() {
                   >
                     <Icon className="h-7 w-7" />
                   </motion.span>
-                  <span className="font-display text-5xl font-semibold text-secondary">
+                  <span className="font-display text-5xl font-semibold text-highlight">
                     {number}
                   </span>
                 </div>
