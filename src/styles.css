@@ -54,56 +54,60 @@
 :root {
   --radius: 1rem;
 
-  /* Brand tokens */
-  --teal: oklch(0.45 0.05 180);            /* #27615c approx */
-  --teal-soft: oklch(0.78 0.05 185);       /* #9ec9c4 approx */
-  --teal-deep: oklch(0.32 0.04 180);
-  --green: oklch(0.82 0.18 125);           /* #9fc031 approx */
-  --green-soft: oklch(0.92 0.12 120);
-  --cream: oklch(0.97 0.012 90);           /* warm off-white */
-  --ink: oklch(0.22 0.03 180);
+  /* Brand tokens (Gimble Teal #27615c + Lime #9fc031) */
+  --teal: hsl(173 43% 27%);
+  --teal-soft: hsl(173 30% 95%);
+  --teal-deep: hsl(173 50% 18%);
+  --green: hsl(74 59% 47%);
+  --green-soft: hsl(74 50% 88%);
+  --cream: hsl(173 20% 98%);
+  --ink: hsl(173 43% 15%);
 
-  /* Semantic mapping */
-  --background: var(--cream);
-  --foreground: var(--ink);
-  --card: oklch(1 0 0);
-  --card-foreground: var(--ink);
-  --popover: oklch(1 0 0);
-  --popover-foreground: var(--ink);
-  --primary: var(--teal);
-  --primary-foreground: var(--cream);
-  --secondary: var(--green);
-  --secondary-foreground: var(--teal-deep);
-  --muted: oklch(0.94 0.01 90);
-  --muted-foreground: oklch(0.45 0.02 180);
-  --accent: var(--green);
-  --accent-foreground: var(--teal-deep);
-  --destructive: oklch(0.55 0.22 27);
-  --destructive-foreground: oklch(0.98 0 0);
-  --border: oklch(0.88 0.015 180);
-  --input: oklch(0.9 0.015 180);
-  --ring: var(--teal);
+  /* Semantic mapping — light mode (from usegimble.io) */
+  --background: hsl(173 20% 98%);
+  --foreground: hsl(173 43% 15%);
+  --card: hsl(0 0% 100%);
+  --card-foreground: hsl(173 43% 15%);
+  --popover: hsl(0 0% 100%);
+  --popover-foreground: hsl(173 43% 15%);
+  --primary: hsl(173 43% 27%);
+  --primary-foreground: hsl(0 0% 100%);
+  --secondary: hsl(173 30% 95%);
+  --secondary-foreground: hsl(173 43% 15%);
+  --muted: hsl(173 15% 94%);
+  --muted-foreground: hsl(173 30% 40%);
+  --accent: hsl(74 59% 47%);
+  --accent-foreground: hsl(173 43% 15%);
+  --destructive: hsl(0 84.2% 60.2%);
+  --destructive-foreground: hsl(210 40% 98%);
+  --border: hsl(173 15% 88%);
+  --input: hsl(173 15% 88%);
+  --ring: hsl(173 43% 27%);
 }
 
 .dark {
-  --background: var(--teal-deep);
-  --foreground: var(--cream);
-  --card: oklch(0.28 0.04 180);
-  --card-foreground: var(--cream);
-  --popover: oklch(0.28 0.04 180);
-  --popover-foreground: var(--cream);
-  --primary: var(--green);
-  --primary-foreground: var(--teal-deep);
-  --secondary: oklch(0.4 0.04 180);
-  --secondary-foreground: var(--cream);
-  --muted: oklch(0.35 0.03 180);
-  --muted-foreground: oklch(0.78 0.02 180);
-  --accent: var(--green);
-  --accent-foreground: var(--teal-deep);
-  --border: oklch(1 0 0 / 12%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: var(--green);
+  /* Dark mode (from usegimble.io) — deep teal background, lime primary */
+  --background: hsl(173 40% 6%);
+  --foreground: hsl(173 20% 95%);
+  --card: hsl(173 35% 10%);
+  --card-foreground: hsl(173 20% 95%);
+  --popover: hsl(173 35% 10%);
+  --popover-foreground: hsl(173 20% 95%);
+  --primary: hsl(74 59% 47%);
+  --primary-foreground: hsl(173 40% 6%);
+  --secondary: hsl(173 30% 15%);
+  --secondary-foreground: hsl(173 20% 95%);
+  --muted: hsl(173 30% 15%);
+  --muted-foreground: hsl(173 15% 65%);
+  --accent: hsl(173 43% 27%);
+  --accent-foreground: hsl(0 0% 100%);
+  --destructive: hsl(0 62.8% 30.6%);
+  --destructive-foreground: hsl(210 40% 98%);
+  --border: hsl(173 30% 18%);
+  --input: hsl(173 30% 18%);
+  --ring: hsl(74 59% 47%);
 }
+
 
 @layer base {
   * {
