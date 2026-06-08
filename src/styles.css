@@ -49,7 +49,10 @@
   --color-green-soft: var(--green-soft);
   --color-cream: var(--cream);
   --color-ink: var(--ink);
+  --color-highlight: var(--highlight);
+  --color-highlight-foreground: var(--highlight-foreground);
 }
+
 
 :root {
   --radius: 1rem;
