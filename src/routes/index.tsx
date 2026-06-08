@@ -12,6 +12,7 @@ import { motion } from "framer-motion";
 import heroImg from "@/assets/hero-woman.jpg";
 import communityImg from "@/assets/community.jpg";
 import calmHands from "@/assets/calm-hands.jpg";
+import oceanicBg from "@/assets/oceanic-bg.jpg.asset.json";
 import { Section, SectionEyebrow, SectionHeading } from "@/components/section";
 import { CtaBanner } from "@/components/cta-banner";
 import { HexPattern } from "@/components/hex-pattern";
@@ -97,6 +98,17 @@ function Home() {
     <>
       {/* HERO */}
       <section className="relative overflow-hidden gradient-hero">
+        {/* Oceanic backdrop image */}
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-0 -z-10 bg-cover bg-center opacity-[0.22] dark:opacity-[0.28]"
+          style={{ backgroundImage: `url(${oceanicBg.url})` }}
+        />
+        {/* Soft gradient wash to fade image into page */}
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-b from-background/40 via-background/60 to-background"
+        />
         <motion.div
           aria-hidden
           animate={{ rotate: 360 }}
