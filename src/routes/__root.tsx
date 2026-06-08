@@ -145,7 +145,7 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <div className="relative flex min-h-screen flex-col bg-background text-foreground">
+      <div className="relative flex min-h-screen flex-col text-foreground">
         {/* Site-wide peaceful nature backdrop — fixed so it stays as you scroll */}
         <div
           aria-hidden
