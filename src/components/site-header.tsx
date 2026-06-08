@@ -2,7 +2,8 @@ import { Link, useRouterState } from "@tanstack/react-router";
 import { Menu, X } from "lucide-react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useEffect, useState } from "react";
-import logoFull from "@/assets/gimble-logo-light.png.asset.json";
+import wordmarkDark from "@/assets/gimble-wordmark-dark.png.asset.json";
+import wordmarkLight from "@/assets/gimble-wordmark-light.png.asset.json";
 import { ThemeToggle } from "@/components/theme-toggle";
 
 
