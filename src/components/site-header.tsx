@@ -83,24 +83,28 @@ export function SiteHeader() {
           })}
         </nav>
 
-        <div className="hidden lg:flex">
-          <motion.div whileHover={{ y: -2 }} whileTap={{ scale: 0.96 }}>
-            <Link
-              to="/app"
-              className="inline-flex items-center justify-center rounded-full bg-secondary px-4 py-2 text-sm font-semibold text-secondary-foreground shadow-sm transition hover:brightness-95"
-            >
-              Get the App
-            </Link>
-          </motion.div>
+        <div className="flex items-center gap-2">
+          <ThemeToggle />
+          <div className="hidden lg:flex">
+            <motion.div whileHover={{ y: -2 }} whileTap={{ scale: 0.96 }}>
+              <Link
+                to="/app"
+                className="inline-flex items-center justify-center rounded-full bg-secondary px-4 py-2 text-sm font-semibold text-secondary-foreground shadow-sm transition hover:brightness-95"
+              >
+                Get the App
+              </Link>
+            </motion.div>
+          </div>
+
+          <button
+            aria-label="Toggle menu"
+            onClick={() => setOpen((v) => !v)}
+            className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-border lg:hidden"
+          >
+            {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+          </button>
         </div>
 
-        <button
-          aria-label="Toggle menu"
-          onClick={() => setOpen((v) => !v)}
-          className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-border lg:hidden"
-        >
-          {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-        </button>
       </div>
 
       {open && (
