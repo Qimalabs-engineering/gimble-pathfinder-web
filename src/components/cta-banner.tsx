@@ -20,7 +20,8 @@ export function CtaBanner({
         whileInView={{ opacity: 1, y: 0, scale: 1 }}
         viewport={{ once: true, margin: "-80px" }}
         transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
-        className="relative mx-auto max-w-7xl overflow-hidden rounded-4xl bg-primary px-6 py-16 text-primary-foreground sm:px-12 sm:py-20"
+        style={{ backgroundColor: "var(--teal)" }}
+        className="relative mx-auto max-w-7xl overflow-hidden rounded-4xl px-6 py-16 text-white sm:px-12 sm:py-20"
       >
         <motion.div
           aria-hidden
