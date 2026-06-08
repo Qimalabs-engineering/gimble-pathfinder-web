@@ -48,7 +48,7 @@ export function SiteHeader() {
             alt="Gimble"
             whileHover={{ scale: 1.04 }}
             transition={{ type: "spring", stiffness: 300, damping: 18 }}
-            className="h-10 w-auto dark:brightness-0 dark:invert-0 dark:[filter:brightness(0)_saturate(100%)_invert(92%)_sepia(8%)_saturate(200%)_hue-rotate(120deg)]"
+            className="h-10 w-auto dark:invert dark:brightness-110"
           />
         </Link>
 
