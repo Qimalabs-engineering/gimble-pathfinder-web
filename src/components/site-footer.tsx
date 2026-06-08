@@ -1,17 +1,18 @@
 import { Link } from "@tanstack/react-router";
 import { Instagram, Linkedin, Twitter } from "lucide-react";
+import logoLight from "@/assets/gimble-logo-light.png.asset.json";
+
 
 export function SiteFooter() {
   return (
     <footer className="mt-24 border-t border-border bg-primary text-primary-foreground">
       <div className="mx-auto grid max-w-7xl gap-12 px-4 py-16 sm:px-6 lg:grid-cols-4 lg:px-8">
         <div className="lg:col-span-2">
-          <Link to="/" className="flex items-center gap-2">
-            <span className="grid h-9 w-9 place-items-center rounded-lg bg-secondary text-secondary-foreground">
-              <span className="font-display text-lg font-bold leading-none">G</span>
-            </span>
+          <Link to="/" className="flex items-center gap-2" aria-label="Gimble home">
+            <img src={logoLight.url} alt="Gimble" className="h-10 w-10 rounded-lg" />
             <span className="font-display text-2xl font-bold tracking-tight">Gimble</span>
           </Link>
+
           <p className="mt-4 max-w-md text-sm leading-relaxed text-primary-foreground/80">
             Mental health support should be accessible before people reach a breaking point.
             Practical, stigma-free wellness for Africans, everyday.
