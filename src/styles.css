@@ -151,3 +151,20 @@
     letter-spacing: -0.02em;
   }
 }
+
+@utility gradient-hero {
+  background: var(--gradient-hero);
+}
+
+@utility shadow-glow {
+  box-shadow: var(--shadow-glow);
+}
+
+@utility text-gradient-brand {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--highlight) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
