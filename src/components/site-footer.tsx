@@ -1,19 +1,22 @@
 import { Link } from "@tanstack/react-router";
 import { Instagram, Linkedin, Twitter } from "lucide-react";
-import logoLight from "@/assets/gimble-logo-light.png.asset.json";
+import logoMark from "@/assets/gimble-logo-mark.png.asset.json";
 
 
 export function SiteFooter() {
   return (
-    <footer className="mt-24 border-t border-border bg-primary text-primary-foreground">
+    <footer
+      className="mt-24 border-t border-border text-white"
+      style={{ backgroundColor: "var(--teal)" }}
+    >
       <div className="mx-auto grid max-w-7xl gap-12 px-4 py-16 sm:px-6 lg:grid-cols-4 lg:px-8">
         <div className="lg:col-span-2">
-          <Link to="/" className="flex items-center gap-2" aria-label="Gimble home">
-            <img src={logoLight.url} alt="Gimble" className="h-10 w-10 rounded-lg" />
+          <Link to="/" className="flex items-center gap-3" aria-label="Gimble home">
+            <img src={logoMark.url} alt="Gimble" className="h-12 w-12 rounded-lg" />
             <span className="font-display text-2xl font-bold tracking-tight">Gimble</span>
           </Link>
 
-          <p className="mt-4 max-w-md text-sm leading-relaxed text-primary-foreground/80">
+          <p className="mt-4 max-w-md text-sm leading-relaxed text-white/80">
             Mental health support should be accessible before people reach a breaking point.
             Practical, stigma-free wellness for Africans, everyday.
           </p>
@@ -25,11 +28,11 @@ export function SiteFooter() {
               type="email"
               required
               placeholder="Your email"
-              className="flex-1 rounded-full border border-primary-foreground/20 bg-primary-foreground/10 px-4 py-2.5 text-sm text-primary-foreground placeholder:text-primary-foreground/60 focus:border-secondary focus:outline-none"
+              className="flex-1 rounded-full border border-white/20 bg-white/10 px-4 py-2.5 text-sm text-white placeholder:text-white/60 focus:border-[color:var(--green)] focus:outline-none"
             />
             <button
               type="submit"
-              className="rounded-full bg-secondary px-5 py-2.5 text-sm font-semibold text-secondary-foreground transition hover:brightness-95"
+              className="rounded-full bg-[color:var(--green)] px-5 py-2.5 text-sm font-semibold text-[color:var(--ink)] transition hover:brightness-95"
             >
               Subscribe
             </button>
@@ -38,36 +41,36 @@ export function SiteFooter() {
 
         <div>
           <h4 className="font-display text-base font-semibold">Explore</h4>
-          <ul className="mt-4 space-y-2 text-sm text-primary-foreground/80">
-            <li><Link to="/about" className="hover:text-secondary">About</Link></li>
-            <li><Link to="/programs" className="hover:text-secondary">Programs</Link></li>
-            <li><Link to="/app" className="hover:text-secondary">The App</Link></li>
-            <li><Link to="/community" className="hover:text-secondary">Community</Link></li>
+          <ul className="mt-4 space-y-2 text-sm text-white/80">
+            <li><Link to="/about" className="hover:text-[color:var(--green)]">About</Link></li>
+            <li><Link to="/programs" className="hover:text-[color:var(--green)]">Programs</Link></li>
+            <li><Link to="/app" className="hover:text-[color:var(--green)]">The App</Link></li>
+            <li><Link to="/community" className="hover:text-[color:var(--green)]">Community</Link></li>
           </ul>
         </div>
 
         <div>
           <h4 className="font-display text-base font-semibold">Get involved</h4>
-          <ul className="mt-4 space-y-2 text-sm text-primary-foreground/80">
-            <li><Link to="/get-involved" className="hover:text-secondary">Partner with us</Link></li>
-            <li><Link to="/get-involved" className="hover:text-secondary">Volunteer</Link></li>
-            <li><Link to="/get-involved" className="hover:text-secondary">Donate</Link></li>
-            <li><Link to="/contact" className="hover:text-secondary">Contact</Link></li>
+          <ul className="mt-4 space-y-2 text-sm text-white/80">
+            <li><Link to="/get-involved" className="hover:text-[color:var(--green)]">Partner with us</Link></li>
+            <li><Link to="/get-involved" className="hover:text-[color:var(--green)]">Volunteer</Link></li>
+            <li><Link to="/get-involved" className="hover:text-[color:var(--green)]">Donate</Link></li>
+            <li><Link to="/contact" className="hover:text-[color:var(--green)]">Contact</Link></li>
           </ul>
         </div>
       </div>
 
-      <div className="border-t border-primary-foreground/10">
-        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-4 py-6 text-xs text-primary-foreground/70 sm:flex-row sm:px-6 lg:px-8">
+      <div className="border-t border-white/15">
+        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-4 py-6 text-xs text-white/70 sm:flex-row sm:px-6 lg:px-8">
           <p>© {new Date().getFullYear()} Gimble Foundation. All rights reserved.</p>
           <div className="flex items-center gap-3">
-            <a href="#" aria-label="Twitter" className="rounded-full p-2 hover:bg-primary-foreground/10">
+            <a href="#" aria-label="Twitter" className="rounded-full p-2 hover:bg-white/10">
               <Twitter className="h-4 w-4" />
             </a>
-            <a href="#" aria-label="Instagram" className="rounded-full p-2 hover:bg-primary-foreground/10">
+            <a href="#" aria-label="Instagram" className="rounded-full p-2 hover:bg-white/10">
               <Instagram className="h-4 w-4" />
             </a>
-            <a href="#" aria-label="LinkedIn" className="rounded-full p-2 hover:bg-primary-foreground/10">
+            <a href="#" aria-label="LinkedIn" className="rounded-full p-2 hover:bg-white/10">
               <Linkedin className="h-4 w-4" />
             </a>
           </div>
