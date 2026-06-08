@@ -72,7 +72,7 @@ function AboutPage() {
             </h3>
           </StaggerItem>
           <StaggerItem as="article" className="rounded-3xl border border-border bg-primary p-8 text-primary-foreground lg:p-10">
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-secondary">
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-highlight">
               Mission
             </p>
             <h3 className="mt-3 font-display text-3xl font-semibold leading-tight">

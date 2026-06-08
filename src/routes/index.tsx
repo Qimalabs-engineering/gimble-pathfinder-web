@@ -96,7 +96,7 @@ function Home() {
   return (
     <>
       {/* HERO */}
-      <section className="relative overflow-hidden">
+      <section className="relative overflow-hidden gradient-hero">
         <motion.div
           aria-hidden
           animate={{ rotate: 360 }}
@@ -112,11 +112,12 @@ function Home() {
             </FadeUp>
             <h1 className="mt-5 font-display text-5xl font-semibold leading-[1.02] text-primary sm:text-6xl lg:text-7xl">
               <WordReveal text="Mental wellness," />{" "}
-              <span className="italic text-secondary">
+              <span className="italic text-highlight">
                 <WordReveal text="before" delay={0.25} />
               </span>{" "}
               <WordReveal text="the breaking point." delay={0.4} />
             </h1>
+
             <FadeUp delay={0.7} className="mt-6 max-w-xl text-lg leading-relaxed text-foreground/75">
               We're a nonprofit mental wellness organization helping Africans
               navigate the everyday weight of stress, burnout, and emotional
@@ -144,15 +145,15 @@ function Home() {
 
             <FadeUp delay={1} className="mt-12 flex flex-wrap items-center gap-x-8 gap-y-3 text-sm text-foreground/70">
               <div className="flex items-center gap-2">
-                <CheckCircle2 className="h-4 w-4 text-secondary" />
+                <CheckCircle2 className="h-4 w-4 text-highlight" />
                 Mobile-first
               </div>
               <div className="flex items-center gap-2">
-                <CheckCircle2 className="h-4 w-4 text-secondary" />
+                <CheckCircle2 className="h-4 w-4 text-highlight" />
                 Stigma-free
               </div>
               <div className="flex items-center gap-2">
-                <CheckCircle2 className="h-4 w-4 text-secondary" />
+                <CheckCircle2 className="h-4 w-4 text-highlight" />
                 Built for Africa
               </div>
             </FadeUp>
@@ -169,8 +170,8 @@ function Home() {
               <motion.div
                 initial={{ opacity: 0, scale: 0.95, y: 20 }}
                 animate={{ opacity: 1, scale: 1, y: 0 }}
-                transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
-                className="relative overflow-hidden rounded-4xl border border-border bg-card shadow-xl"
+                transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1] }}
+                className="relative overflow-hidden rounded-4xl border border-border bg-card shadow-2xl shadow-glow"
               >
                 <img
                   src={heroImg}
@@ -181,6 +182,7 @@ function Home() {
                 />
               </motion.div>
             </Parallax>
+
             <motion.div
               initial={{ opacity: 0, y: 20, scale: 0.9 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
@@ -191,10 +193,11 @@ function Home() {
                 <motion.span
                   animate={{ scale: [1, 1.1, 1] }}
                   transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-                  className="grid h-10 w-10 place-items-center rounded-full bg-secondary/20 text-secondary-foreground"
+                  className="grid h-10 w-10 place-items-center rounded-full bg-highlight/20 text-highlight"
                 >
-                  <Sparkles className="h-5 w-5 text-primary" />
+                  <Sparkles className="h-5 w-5" />
                 </motion.span>
+
                 <div>
                   <p className="font-display text-sm font-semibold text-primary">
                     Today, take a breath.
@@ -327,7 +330,7 @@ function Home() {
                 "Build healthier mental habits",
               ].map((f) => (
                 <StaggerItem key={f} as="li" className="flex items-start gap-3">
-                  <CheckCircle2 className="mt-0.5 h-5 w-5 flex-shrink-0 text-secondary" />
+                  <CheckCircle2 className="mt-0.5 h-5 w-5 flex-shrink-0 text-highlight" />
                   <span>{f}</span>
                 </StaggerItem>
               ))}
