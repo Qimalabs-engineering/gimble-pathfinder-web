@@ -2,6 +2,9 @@ import { Link, useRouterState } from "@tanstack/react-router";
 import { Menu, X } from "lucide-react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useEffect, useState } from "react";
+import logoMark from "@/assets/gimble-logo-mark.png.asset.json";
+import { ThemeToggle } from "@/components/theme-toggle";
+
 
 const nav = [
   { to: "/", label: "Home" },
