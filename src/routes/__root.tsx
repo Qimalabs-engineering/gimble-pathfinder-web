@@ -13,7 +13,7 @@ import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { SiteHeader } from "../components/site-header";
 import { SiteFooter } from "../components/site-footer";
-import oceanicBg from "../assets/oceanic-bg.jpg.asset.json";
+const oceanicBg = "/brand/oceanic-bg.jpg";
 
 function NotFoundComponent() {
   return (
@@ -150,7 +150,7 @@ function RootComponent() {
         <div
           aria-hidden
           className="pointer-events-none fixed inset-0 -z-20 bg-cover bg-center bg-no-repeat opacity-[0.18] dark:opacity-[0.22]"
-          style={{ backgroundImage: `url(${oceanicBg.url})` }}
+          style={{ backgroundImage: `url(${oceanicBg})` }}
         />
         <div
           aria-hidden

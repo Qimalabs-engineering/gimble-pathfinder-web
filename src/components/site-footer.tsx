@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { Instagram, Linkedin, Twitter } from "lucide-react";
-import wordmarkLight from "@/assets/gimble-wordmark-light.png.asset.json";
+const wordmarkLight = "/brand/gimble-wordmark-light.png";
 
 
 export function SiteFooter() {
@@ -12,7 +12,7 @@ export function SiteFooter() {
       <div className="mx-auto grid max-w-7xl gap-12 px-4 py-16 sm:px-6 lg:grid-cols-4 lg:px-8">
         <div className="lg:col-span-2">
           <Link to="/" className="flex items-center" aria-label="Gimble home">
-            <img src={wordmarkLight.url} alt="Gimble" className="h-10 w-auto sm:h-11" />
+            <img src={wordmarkLight} alt="Gimble" className="h-10 w-auto sm:h-11" />
           </Link>
 
           <p className="mt-4 max-w-md text-sm leading-relaxed text-white/80">
