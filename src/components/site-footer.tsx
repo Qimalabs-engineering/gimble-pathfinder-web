@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { Instagram, Linkedin, Twitter } from "lucide-react";
-import wordmarkLight from "@/assets/gimble-wordmark-light.png.asset.json";
+const wordmarkLight = "/brand/gimble-wordmark-light.png";
 
 
 export function SiteFooter() {

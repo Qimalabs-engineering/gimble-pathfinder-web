@@ -102,7 +102,7 @@ function Home() {
         <div
           aria-hidden
           className="pointer-events-none absolute inset-0 -z-10 bg-cover bg-center opacity-60 dark:opacity-55"
-          style={{ backgroundImage: `url(${oceanicBg.url})` }}
+          style={{ backgroundImage: `url(${oceanicBg})` }}
         />
         {/* Soft gradient wash so text stays readable */}
         <div

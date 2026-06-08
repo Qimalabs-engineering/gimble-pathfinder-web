@@ -2,8 +2,8 @@ import { Link, useRouterState } from "@tanstack/react-router";
 import { Menu, X } from "lucide-react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useEffect, useState } from "react";
-import wordmarkDark from "@/assets/gimble-wordmark-dark.png.asset.json";
-import wordmarkLight from "@/assets/gimble-wordmark-light.png.asset.json";
+const wordmarkDark = "/brand/gimble-wordmark-dark.png";
+const wordmarkLight = "/brand/gimble-wordmark-light.png";
 import { ThemeToggle } from "@/components/theme-toggle";
 
 
