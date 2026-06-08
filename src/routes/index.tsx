@@ -12,7 +12,7 @@ import { motion } from "framer-motion";
 import heroImg from "@/assets/hero-woman.jpg";
 import communityImg from "@/assets/community.jpg";
 import calmHands from "@/assets/calm-hands.jpg";
-import oceanicBg from "@/assets/oceanic-bg.jpg.asset.json";
+const oceanicBg = "/brand/oceanic-bg.jpg";
 import { Section, SectionEyebrow, SectionHeading } from "@/components/section";
 import { CtaBanner } from "@/components/cta-banner";
 import { HexPattern } from "@/components/hex-pattern";
