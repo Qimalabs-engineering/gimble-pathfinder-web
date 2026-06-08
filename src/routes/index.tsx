@@ -96,7 +96,7 @@ function Home() {
   return (
     <>
       {/* HERO */}
-      <section className="relative overflow-hidden">
+      <section className="relative overflow-hidden gradient-hero">
         <motion.div
           aria-hidden
           animate={{ rotate: 360 }}
@@ -112,11 +112,12 @@ function Home() {
             </FadeUp>
             <h1 className="mt-5 font-display text-5xl font-semibold leading-[1.02] text-primary sm:text-6xl lg:text-7xl">
               <WordReveal text="Mental wellness," />{" "}
-              <span className="italic text-secondary">
+              <span className="italic text-highlight">
                 <WordReveal text="before" delay={0.25} />
               </span>{" "}
               <WordReveal text="the breaking point." delay={0.4} />
             </h1>
+
             <FadeUp delay={0.7} className="mt-6 max-w-xl text-lg leading-relaxed text-foreground/75">
               We're a nonprofit mental wellness organization helping Africans
               navigate the everyday weight of stress, burnout, and emotional
