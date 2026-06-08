@@ -97,17 +97,17 @@ function Home() {
   return (
     <>
       {/* HERO */}
-      <section className="relative overflow-hidden gradient-hero">
-        {/* Oceanic backdrop image */}
+      <section className="relative overflow-hidden">
+        {/* Oceanic backdrop image, stronger in the hero */}
         <div
           aria-hidden
-          className="pointer-events-none absolute inset-0 -z-10 bg-cover bg-center opacity-[0.22] dark:opacity-[0.28]"
+          className="pointer-events-none absolute inset-0 -z-10 bg-cover bg-center opacity-60 dark:opacity-55"
           style={{ backgroundImage: `url(${oceanicBg.url})` }}
         />
-        {/* Soft gradient wash to fade image into page */}
+        {/* Soft gradient wash so text stays readable */}
         <div
           aria-hidden
-          className="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-b from-background/40 via-background/60 to-background"
+          className="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-b from-background/55 via-background/40 to-background"
         />
         <motion.div
           aria-hidden

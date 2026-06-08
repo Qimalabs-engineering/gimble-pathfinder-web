@@ -1,19 +1,18 @@
 import { Link } from "@tanstack/react-router";
 import { Instagram, Linkedin, Twitter } from "lucide-react";
-import logoMark from "@/assets/gimble-mark.png.asset.json";
+import wordmarkLight from "@/assets/gimble-wordmark-light.png.asset.json";
 
 
 export function SiteFooter() {
   return (
     <footer
-      className="mt-24 border-t border-border text-white"
+      className="relative mt-24 overflow-hidden border-t border-border text-white"
       style={{ backgroundColor: "var(--teal)" }}
     >
       <div className="mx-auto grid max-w-7xl gap-12 px-4 py-16 sm:px-6 lg:grid-cols-4 lg:px-8">
         <div className="lg:col-span-2">
-          <Link to="/" className="flex items-center gap-3" aria-label="Gimble home">
-            <img src={logoMark.url} alt="Gimble" className="h-12 w-12 rounded-lg" />
-            <span className="font-display text-2xl font-bold tracking-tight">Gimble</span>
+          <Link to="/" className="flex items-center" aria-label="Gimble home">
+            <img src={wordmarkLight.url} alt="Gimble" className="h-10 w-auto sm:h-11" />
           </Link>
 
           <p className="mt-4 max-w-md text-sm leading-relaxed text-white/80">

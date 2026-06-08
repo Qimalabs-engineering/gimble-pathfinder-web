@@ -13,6 +13,7 @@ import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { SiteHeader } from "../components/site-header";
 import { SiteFooter } from "../components/site-footer";
+import oceanicBg from "../assets/oceanic-bg.jpg.asset.json";
 
 function NotFoundComponent() {
   return (
@@ -144,7 +145,17 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <div className="flex min-h-screen flex-col bg-background text-foreground">
+      <div className="relative flex min-h-screen flex-col bg-background text-foreground">
+        {/* Site-wide peaceful nature backdrop — fixed so it stays as you scroll */}
+        <div
+          aria-hidden
+          className="pointer-events-none fixed inset-0 -z-20 bg-cover bg-center bg-no-repeat opacity-[0.18] dark:opacity-[0.22]"
+          style={{ backgroundImage: `url(${oceanicBg.url})` }}
+        />
+        <div
+          aria-hidden
+          className="pointer-events-none fixed inset-0 -z-10 bg-gradient-to-b from-background/60 via-background/75 to-background/95"
+        />
         <SiteHeader />
         <main className="flex-1">
           <Outlet />
