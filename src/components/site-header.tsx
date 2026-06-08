@@ -42,18 +42,19 @@ export function SiteHeader() {
         className="absolute inset-0 -z-10 bg-background"
       />
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
-        <Link to="/" className="flex items-center gap-2 group">
-          <motion.span
-            whileHover={{ rotate: -8, scale: 1.05 }}
+        <Link to="/" className="flex items-center gap-2 group" aria-label="Gimble home">
+          <motion.img
+            src={logoMark.url}
+            alt="Gimble"
+            whileHover={{ rotate: -6, scale: 1.05 }}
             transition={{ type: "spring", stiffness: 300, damping: 18 }}
-            className="grid h-8 w-8 place-items-center rounded-lg bg-primary text-primary-foreground"
-          >
-            <span className="text-base font-display font-bold leading-none">G</span>
-          </motion.span>
+            className="h-9 w-9 rounded-lg"
+          />
           <span className="font-display text-xl font-bold tracking-tight text-primary">
             Gimble
           </span>
         </Link>
+
 
         <nav className="hidden items-center gap-1 lg:flex">
           {nav.map((item) => {
