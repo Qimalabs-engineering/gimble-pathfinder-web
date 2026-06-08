@@ -150,7 +150,7 @@ function RootComponent() {
         <div
           aria-hidden
           className="pointer-events-none fixed inset-0 -z-20 bg-cover bg-center bg-no-repeat opacity-[0.18] dark:opacity-[0.22]"
-          style={{ backgroundImage: `url(${oceanicBg.url})` }}
+          style={{ backgroundImage: `url(${oceanicBg})` }}
         />
         <div
           aria-hidden

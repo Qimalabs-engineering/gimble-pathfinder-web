@@ -45,14 +45,14 @@ export function SiteHeader() {
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
         <Link to="/" className="flex items-center group" aria-label="Gimble home">
           <motion.img
-            src={wordmarkDark.url}
+            src={wordmarkDark}
             alt="Gimble"
             whileHover={{ scale: 1.04 }}
             transition={{ type: "spring", stiffness: 300, damping: 18 }}
             className="h-8 w-auto sm:h-9 dark:hidden"
           />
           <motion.img
-            src={wordmarkLight.url}
+            src={wordmarkLight}
             alt="Gimble"
             whileHover={{ scale: 1.04 }}
             transition={{ type: "spring", stiffness: 300, damping: 18 }}
