@@ -193,10 +193,11 @@ function Home() {
                 <motion.span
                   animate={{ scale: [1, 1.1, 1] }}
                   transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-                  className="grid h-10 w-10 place-items-center rounded-full bg-secondary/20 text-secondary-foreground"
+                  className="grid h-10 w-10 place-items-center rounded-full bg-highlight/20 text-highlight"
                 >
-                  <Sparkles className="h-5 w-5 text-primary" />
+                  <Sparkles className="h-5 w-5" />
                 </motion.span>
+
                 <div>
                   <p className="font-display text-sm font-semibold text-primary">
                     Today, take a breath.
