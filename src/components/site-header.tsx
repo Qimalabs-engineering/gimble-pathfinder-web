@@ -13,7 +13,7 @@ const nav = [
   { to: "/programs", label: "Programs" },
   { to: "/app", label: "The App" },
   { to: "/community", label: "Community" },
-  { to: "/get-involved", label: "Get Involved" },
+  { to: "/get-involved", label: "Join Us" },
   { to: "/contact", label: "Contact" },
 ] as const;
 

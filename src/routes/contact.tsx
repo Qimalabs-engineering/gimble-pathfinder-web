@@ -141,6 +141,25 @@ function ContactPage() {
         </div>
       </div>
     </Section>
+
+    <Section className="!pt-0">
+      <div className="mx-auto max-w-3xl rounded-3xl border border-border bg-card p-8 text-center sm:p-12">
+        <h3 className="font-display text-2xl font-semibold text-primary">Stay Connected</h3>
+        <p className="mt-3 text-foreground/70">
+          Follow our journey, join our conversations, and become part of a growing movement working to make mental wellness support accessible for Africans.
+        </p>
+        <div className="mt-6 flex flex-wrap justify-center gap-3">
+          {["Instagram", "TikTok", "X", "Facebook", "YouTube"].map((name) => (
+            <span
+              key={name}
+              className="rounded-full border border-border bg-background px-4 py-2 text-sm font-medium text-primary"
+            >
+              {name}
+            </span>
+          ))}
+        </div>
+      </div>
+    </Section>
   );
 }
 
