@@ -52,20 +52,29 @@ function ContactPage() {
             </div>
             <div className="flex items-start gap-4">
               <span className="grid h-11 w-11 place-items-center rounded-2xl bg-primary/10 text-primary">
+                <Phone className="h-5 w-5" />
+              </span>
+              <div>
+                <p className="text-sm font-semibold text-primary">Phone</p>
+                <p className="text-sm text-foreground/70">Available on request via email.</p>
+              </div>
+            </div>
+            <div className="flex items-start gap-4">
+              <span className="grid h-11 w-11 place-items-center rounded-2xl bg-primary/10 text-primary">
+                <Globe className="h-5 w-5" />
+              </span>
+              <div>
+                <p className="text-sm font-semibold text-primary">Social Media</p>
+                <p className="text-sm text-foreground/70">Instagram, TikTok, X, Facebook, YouTube</p>
+              </div>
+            </div>
+            <div className="flex items-start gap-4">
+              <span className="grid h-11 w-11 place-items-center rounded-2xl bg-primary/10 text-primary">
                 <MapPin className="h-5 w-5" />
               </span>
               <div>
                 <p className="text-sm font-semibold text-primary">Based in</p>
                 <p className="text-sm text-foreground/70">Across Africa. Serving the continent.</p>
-              </div>
-            </div>
-            <div className="flex items-start gap-4">
-              <span className="grid h-11 w-11 place-items-center rounded-2xl bg-primary/10 text-primary">
-                <MessageSquare className="h-5 w-5" />
-              </span>
-              <div>
-                <p className="text-sm font-semibold text-primary">Response time</p>
-                <p className="text-sm text-foreground/70">Usually within 2–3 business days.</p>
               </div>
             </div>
           </div>

@@ -16,7 +16,7 @@ export function SiteFooter() {
           </Link>
 
           <p className="mt-4 max-w-md text-sm leading-relaxed text-white/80">
-            Mental health support should be accessible before people reach a breaking point.
+            Mental wellness support should be accessible before people reach a breaking point.
             Practical, stigma-free wellness for Africans, everyday.
           </p>
           <form
