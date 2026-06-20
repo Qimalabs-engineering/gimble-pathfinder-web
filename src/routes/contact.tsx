@@ -27,6 +27,7 @@ function ContactPage() {
   const [sent, setSent] = useState(false);
 
   return (
+    <>
     <Section className="!pt-20">
       <div className="grid gap-12 lg:grid-cols-12">
         <div className="lg:col-span-5">
