@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Mail, MapPin, MessageSquare } from "lucide-react";
+import { Mail, MapPin, MessageSquare, Phone, Globe } from "lucide-react";
 import { useState } from "react";
 
 import { Section, SectionHeading } from "@/components/section";
@@ -33,7 +33,7 @@ function ContactPage() {
           <SectionHeading
             eyebrow="Contact"
             title="We'd love to hear from you."
-            description="Partnerships, press, volunteering, or just a hello. Drop us a note and we'll get back to you."
+            description="Whether you have a question, want to partner with us, volunteer, or simply learn more about our work, we'd be happy to connect."
           />
           <div className="mt-10 space-y-5">
             <div className="flex items-start gap-4">
