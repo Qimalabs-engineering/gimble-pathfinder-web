@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Building2, GraduationCap, HandHeart, Heart, Briefcase } from "lucide-react";
+import { HandHeart, Building2, Award } from "lucide-react";
 import { motion } from "framer-motion";
 
 import workshopImg from "@/assets/workshop.jpg";
@@ -10,17 +10,17 @@ import { FadeUp, StaggerGroup, StaggerItem, Parallax } from "@/components/motion
 export const Route = createFileRoute("/get-involved")({
   head: () => ({
     meta: [
-      { title: "Get Involved — Gimble Foundation" },
+      { title: "Join Us — Gimble Foundation" },
       {
         name: "description",
         content:
-          "Partner with Gimble Foundation. Workplaces, campuses, NGOs, volunteers, and donors all play a part in making mental wellness accessible across Africa.",
+          "Volunteer, partner, or become an ambassador to help build a mentally healthier Africa with Gimble Foundation.",
       },
-      { property: "og:title", content: "Get Involved — Gimble Foundation" },
+      { property: "og:title", content: "Join Us — Gimble Foundation" },
       {
         property: "og:description",
         content:
-          "Partner, volunteer, or donate to bring mental wellness support to more Africans.",
+          "Be part of making mental wellness support more accessible across Africa.",
       },
     ],
   }),
@@ -29,34 +29,22 @@ export const Route = createFileRoute("/get-involved")({
 
 const ways = [
   {
-    icon: Briefcase,
-    title: "Workplace partnerships",
-    body: "Bring Gimble's wellness programs to your team. Reduce burnout, support your people.",
-    cta: "Partner with us",
-  },
-  {
-    icon: GraduationCap,
-    title: "Campus programs",
-    body: "Run wellness programming on your campus and reach students before things escalate.",
-    cta: "Start a campus program",
+    icon: HandHeart,
+    title: "Volunteer",
+    body: "Support outreach programs, events, and community initiatives.",
+    cta: "Become a Volunteer",
   },
   {
     icon: Building2,
-    title: "NGO & community partners",
-    body: "Co-design wellness initiatives that meet your community where they are.",
-    cta: "Partner with us",
+    title: "Partner With Us",
+    body: "Collaborate with us to bring mental wellness support to schools, organizations, and communities.",
+    cta: "Partner With Us",
   },
   {
-    icon: HandHeart,
-    title: "Volunteer",
-    body: "Share your skills: writing, design, facilitation, outreach. We need them all.",
-    cta: "Volunteer",
-  },
-  {
-    icon: Heart,
-    title: "Donate",
-    body: "Every contribution helps us reach more people, earlier, with practical support.",
-    cta: "Donate",
+    icon: Award,
+    title: "Become an Ambassador",
+    body: "Help spread awareness and inspire more people to prioritize their mental wellbeing.",
+    cta: "Become an Ambassador",
   },
 ];
 
@@ -67,9 +55,9 @@ function GetInvolvedPage() {
         <div className="grid items-end gap-12 lg:grid-cols-12">
           <FadeUp className="lg:col-span-7">
             <SectionHeading
-              eyebrow="Get involved"
-              title="Help us reach Africans before the breaking point."
-              description="There are many ways to be part of Gimble. Partner with us, volunteer your skills, or contribute to make mental wellness support more accessible."
+              eyebrow="Join Us"
+              title="Help us build a mentally healthier Africa."
+              description="Creating a culture where mental wellbeing is valued requires all of us. Whether you volunteer your time, partner with us, or advocate for mental wellness in your community, you can make a meaningful difference."
             />
           </FadeUp>
           <Parallax offset={30} className="lg:col-span-5">
@@ -127,11 +115,32 @@ function GetInvolvedPage() {
         </StaggerGroup>
       </Section>
 
+      <Section className="!pt-0">
+        <FadeUp>
+          <div className="mx-auto max-w-3xl rounded-3xl border border-border bg-card p-8 text-center sm:p-12">
+            <h3 className="font-display text-2xl font-semibold text-primary sm:text-3xl">
+              Together, we can make mental wellness support more accessible across Africa.
+            </h3>
+            <p className="mt-4 text-foreground/70">
+              Every contribution, partnership, and conversation brings us closer to a continent where no one has to struggle alone.
+            </p>
+            <motion.div whileHover={{ y: -3 }} whileTap={{ scale: 0.97 }} className="mt-8 inline-block">
+              <Link
+                to="/contact"
+                className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/20"
+              >
+                Become a Volunteer
+              </Link>
+            </motion.div>
+          </div>
+        </FadeUp>
+      </Section>
+
       <CtaBanner
-        title="Tell us how you'd like to partner."
-        subtitle="We're building this with the communities we serve. Send us a note."
+        title="Ready to make a difference?"
+        subtitle="Reach out and let us know how you'd like to get involved."
         primary={{ label: "Contact us", to: "/contact" }}
-        secondary={{ label: "Read our programs", to: "/community" }}
+        secondary={{ label: "Explore our programs", to: "/programs" }}
       />
     </>
   );

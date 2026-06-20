@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Mail, MapPin, MessageSquare } from "lucide-react";
+import { Mail, MapPin, MessageSquare, Phone, Globe } from "lucide-react";
 import { useState } from "react";
 
 import { Section, SectionHeading } from "@/components/section";
@@ -27,13 +27,14 @@ function ContactPage() {
   const [sent, setSent] = useState(false);
 
   return (
+    <>
     <Section className="!pt-20">
       <div className="grid gap-12 lg:grid-cols-12">
         <div className="lg:col-span-5">
           <SectionHeading
             eyebrow="Contact"
             title="We'd love to hear from you."
-            description="Partnerships, press, volunteering, or just a hello. Drop us a note and we'll get back to you."
+            description="Whether you have a question, want to partner with us, volunteer, or simply learn more about our work, we'd be happy to connect."
           />
           <div className="mt-10 space-y-5">
             <div className="flex items-start gap-4">
@@ -52,20 +53,29 @@ function ContactPage() {
             </div>
             <div className="flex items-start gap-4">
               <span className="grid h-11 w-11 place-items-center rounded-2xl bg-primary/10 text-primary">
+                <Phone className="h-5 w-5" />
+              </span>
+              <div>
+                <p className="text-sm font-semibold text-primary">Phone</p>
+                <p className="text-sm text-foreground/70">Available on request via email.</p>
+              </div>
+            </div>
+            <div className="flex items-start gap-4">
+              <span className="grid h-11 w-11 place-items-center rounded-2xl bg-primary/10 text-primary">
+                <Globe className="h-5 w-5" />
+              </span>
+              <div>
+                <p className="text-sm font-semibold text-primary">Social Media</p>
+                <p className="text-sm text-foreground/70">Instagram, TikTok, X, Facebook, YouTube</p>
+              </div>
+            </div>
+            <div className="flex items-start gap-4">
+              <span className="grid h-11 w-11 place-items-center rounded-2xl bg-primary/10 text-primary">
                 <MapPin className="h-5 w-5" />
               </span>
               <div>
                 <p className="text-sm font-semibold text-primary">Based in</p>
                 <p className="text-sm text-foreground/70">Across Africa. Serving the continent.</p>
-              </div>
-            </div>
-            <div className="flex items-start gap-4">
-              <span className="grid h-11 w-11 place-items-center rounded-2xl bg-primary/10 text-primary">
-                <MessageSquare className="h-5 w-5" />
-              </span>
-              <div>
-                <p className="text-sm font-semibold text-primary">Response time</p>
-                <p className="text-sm text-foreground/70">Usually within 2–3 business days.</p>
               </div>
             </div>
           </div>
@@ -132,6 +142,26 @@ function ContactPage() {
         </div>
       </div>
     </Section>
+
+    <Section className="!pt-0">
+      <div className="mx-auto max-w-3xl rounded-3xl border border-border bg-card p-8 text-center sm:p-12">
+        <h3 className="font-display text-2xl font-semibold text-primary">Stay Connected</h3>
+        <p className="mt-3 text-foreground/70">
+          Follow our journey, join our conversations, and become part of a growing movement working to make mental wellness support accessible for Africans.
+        </p>
+        <div className="mt-6 flex flex-wrap justify-center gap-3">
+          {["Instagram", "TikTok", "X", "Facebook", "YouTube"].map((name) => (
+            <span
+              key={name}
+              className="rounded-full border border-border bg-background px-4 py-2 text-sm font-medium text-primary"
+            >
+              {name}
+            </span>
+          ))}
+        </div>
+      </div>
+    </Section>
+    </>
   );
 }
 

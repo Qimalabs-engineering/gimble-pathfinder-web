@@ -61,34 +61,23 @@ export const Route = createFileRoute("/")({
   component: Home,
 });
 
-const helpsWith = [
-  "Stress",
-  "Burnout",
-  "Anxiety",
-  "Emotional exhaustion",
-  "Work pressure",
-  "Life transitions",
-  "Loneliness",
-  "Motivation struggles",
-];
-
 const programs = [
   {
     icon: HeartPulse,
     title: "Digital Support",
-    body: "The Gimble app: guided wellness journeys, daily check-ins, coping tools, and habits you can build at your own pace.",
+    body: "Our mobile app provides guided support, wellness tools, and educational resources that help people build healthier mental habits every day.",
     to: "/app" as const,
   },
   {
     icon: Users,
     title: "Community & Connection",
-    body: "Safe online spaces, virtual conversations, and expert-led workshops where you don't have to navigate this alone.",
+    body: "We bring people together through our online community and virtual events, creating safe spaces for learning, encouragement, and meaningful conversations about mental wellbeing.",
     to: "/community" as const,
   },
   {
     icon: Megaphone,
     title: "Outreach & Awareness",
-    body: "Campus programs, workshops, and partnerships taking mental wellness directly into communities across Africa.",
+    body: "Through workshops, campus initiatives, and community programs, we take mental wellness education directly to the people and communities that need it most.",
     to: "/programs" as const,
   },
 ];
@@ -123,39 +112,35 @@ function Home() {
               <SectionEyebrow>Gimble Foundation</SectionEyebrow>
             </FadeUp>
             <h1 className="mt-5 font-display text-5xl font-semibold leading-[1.02] text-primary sm:text-6xl lg:text-7xl">
-              <WordReveal text="Mental wellness," />{" "}
-              <span className="italic text-highlight">
-                <WordReveal text="before" delay={0.25} />
-              </span>{" "}
-              <WordReveal text="the breaking point." delay={0.4} />
+              <WordReveal text="Mental wellness support for everyday life." />
             </h1>
 
-            <FadeUp delay={0.7} className="mt-6 max-w-xl text-lg leading-relaxed text-foreground/75">
-              We're a nonprofit mental wellness organization helping Africans
-              navigate the everyday weight of stress, burnout, and emotional
-              strain, through technology, education, and community.
+            <FadeUp delay={0.4} className="mt-6 max-w-xl text-lg leading-relaxed text-foreground/75">
+              Life can be overwhelming. Stress, burnout, anxiety, and emotional pressure affect millions of Africans every day, yet many people never receive support until they reach a breaking point.
+              <br /><br />
+              Gimble Foundation exists to change that. Through our mobile app, community, and outreach programs, we're making mental wellness support more accessible, practical, and stigma-free across Africa.
             </FadeUp>
-            <FadeUp delay={0.85} className="mt-8 flex flex-wrap gap-3">
+            <FadeUp delay={0.6} className="mt-8 flex flex-wrap gap-3">
               <motion.div whileHover={{ y: -3 }} whileTap={{ scale: 0.97 }}>
                 <Link
                   to="/app"
                   className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/20 transition hover:opacity-90"
                 >
-                  Get the Gimble App
+                  Download the App
                   <ArrowRight className="h-4 w-4" />
                 </Link>
               </motion.div>
               <motion.div whileHover={{ y: -3 }} whileTap={{ scale: 0.97 }}>
                 <Link
-                  to="/programs"
+                  to="/community"
                   className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-background px-6 py-3 text-sm font-semibold text-primary transition hover:bg-primary/5"
                 >
-                  Explore our work
+                  Join Our Community
                 </Link>
               </motion.div>
             </FadeUp>
 
-            <FadeUp delay={1} className="mt-12 flex flex-wrap items-center gap-x-8 gap-y-3 text-sm text-foreground/70">
+            <FadeUp delay={0.8} className="mt-12 flex flex-wrap items-center gap-x-8 gap-y-3 text-sm text-foreground/70">
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="h-4 w-4 text-highlight" />
                 Mobile-first
@@ -222,42 +207,22 @@ function Home() {
         </div>
       </section>
 
-      {/* HELPS WITH */}
+      {/* WHY GIMBLE */}
       <Section className="!py-16">
-        <div className="grid items-end gap-8 lg:grid-cols-12">
-          <FadeUp className="lg:col-span-5">
-            <SectionHeading
-              eyebrow="What we help with"
-              title="The weight of the everyday, held early."
-            />
-          </FadeUp>
-          <div className="lg:col-span-7">
-            <FadeUp delay={0.1} className="text-lg leading-relaxed text-foreground/75">
-              We're not a therapy company or a clinical platform. We're here for
-              the moments before things get worse: the quiet stress, the
-              creeping burnout, the loneliness no one talks about.
-            </FadeUp>
-            <StaggerGroup stagger={0.04} className="mt-8 flex flex-wrap gap-2">
-              {helpsWith.map((item) => (
-                <StaggerItem key={item} variant="scaleIn">
-                  <motion.span
-                    whileHover={{ scale: 1.06, y: -2 }}
-                    className="inline-block rounded-full border border-primary/15 bg-primary/5 px-4 py-2 text-sm font-medium text-primary"
-                  >
-                    {item}
-                  </motion.span>
-                </StaggerItem>
-              ))}
-            </StaggerGroup>
-          </div>
-        </div>
+        <FadeUp>
+          <SectionHeading
+            eyebrow="Why Gimble?"
+            title="Mental wellbeing shouldn't only matter during a crisis."
+            description="We believe everyone deserves access to support that helps them navigate everyday challenges before they become overwhelming. Whether you're feeling stressed, emotionally exhausted, burned out, or simply trying to build healthier habits, Gimble is here to support you."
+          />
+        </FadeUp>
       </Section>
 
-      {/* PROGRAMS */}
+      {/* HOW WE CREATE IMPACT */}
       <Section className="!pt-0">
         <FadeUp>
           <SectionHeading
-            eyebrow="Our programs"
+            eyebrow="How We Create Impact"
             title="Three ways we show up."
             description="A complete ecosystem for mental wellness: digital support, ongoing connection, and broader community impact."
           />
@@ -314,7 +279,7 @@ function Home() {
             </FadeUp>
             <FadeUp delay={0.15}>
               <blockquote className="mt-6 font-display text-3xl font-semibold leading-[1.15] text-primary sm:text-4xl lg:text-5xl">
-                "Mental health support should be accessible{" "}
+                "Mental wellness support should be accessible{" "}
                 <span className="italic">before</span> people reach a breaking
                 point."
               </blockquote>
@@ -401,7 +366,7 @@ function Home() {
             <div className="p-8 sm:p-12 lg:p-16">
               <SectionEyebrow>Community</SectionEyebrow>
               <h3 className="mt-4 font-display text-3xl font-semibold leading-tight text-primary sm:text-4xl">
-                You don't have to do this alone.
+                You don't have to do it alone.
               </h3>
               <p className="mt-4 text-foreground/75">
                 Through our online community, virtual conversations, and
@@ -422,7 +387,68 @@ function Home() {
         </FadeUp>
       </Section>
 
-      <CtaBanner />
+      {/* JOIN THE MOVEMENT */}
+      <Section className="!pt-0">
+        <motion.div
+          initial={{ opacity: 0, y: 40, scale: 0.97 }}
+          whileInView={{ opacity: 1, y: 0, scale: 1 }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
+          style={{ backgroundColor: "var(--teal)" }}
+          className="relative mx-auto max-w-7xl overflow-hidden rounded-4xl px-6 py-16 text-white sm:px-12 sm:py-20"
+        >
+          <motion.div
+            aria-hidden
+            animate={{ scale: [1, 1.25, 1], opacity: [0.3, 0.55, 0.3] }}
+            transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+            className="pointer-events-none absolute -right-20 -top-20 h-72 w-72 rounded-full bg-secondary/30 blur-3xl"
+          />
+          <motion.div
+            aria-hidden
+            animate={{ scale: [1, 1.2, 1], opacity: [0.2, 0.45, 0.2] }}
+            transition={{ duration: 9, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+            className="pointer-events-none absolute -bottom-20 -left-20 h-72 w-72 rounded-full bg-secondary/20 blur-3xl"
+          />
+          <div className="relative max-w-2xl">
+            <p className="font-display text-xs font-semibold uppercase tracking-[0.2em] text-white/70">
+              Join the Movement
+            </p>
+            <h2 className="mt-3 font-display text-4xl font-semibold leading-[1.05] sm:text-5xl">
+              Mental wellness is everyone's responsibility.
+            </h2>
+            <p className="mt-4 text-lg text-white/85">
+              Whether you download the app, join our community, volunteer your time, or partner with us, you're helping create a future where no one has to struggle alone.
+            </p>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <motion.div whileHover={{ y: -3 }} whileTap={{ scale: 0.97 }}>
+                <Link
+                  to="/app"
+                  className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-semibold text-[color:var(--teal)] shadow-lg transition hover:brightness-95"
+                >
+                  Download the App
+                  <ArrowRight className="h-4 w-4" />
+                </Link>
+              </motion.div>
+              <motion.div whileHover={{ y: -3 }} whileTap={{ scale: 0.97 }}>
+                <Link
+                  to="/community"
+                  className="inline-flex items-center gap-2 rounded-full border border-white/30 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
+                >
+                  Join the Community
+                </Link>
+              </motion.div>
+              <motion.div whileHover={{ y: -3 }} whileTap={{ scale: 0.97 }}>
+                <Link
+                  to="/get-involved"
+                  className="inline-flex items-center gap-2 rounded-full border border-white/30 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
+                >
+                  Volunteer With Us
+                </Link>
+              </motion.div>
+            </div>
+          </div>
+        </motion.div>
+      </Section>
     </>
   );
 }

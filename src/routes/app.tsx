@@ -55,23 +55,23 @@ const features = [
   },
   {
     icon: Sparkles,
-    title: "Coping tools and exercises",
-    body: "Breathing, grounding, reframing: practical techniques for the hard moments.",
+    title: "Stress and burnout support",
+    body: "Practical tools and exercises designed to help you manage everyday emotional challenges.",
   },
   {
     icon: BookOpen,
-    title: "Wellness education",
+    title: "Educational content",
     body: "Short, honest reads on mental wellness, written for an African audience.",
   },
   {
     icon: Repeat,
-    title: "Habit building",
-    body: "Small consistent actions that compound into healthier mental habits.",
+    title: "Practical coping tools",
+    body: "Breathing, grounding, reframing: practical techniques for the hard moments.",
   },
   {
     icon: Activity,
-    title: "Track your wellbeing",
-    body: "See how you're really doing over time. Spot what helps. Adjust what doesn't.",
+    title: "Self-reflection exercises",
+    body: "Small consistent actions that compound into healthier mental habits.",
   },
 ];
 
@@ -85,13 +85,10 @@ function AppPage() {
               <SectionEyebrow>The Gimble App</SectionEyebrow>
             </FadeUp>
             <h1 className="mt-5 font-display text-5xl font-semibold leading-[1.05] text-primary sm:text-6xl">
-              <WordReveal text="A small, calm space, every day." />
+              <WordReveal text="Mental wellness support in your pocket." />
             </h1>
             <FadeUp delay={0.4} className="mt-6 max-w-xl text-lg leading-relaxed text-foreground/75">
-              The Gimble app is publicly accessible. Anyone can download it and
-              start with one small thing: a check-in, a breath, a journal
-              prompt. We're not here to replace therapy; we're here so you can
-              manage everyday mental strain earlier and more consistently.
+              The Gimble app is designed to help you navigate everyday emotional challenges through guided support, practical tools, and healthy habits. Whether you're dealing with stress, burnout, anxiety, or emotional exhaustion, Gimble provides a safe and supportive space to take care of your mental wellbeing.
             </FadeUp>
             <FadeUp delay={0.55} className="mt-8 flex flex-wrap gap-3">
               <motion.a
@@ -156,7 +153,7 @@ function AppPage() {
       <Section>
         <FadeUp>
           <SectionHeading
-            eyebrow="What's inside"
+            eyebrow="What You'll Find"
             title="Tools that meet you where you are."
           />
         </FadeUp>
@@ -182,6 +179,28 @@ function AppPage() {
             </StaggerItem>
           ))}
         </StaggerGroup>
+      </Section>
+
+      <Section className="!pt-0">
+        <FadeUp>
+          <div className="mx-auto max-w-3xl rounded-3xl border border-border bg-card p-8 text-center sm:p-12">
+            <p className="font-display text-xs font-semibold uppercase tracking-[0.2em] text-primary/80">
+              A daily practice
+            </p>
+            <h3 className="mt-4 font-display text-3xl font-semibold leading-tight text-primary sm:text-4xl">
+              "Mental wellness isn't a one-time event. It's a daily practice."
+            </h3>
+            <motion.a
+              href="#"
+              whileHover={{ y: -3 }}
+              whileTap={{ scale: 0.97 }}
+              className="mt-8 inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/20 transition"
+            >
+              <Apple className="h-5 w-5" />
+              Download the App
+            </motion.a>
+          </div>
+        </FadeUp>
       </Section>
 
       <CtaBanner
