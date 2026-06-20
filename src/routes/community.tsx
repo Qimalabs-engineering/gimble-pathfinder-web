@@ -29,29 +29,34 @@ export const Route = createFileRoute("/community")({
 
 const initiatives = [
   {
-    icon: Users2,
-    title: "The Gimble online community",
-    body: "A safe, moderated space to share, listen, and learn alongside others walking similar paths.",
-  },
-  {
     icon: MessageCircle,
-    title: "Virtual wellness conversations",
+    title: "Wellness conversations",
     body: "Real, unscripted conversations on the things we usually keep to ourselves.",
   },
   {
+    icon: Calendar,
+    title: "Virtual events",
+    body: "Expert-led webinars and workshops on practical mental wellness topics.",
+  },
+  {
     icon: Mic,
-    title: "Expert-led webinars",
+    title: "Learning sessions",
     body: "Sessions with psychologists, coaches, and practitioners: practical and relatable.",
   },
   {
     icon: Trophy,
-    title: "Community wellness challenges",
+    title: "Community challenges",
     body: "Short, supportive challenges that build healthier habits together.",
   },
   {
-    icon: Calendar,
-    title: "Peer learning and support",
-    body: "Discussion groups where members share what's working and what isn't.",
+    icon: Users2,
+    title: "Shared experiences",
+    body: "A safe, moderated space to share, listen, and learn alongside others walking similar paths.",
+  },
+  {
+    icon: MessageCircle,
+    title: "Encouragement and accountability",
+    body: "Peer support that helps you stay consistent and motivated on your wellness journey.",
   },
 ];
 
@@ -63,8 +68,8 @@ function CommunityPage() {
           <FadeUp>
             <SectionHeading
               eyebrow="Community & Connection"
-              title="You don't have to carry it alone."
-              description="Mental wellness shouldn't be a solo journey. Our online community and virtual events create safe spaces where Africans support one another, reduce stigma, and learn together."
+              title="You don't have to do it alone."
+              description="The Gimble Community is a supportive space where people come together to learn, grow, and have honest conversations about mental wellbeing. We believe that connection is an important part of emotional wellness."
             />
             <form
               onSubmit={(e) => e.preventDefault()}
@@ -109,7 +114,7 @@ function CommunityPage() {
 
       <Section className="!pt-0">
         <FadeUp>
-          <SectionHeading eyebrow="Key initiatives" title="Ways to connect with Gimble." />
+          <SectionHeading eyebrow="Inside the Community" title="Ways to connect with Gimble." />
         </FadeUp>
         <StaggerGroup className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {initiatives.map(({ icon: Icon, title, body }) => (
@@ -135,11 +140,28 @@ function CommunityPage() {
         </StaggerGroup>
       </Section>
 
+      <Section className="!pt-0">
+        <FadeUp>
+          <div className="mx-auto max-w-3xl rounded-3xl border border-border bg-card p-8 text-center sm:p-12">
+            <h3 className="font-display text-2xl font-semibold text-primary sm:text-3xl">
+              Whether you're beginning your wellness journey or simply looking for a supportive community, there's a place for you here.
+            </h3>
+            <motion.button
+              whileHover={{ y: -3 }}
+              whileTap={{ scale: 0.97 }}
+              className="mt-8 inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/20"
+            >
+              Join the Community
+            </motion.button>
+          </div>
+        </FadeUp>
+      </Section>
+
       <CtaBanner
         title="Be part of the conversation."
         subtitle="Subscribe to hear about upcoming events, workshops, and community challenges."
         primary={{ label: "Subscribe", to: "/contact" }}
-        secondary={{ label: "See our programs", to: "/get-involved" }}
+        secondary={{ label: "See our programs", to: "/programs" }}
       />
     </>
   );

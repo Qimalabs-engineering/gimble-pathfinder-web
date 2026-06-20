@@ -33,13 +33,13 @@ const programs = [
     number: "01",
     title: "Digital Support",
     intro:
-      "The Gimble app is the foundation of our work, our primary tool for delivering mental wellness support at scale. Individuals can access guided support for everyday challenges like stress, burnout, anxiety, and life pressures.",
+      "Our mobile app provides guided support for everyday emotional challenges, helping people build healthier habits and improve their wellbeing through accessible, practical tools.",
     initiatives: [
       "Guided wellness journeys",
       "Daily emotional check-ins",
-      "Wellness exercises and coping tools",
-      "Mental wellness education and resources",
-      "Self-reflection and habit-building activities",
+      "Wellness exercises",
+      "Educational resources",
+      "Habit-building activities",
     ],
   },
   {
@@ -47,13 +47,13 @@ const programs = [
     number: "02",
     title: "Community & Connection",
     intro:
-      "Mental wellness shouldn't be a journey people navigate alone. Through our online community and virtual events, we create safe spaces where individuals learn, connect, share, and support one another, reducing stigma along the way.",
+      "We create safe online spaces where people can learn, connect, share experiences, and participate in conversations that reduce stigma and promote emotional wellbeing.",
     initiatives: [
-      "The Gimble online community",
-      "Virtual wellness conversations",
-      "Expert-led webinars and workshops",
-      "Community wellness challenges",
-      "Peer learning and support discussions",
+      "Online community",
+      "Virtual wellness events",
+      "Expert conversations",
+      "Community challenges",
+      "Peer support discussions",
     ],
   },
   {
@@ -61,14 +61,13 @@ const programs = [
     number: "03",
     title: "Outreach & Awareness",
     intro:
-      "We take mental wellness education and support directly into communities through physical events, workshops, partnerships, and awareness campaigns, meeting people where they are.",
+      "We take mental wellness beyond digital spaces through physical events and partnerships that increase awareness and access across communities.",
     initiatives: [
       "Campus wellness programs",
-      "Community workshops and wellness events",
-      "Mental health awareness campaigns",
-      "NGO and community partnerships",
-      "Workplace wellness partnerships",
-      "Wellness outreach for underserved communities",
+      "Community workshops",
+      "Awareness campaigns",
+      "NGO partnerships",
+      "Workplace wellness initiatives",
     ],
   },
 ];
