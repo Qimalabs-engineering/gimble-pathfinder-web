@@ -161,6 +161,7 @@ function ContactPage() {
         </div>
       </div>
     </Section>
+    </>
   );
 }
 
