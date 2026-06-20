@@ -1,5 +1,4 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Check, X } from "lucide-react";
 import { motion } from "framer-motion";
 
 import heroImg from "@/assets/hero-woman.jpg";
@@ -20,12 +19,31 @@ export const Route = createFileRoute("/about")({
       {
         property: "og:description",
         content:
-          "Our vision, mission, and the tone we bring to mental wellness across Africa.",
+          "Our vision, mission, and the values that guide our work in mental wellness across Africa.",
       },
     ],
   }),
   component: AboutPage,
 });
+
+const values = [
+  {
+    title: "Accessibility",
+    body: "Support should be available to everyone, regardless of background or location.",
+  },
+  {
+    title: "Prevention",
+    body: "Early support changes lives.",
+  },
+  {
+    title: "Community",
+    body: "Healing and growth happen better together.",
+  },
+  {
+    title: "Compassion",
+    body: "We meet people with empathy, respect, and understanding.",
+  },
+];
 
 function AboutPage() {
   return (
@@ -34,9 +52,9 @@ function AboutPage() {
         <div className="grid items-end gap-12 lg:grid-cols-12">
           <FadeUp className="lg:col-span-7">
             <SectionHeading
-              eyebrow="About Gimble"
-              title="A warm, practical place for the everyday weight of life."
-              description="Gimble Foundation is a nonprofit mental health organization using technology, education, and community support to help Africans navigate everyday emotional and mental challenges."
+              eyebrow="Who We Are"
+              title="Gimble Foundation is a nonprofit organization committed to making mental wellness support accessible to Africans."
+              description="We believe that mental wellbeing should not be a privilege or something people only seek when they reach a crisis. Everyone deserves practical, everyday support that helps them manage life's pressures and build emotional resilience. By combining technology, community, and outreach, we're creating a future where mental wellness is understood, prioritized, and accessible to all."
             />
           </FadeUp>
           <Parallax offset={30} className="lg:col-span-5">
@@ -67,7 +85,7 @@ function AboutPage() {
               Vision
             </p>
             <h3 className="mt-3 font-display text-3xl font-semibold leading-tight text-primary">
-              To make mental health support accessible, practical, and
+              To make mental wellness support accessible, practical, and
               stigma-free for Africans everywhere.
             </h3>
           </StaggerItem>
@@ -76,63 +94,36 @@ function AboutPage() {
               Mission
             </p>
             <h3 className="mt-3 font-display text-3xl font-semibold leading-tight">
-              To provide Africans with simple and continuous mental health
-              support through technology, education, partnerships, and
-              community programs.
+              To empower Africans with accessible mental wellness support through technology, education, and community-driven initiatives.
             </h3>
           </StaggerItem>
         </StaggerGroup>
       </Section>
 
-      {/* We are / are not */}
+      {/* Values */}
       <Section className="!pt-0">
         <FadeUp>
           <SectionHeading
-            eyebrow="How we show up"
-            title="What Gimble is, and what it isn't."
-            description="We're clear about our role. We exist for the early moments, the quiet strain, the in-between."
+            eyebrow="Our Values"
+            title="The principles that guide our work."
           />
         </FadeUp>
-        <div className="mt-12 grid gap-6 lg:grid-cols-2">
-          <div className="rounded-3xl border border-border bg-card p-8">
-            <p className="font-display text-sm font-semibold uppercase tracking-[0.18em] text-primary">
-              We are
-            </p>
-            <ul className="mt-5 space-y-4">
-              {[
-                "A mental wellness and emotional support organization",
-                "Focused on prevention, awareness, and early support",
-                "Human, warm, calm, practical, hopeful, non-judgmental",
-              ].map((item) => (
-                <li key={item} className="flex items-start gap-3 text-foreground/85">
-                  <span className="mt-0.5 grid h-6 w-6 flex-shrink-0 place-items-center rounded-full bg-secondary text-secondary-foreground">
-                    <Check className="h-4 w-4" />
-                  </span>
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div className="rounded-3xl border border-border bg-muted p-8">
-            <p className="font-display text-sm font-semibold uppercase tracking-[0.18em] text-foreground/60">
-              We are not
-            </p>
-            <ul className="mt-5 space-y-4">
-              {[
-                "A therapy company",
-                "A clinical psychiatry platform",
-                "A replacement for professional mental health care",
-              ].map((item) => (
-                <li key={item} className="flex items-start gap-3 text-foreground/70">
-                  <span className="mt-0.5 grid h-6 w-6 flex-shrink-0 place-items-center rounded-full bg-foreground/10 text-foreground/60">
-                    <X className="h-4 w-4" />
-                  </span>
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
+        <StaggerGroup className="mt-10 grid gap-6 sm:grid-cols-2">
+          {values.map(({ title, body }) => (
+            <StaggerItem key={title}>
+              <motion.div
+                whileHover={{ y: -6 }}
+                transition={{ type: "spring", stiffness: 260, damping: 22 }}
+                className="h-full rounded-3xl border border-border bg-card p-7 hover:shadow-xl"
+              >
+                <h3 className="font-display text-xl font-semibold text-primary">
+                  {title}
+                </h3>
+                <p className="mt-2 text-sm leading-relaxed text-foreground/70">{body}</p>
+              </motion.div>
+            </StaggerItem>
+          ))}
+        </StaggerGroup>
       </Section>
 
       {/* Core message */}
@@ -142,14 +133,14 @@ function AboutPage() {
             Core message
           </p>
           <blockquote className="mt-5 font-display text-3xl font-semibold leading-tight text-primary sm:text-4xl">
-            "Mental health support should be accessible before people reach a
+            "Mental wellness support should be accessible before people reach a
             breaking point."
           </blockquote>
         </div>
       </section>
 
       <CtaBanner
-        title="Join us in building a calmer Africa."
+        title="Join us in building a healthier Africa."
         subtitle="Whether you download the app or partner with us, every step makes early support more accessible."
         primary={{ label: "Get the App", to: "/app" }}
         secondary={{ label: "Partner with us", to: "/get-involved" }}
