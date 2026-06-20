@@ -10,8 +10,8 @@ export function CtaBanner({
 }: {
   title?: string;
   subtitle?: string;
-  primary?: { label: string; to: "/app" | "/community" | "/get-involved" | "/contact" };
-  secondary?: { label: string; to: "/app" | "/community" | "/get-involved" | "/contact" };
+  primary?: { label: string; to: string };
+  secondary?: { label: string; to: string };
 }) {
   return (
     <section className="px-4 pb-24 sm:px-6 lg:px-8">
