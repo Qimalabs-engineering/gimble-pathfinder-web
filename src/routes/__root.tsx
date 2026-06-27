@@ -105,8 +105,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "@context": "https://schema.org",
           "@type": "Organization",
           name: "Gimble Foundation",
-          url: "https://gimble-pathfinder-web.lovable.app",
-          logo: "https://gimble-pathfinder-web.lovable.app/favicon.ico",
+          url: "https://www.gimblefoundation.org",
+          logo: "https://www.gimblefoundation.org/favicon.ico",
           description:
             "Nonprofit mental wellness organization using technology, education, and community to make support accessible for Africans.",
           sameAs: [],

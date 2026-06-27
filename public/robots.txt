@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://gimble-pathfinder-web.lovable.app/sitemap.xml
+Sitemap: https://www.gimblefoundation.org/sitemap.xml

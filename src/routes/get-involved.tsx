@@ -22,9 +22,9 @@ export const Route = createFileRoute("/get-involved")({
         content:
           "Be part of making mental wellness support more accessible across Africa.",
       },
-      { property: "og:url", content: "https://gimble-pathfinder-web.lovable.app/get-involved" },
+      { property: "og:url", content: "https://www.gimblefoundation.org/get-involved" },
     ],
-    links: [{ rel: "canonical", href: "https://gimble-pathfinder-web.lovable.app/get-involved" }],
+    links: [{ rel: "canonical", href: "https://www.gimblefoundation.org/get-involved" }],
   }),
   component: GetInvolvedPage,
 });
