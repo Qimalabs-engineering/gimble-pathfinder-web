@@ -46,14 +46,14 @@ export function SiteHeader() {
         <Link to="/" className="flex items-center group" aria-label="Gimble home">
           <motion.img
             src={wordmarkDark}
-            alt="Gimble"
+            alt="Gimble Foundation logo"
             whileHover={{ scale: 1.04 }}
             transition={{ type: "spring", stiffness: 300, damping: 18 }}
             className="h-8 w-auto sm:h-9 dark:hidden"
           />
           <motion.img
             src={wordmarkLight}
-            alt="Gimble"
+            alt="Gimble Foundation logo"
             whileHover={{ scale: 1.04 }}
             transition={{ type: "spring", stiffness: 300, damping: 18 }}
             className="hidden h-8 w-auto sm:h-9 dark:block"

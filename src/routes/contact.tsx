@@ -95,9 +95,9 @@ function ContactPage() {
           >
             {sent ? (
               <div className="py-10 text-center">
-                <h3 className="font-display text-2xl font-semibold text-primary">
+                <h2 className="font-display text-2xl font-semibold text-primary">
                   Thank you.
-                </h3>
+                </h2>
                 <p className="mt-3 text-foreground/70">
                   Your message is on its way. We'll be in touch soon.
                 </p>
@@ -149,7 +149,7 @@ function ContactPage() {
 
     <Section className="!pt-0">
       <div className="mx-auto max-w-3xl rounded-3xl border border-border bg-card p-8 text-center sm:p-12">
-        <h3 className="font-display text-2xl font-semibold text-primary">Stay Connected</h3>
+        <h2 className="font-display text-2xl font-semibold text-primary">Stay Connected</h2>
         <p className="mt-3 text-foreground/70">
           Follow our journey, join our conversations, and become part of a growing movement working to make mental wellness support accessible for Africans.
         </p>

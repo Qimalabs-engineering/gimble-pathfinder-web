@@ -145,9 +145,9 @@ function ProgramsPage() {
                     {number}
                   </span>
                 </div>
-                <h3 className="mt-6 font-display text-3xl font-semibold leading-tight text-primary">
+                <h2 className="mt-6 font-display text-3xl font-semibold leading-tight text-primary">
                   {title}
-                </h3>
+                </h2>
                 <p className="mt-4 text-foreground/75">{intro}</p>
                 {idx === 2 && (
                   <div className="mt-8 overflow-hidden rounded-2xl border border-border">
