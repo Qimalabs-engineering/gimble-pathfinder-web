@@ -99,9 +99,9 @@ function GetInvolvedPage() {
                 >
                   <Icon className="h-6 w-6" />
                 </motion.span>
-                <h3 className="mt-5 font-display text-xl font-semibold text-primary">
+                <h2 className="mt-5 font-display text-xl font-semibold text-primary">
                   {title}
-                </h3>
+                </h2>
                 <p className="mt-2 flex-1 text-sm leading-relaxed text-foreground/70">
                   {body}
                 </p>
@@ -121,9 +121,9 @@ function GetInvolvedPage() {
       <Section className="!pt-0">
         <FadeUp>
           <div className="mx-auto max-w-3xl rounded-3xl border border-border bg-card p-8 text-center sm:p-12">
-            <h3 className="font-display text-2xl font-semibold text-primary sm:text-3xl">
+            <h2 className="font-display text-2xl font-semibold text-primary sm:text-3xl">
               Together, we can make mental wellness support more accessible across Africa.
-            </h3>
+            </h2>
             <p className="mt-4 text-foreground/70">
               Every contribution, partnership, and conversation brings us closer to a continent where no one has to struggle alone.
             </p>

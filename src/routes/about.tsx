@@ -87,18 +87,18 @@ function AboutPage() {
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-secondary-foreground">
               Vision
             </p>
-            <h3 className="mt-3 font-display text-3xl font-semibold leading-tight text-primary">
+            <h2 className="mt-3 font-display text-3xl font-semibold leading-tight text-primary">
               To make mental wellness support accessible, practical, and
               stigma-free for Africans everywhere.
-            </h3>
+            </h2>
           </StaggerItem>
           <StaggerItem as="article" className="rounded-3xl border border-border bg-primary p-8 text-primary-foreground lg:p-10">
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-highlight">
               Mission
             </p>
-            <h3 className="mt-3 font-display text-3xl font-semibold leading-tight">
+            <h2 className="mt-3 font-display text-3xl font-semibold leading-tight">
               To empower Africans with accessible mental wellness support through technology, education, and community-driven initiatives.
-            </h3>
+            </h2>
           </StaggerItem>
         </StaggerGroup>
       </Section>
@@ -119,9 +119,9 @@ function AboutPage() {
                 transition={{ type: "spring", stiffness: 260, damping: 22 }}
                 className="h-full rounded-3xl border border-border bg-card p-7 hover:shadow-xl"
               >
-                <h3 className="font-display text-xl font-semibold text-primary">
+                <h2 className="font-display text-xl font-semibold text-primary">
                   {title}
-                </h3>
+                </h2>
                 <p className="mt-2 text-sm leading-relaxed text-foreground/70">{body}</p>
               </motion.div>
             </StaggerItem>
