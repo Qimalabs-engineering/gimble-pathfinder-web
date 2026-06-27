@@ -16,9 +16,12 @@ export const Route = createFileRoute("/contact")({
       { property: "og:title", content: "Contact — Gimble Foundation" },
       {
         property: "og:description",
-        content: "Reach out to Gimble Foundation.",
+        content:
+          "Contact Gimble Foundation for partnerships, volunteering opportunities, media inquiries, or to join our app waitlist.",
       },
+      { property: "og:url", content: "https://gimble-pathfinder-web.lovable.app/contact" },
     ],
+    links: [{ rel: "canonical", href: "https://gimble-pathfinder-web.lovable.app/contact" }],
   }),
   component: ContactPage,
 });
