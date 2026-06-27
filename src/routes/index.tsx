@@ -39,10 +39,10 @@ export const Route = createFileRoute("/")({
         content:
           "Practical, stigma-free mental wellness support for Africans through the Gimble app, community, and outreach.",
       },
-      { property: "og:url", content: "https://gimble-pathfinder-web.lovable.app/" },
+      { property: "og:url", content: "https://www.gimblefoundation.org/" },
     ],
     links: [
-      { rel: "canonical", href: "https://gimble-pathfinder-web.lovable.app/" },
+      { rel: "canonical", href: "https://www.gimblefoundation.org/" },
     ],
     scripts: [
       {
@@ -51,7 +51,7 @@ export const Route = createFileRoute("/")({
           "@context": "https://schema.org",
           "@type": "WebSite",
           name: "Gimble Foundation",
-          url: "https://gimble-pathfinder-web.lovable.app",
+          url: "https://www.gimblefoundation.org",
           description:
             "Nonprofit mental wellness support for Africans through the Gimble app, community, and outreach.",
         }),

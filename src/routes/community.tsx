@@ -22,9 +22,9 @@ export const Route = createFileRoute("/community")({
         content:
           "Safe spaces and virtual events where Africans connect around mental wellness.",
       },
-      { property: "og:url", content: "https://gimble-pathfinder-web.lovable.app/community" },
+      { property: "og:url", content: "https://www.gimblefoundation.org/community" },
     ],
-    links: [{ rel: "canonical", href: "https://gimble-pathfinder-web.lovable.app/community" }],
+    links: [{ rel: "canonical", href: "https://www.gimblefoundation.org/community" }],
   }),
   component: CommunityPage,
 });

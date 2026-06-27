@@ -21,9 +21,9 @@ export const Route = createFileRoute("/about")({
         content:
           "Our vision, mission, and the values that guide our work in mental wellness across Africa.",
       },
-      { property: "og:url", content: "https://gimble-pathfinder-web.lovable.app/about" },
+      { property: "og:url", content: "https://www.gimblefoundation.org/about" },
     ],
-    links: [{ rel: "canonical", href: "https://gimble-pathfinder-web.lovable.app/about" }],
+    links: [{ rel: "canonical", href: "https://www.gimblefoundation.org/about" }],
   }),
   component: AboutPage,
 });

@@ -22,9 +22,9 @@ export const Route = createFileRoute("/programs")({
         content:
           "How Gimble Foundation delivers mental wellness support: app, community, and outreach.",
       },
-      { property: "og:url", content: "https://gimble-pathfinder-web.lovable.app/programs" },
+      { property: "og:url", content: "https://www.gimblefoundation.org/programs" },
     ],
-    links: [{ rel: "canonical", href: "https://gimble-pathfinder-web.lovable.app/programs" }],
+    links: [{ rel: "canonical", href: "https://www.gimblefoundation.org/programs" }],
     scripts: [
       {
         type: "application/ld+json",

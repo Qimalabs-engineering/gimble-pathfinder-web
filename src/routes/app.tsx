@@ -37,9 +37,9 @@ export const Route = createFileRoute("/app")({
         content:
           "Mobile-first mental wellness support: guided journeys, check-ins, coping tools, habits.",
       },
-      { property: "og:url", content: "https://gimble-pathfinder-web.lovable.app/app" },
+      { property: "og:url", content: "https://www.gimblefoundation.org/app" },
     ],
-    links: [{ rel: "canonical", href: "https://gimble-pathfinder-web.lovable.app/app" }],
+    links: [{ rel: "canonical", href: "https://www.gimblefoundation.org/app" }],
     scripts: [
       {
         type: "application/ld+json",
