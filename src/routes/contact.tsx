@@ -35,6 +35,7 @@ function ContactPage() {
       <div className="grid gap-12 lg:grid-cols-12">
         <div className="lg:col-span-5">
           <SectionHeading
+            as="h1"
             eyebrow="Contact"
             title="We'd love to hear from you."
             description="Whether you have a question, want to partner with us, volunteer, or simply learn more about our work, we'd be happy to connect."
