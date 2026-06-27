@@ -117,6 +117,7 @@ function ProgramsPage() {
       <Section className="!pb-12 !pt-20">
         <FadeUp>
           <SectionHeading
+            as="h1"
             eyebrow="Our programs"
             title="A complete ecosystem for mental wellness."
             description="Gimble Foundation delivers its mission through three core programs that make mental wellness support accessible, practical, and community-driven for Africans."
