@@ -21,7 +21,9 @@ export const Route = createFileRoute("/about")({
         content:
           "Our vision, mission, and the values that guide our work in mental wellness across Africa.",
       },
+      { property: "og:url", content: "https://gimble-pathfinder-web.lovable.app/about" },
     ],
+    links: [{ rel: "canonical", href: "https://gimble-pathfinder-web.lovable.app/about" }],
   }),
   component: AboutPage,
 });
@@ -52,6 +54,7 @@ function AboutPage() {
         <div className="grid items-end gap-12 lg:grid-cols-12">
           <FadeUp className="lg:col-span-7">
             <SectionHeading
+              as="h1"
               eyebrow="Who We Are"
               title="Gimble Foundation is a nonprofit organization committed to making mental wellness support accessible to Africans."
               description="We believe that mental wellbeing should not be a privilege or something people only seek when they reach a crisis. Everyone deserves practical, everyday support that helps them manage life's pressures and build emotional resilience. By combining technology, community, and outreach, we're creating a future where mental wellness is understood, prioritized, and accessible to all."

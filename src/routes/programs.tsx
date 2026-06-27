@@ -22,6 +22,45 @@ export const Route = createFileRoute("/programs")({
         content:
           "How Gimble Foundation delivers mental wellness support: app, community, and outreach.",
       },
+      { property: "og:url", content: "https://gimble-pathfinder-web.lovable.app/programs" },
+    ],
+    links: [{ rel: "canonical", href: "https://gimble-pathfinder-web.lovable.app/programs" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Service",
+              name: "Digital Support",
+              serviceType: "Mental wellness mobile application",
+              provider: { "@type": "Organization", name: "Gimble Foundation" },
+              areaServed: "Africa",
+              description:
+                "Mobile app delivering guided wellness journeys, daily check-ins, coping tools, and educational resources.",
+            },
+            {
+              "@type": "Service",
+              name: "Community & Connection",
+              serviceType: "Online peer support community",
+              provider: { "@type": "Organization", name: "Gimble Foundation" },
+              areaServed: "Africa",
+              description:
+                "Safe online community, virtual wellness events, and expert conversations that reduce stigma and build emotional wellbeing.",
+            },
+            {
+              "@type": "Service",
+              name: "Outreach & Awareness",
+              serviceType: "Mental wellness outreach and education",
+              provider: { "@type": "Organization", name: "Gimble Foundation" },
+              areaServed: "Africa",
+              description:
+                "Campus programs, community workshops, awareness campaigns, and partnerships that expand access to mental wellness support.",
+            },
+          ],
+        }),
+      },
     ],
   }),
   component: ProgramsPage,
@@ -78,6 +117,7 @@ function ProgramsPage() {
       <Section className="!pb-12 !pt-20">
         <FadeUp>
           <SectionHeading
+            as="h1"
             eyebrow="Our programs"
             title="A complete ecosystem for mental wellness."
             description="Gimble Foundation delivers its mission through three core programs that make mental wellness support accessible, practical, and community-driven for Africans."

@@ -22,7 +22,9 @@ export const Route = createFileRoute("/get-involved")({
         content:
           "Be part of making mental wellness support more accessible across Africa.",
       },
+      { property: "og:url", content: "https://gimble-pathfinder-web.lovable.app/get-involved" },
     ],
+    links: [{ rel: "canonical", href: "https://gimble-pathfinder-web.lovable.app/get-involved" }],
   }),
   component: GetInvolvedPage,
 });
@@ -55,6 +57,7 @@ function GetInvolvedPage() {
         <div className="grid items-end gap-12 lg:grid-cols-12">
           <FadeUp className="lg:col-span-7">
             <SectionHeading
+              as="h1"
               eyebrow="Join Us"
               title="Help us build a mentally healthier Africa."
               description="Creating a culture where mental wellbeing is valued requires all of us. Whether you volunteer your time, partner with us, or advocate for mental wellness in your community, you can make a meaningful difference."

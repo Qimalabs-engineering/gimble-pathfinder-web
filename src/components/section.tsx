@@ -30,19 +30,21 @@ export function SectionHeading({
   title,
   description,
   align = "left",
+  as: As = "h2",
 }: {
   eyebrow?: string;
   title: ReactNode;
   description?: ReactNode;
   align?: "left" | "center";
+  as?: "h1" | "h2";
 }) {
   const alignClass = align === "center" ? "text-center mx-auto" : "";
   return (
     <div className={`max-w-3xl ${alignClass}`}>
       {eyebrow && <SectionEyebrow>{eyebrow}</SectionEyebrow>}
-      <h2 className="mt-4 text-4xl font-display font-semibold leading-[1.05] text-primary sm:text-5xl">
+      <As className="mt-4 text-4xl font-display font-semibold leading-[1.05] text-primary sm:text-5xl">
         {title}
-      </h2>
+      </As>
       {description && (
         <p className="mt-5 text-lg leading-relaxed text-foreground/75">{description}</p>
       )}
