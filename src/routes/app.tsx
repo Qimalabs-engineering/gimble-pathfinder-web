@@ -37,6 +37,24 @@ export const Route = createFileRoute("/app")({
         content:
           "Mobile-first mental wellness support: guided journeys, check-ins, coping tools, habits.",
       },
+      { property: "og:url", content: "https://gimble-pathfinder-web.lovable.app/app" },
+    ],
+    links: [{ rel: "canonical", href: "https://gimble-pathfinder-web.lovable.app/app" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "SoftwareApplication",
+          name: "Gimble",
+          applicationCategory: "HealthApplication",
+          operatingSystem: "iOS, Android",
+          description:
+            "Gimble is a mental wellness app for everyday emotional support: guided wellness journeys, daily check-ins, coping tools, and habit-building.",
+          publisher: { "@type": "Organization", name: "Gimble Foundation" },
+          offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+        }),
+      },
     ],
   }),
   component: AppPage,
