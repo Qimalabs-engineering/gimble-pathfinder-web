@@ -69,6 +69,7 @@ function CommunityPage() {
         <div className="grid items-center gap-12 lg:grid-cols-2">
           <FadeUp>
             <SectionHeading
+              as="h1"
               eyebrow="Community & Connection"
               title="You don't have to do it alone."
               description="The Gimble Community is a supportive space where people come together to learn, grow, and have honest conversations about mental wellbeing. We believe that connection is an important part of emotional wellness."
