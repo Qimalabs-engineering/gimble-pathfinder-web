@@ -57,6 +57,7 @@ function GetInvolvedPage() {
         <div className="grid items-end gap-12 lg:grid-cols-12">
           <FadeUp className="lg:col-span-7">
             <SectionHeading
+              as="h1"
               eyebrow="Join Us"
               title="Help us build a mentally healthier Africa."
               description="Creating a culture where mental wellbeing is valued requires all of us. Whether you volunteer your time, partner with us, or advocate for mental wellness in your community, you can make a meaningful difference."
