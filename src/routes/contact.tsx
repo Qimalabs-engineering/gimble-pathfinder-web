@@ -116,10 +116,7 @@ function ContactPage() {
 
         <div className="lg:col-span-7">
           <form
-            onSubmit={(e) => {
-              e.preventDefault();
-              setSent(true);
-            }}
+            onSubmit={handleSubmit}
             className="rounded-3xl border border-border bg-card p-6 sm:p-10"
           >
             {sent ? (
