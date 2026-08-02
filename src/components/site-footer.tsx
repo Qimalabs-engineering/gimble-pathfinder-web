@@ -41,7 +41,7 @@ export function SiteFooter() {
             Practical, stigma-free wellness for Africans, everyday.
           </p>
           <form
-            onSubmit={(e) => e.preventDefault()}
+            onSubmit={handleSubscribe}
             className="mt-6 flex max-w-sm flex-col gap-2 sm:flex-row"
           >
             <label htmlFor="footer-newsletter-email" className="sr-only">
@@ -58,11 +58,22 @@ export function SiteFooter() {
 
             <button
               type="submit"
-              className="rounded-full bg-[color:var(--green)] px-5 py-2.5 text-sm font-semibold text-[color:var(--ink)] transition hover:brightness-95"
+              disabled={status === "sending"}
+              className="rounded-full bg-[color:var(--green)] px-5 py-2.5 text-sm font-semibold text-[color:var(--ink)] transition hover:brightness-95 disabled:opacity-60"
             >
-              Subscribe
+              {status === "sending" ? "Subscribing…" : "Subscribe"}
             </button>
           </form>
+          {status === "done" && (
+            <p className="mt-3 text-sm text-[color:var(--green)]">
+              You're on the list. Thank you for subscribing.
+            </p>
+          )}
+          {status === "error" && (
+            <p role="alert" className="mt-3 text-sm text-white/80">
+              Something went wrong. Please try again.
+            </p>
+          )}
         </div>
 
         <div>
