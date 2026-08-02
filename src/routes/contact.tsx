@@ -1,7 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Mail, MapPin, MessageSquare, Phone, Globe } from "lucide-react";
+import { Mail, MapPin, Phone, Globe } from "lucide-react";
 import { useState } from "react";
+import { useServerFn } from "@tanstack/react-start";
 
+import { submitContact } from "@/lib/api/forms.functions";
 import { Section, SectionHeading } from "@/components/section";
 
 export const Route = createFileRoute("/contact")({
@@ -28,6 +30,33 @@ export const Route = createFileRoute("/contact")({
 
 function ContactPage() {
   const [sent, setSent] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const send = useServerFn(submitContact);
+
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    setError(null);
+    setSubmitting(true);
+    const fd = new FormData(e.currentTarget);
+    try {
+      await send({
+        data: {
+          name: String(fd.get("name") ?? ""),
+          email: String(fd.get("email") ?? ""),
+          organization: String(fd.get("org") ?? ""),
+          subject: String(fd.get("subject") ?? "General enquiry"),
+          message: String(fd.get("message") ?? ""),
+        },
+      });
+      setSent(true);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Something went wrong. Please try again.");
+    } finally {
+      setSubmitting(false);
+    }
+  }
+
 
   return (
     <>
@@ -87,10 +116,7 @@ function ContactPage() {
 
         <div className="lg:col-span-7">
           <form
-            onSubmit={(e) => {
-              e.preventDefault();
-              setSent(true);
-            }}
+            onSubmit={handleSubmit}
             className="rounded-3xl border border-border bg-card p-6 sm:p-10"
           >
             {sent ? (
@@ -136,12 +162,18 @@ function ContactPage() {
                     placeholder="Tell us a little about what's on your mind…"
                   />
                 </div>
+                {error && (
+                  <p role="alert" className="text-sm font-medium text-destructive">
+                    {error}
+                  </p>
+                )}
 
                 <button
                   type="submit"
-                  className="self-start rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition hover:opacity-90"
+                  disabled={submitting}
+                  className="self-start rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition hover:opacity-90 disabled:opacity-60"
                 >
-                  Send message
+                  {submitting ? "Sending…" : "Send message"}
                 </button>
               </div>
             )}
