@@ -95,7 +95,7 @@ function CommunityPage() {
               description="The Gimble Community is a supportive space where people come together to learn, grow, and have honest conversations about mental wellbeing. We believe that connection is an important part of emotional wellness."
             />
             <form
-              onSubmit={(e) => e.preventDefault()}
+              onSubmit={handleJoin}
               className="mt-8 flex max-w-md flex-col gap-2 sm:flex-row"
             >
               <label htmlFor="community-join-email" className="sr-only">
@@ -114,11 +114,22 @@ function CommunityPage() {
                 whileHover={{ y: -2 }}
                 whileTap={{ scale: 0.97 }}
                 type="submit"
-                className="rounded-full bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/20"
+                disabled={status === "sending"}
+                className="rounded-full bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/20 disabled:opacity-60"
               >
-                Join the community
+                {status === "sending" ? "Joining…" : "Join the community"}
               </motion.button>
             </form>
+            {status === "done" && (
+              <p className="mt-3 text-sm font-medium text-primary">
+                You're in. Look out for our next community update.
+              </p>
+            )}
+            {status === "error" && (
+              <p role="alert" className="mt-3 text-sm text-destructive">
+                Something went wrong. Please try again.
+              </p>
+            )}
           </FadeUp>
           <Parallax offset={30}>
             <motion.div
