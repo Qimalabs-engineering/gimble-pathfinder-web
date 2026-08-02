@@ -66,6 +66,23 @@ const initiatives = [
 ];
 
 function CommunityPage() {
+  const [status, setStatus] = useState<"idle" | "sending" | "done" | "error">("idle");
+  const subscribe = useServerFn(subscribeEmail);
+
+  async function handleJoin(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    const form = e.currentTarget;
+    const email = String(new FormData(form).get("email") ?? "");
+    setStatus("sending");
+    try {
+      await subscribe({ data: { email, source: "community" } });
+      setStatus("done");
+      form.reset();
+    } catch {
+      setStatus("error");
+    }
+  }
+
   return (
     <>
       <Section className="!pt-20">
