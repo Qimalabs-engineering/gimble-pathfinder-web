@@ -1,7 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Mail, MapPin, MessageSquare, Phone, Globe } from "lucide-react";
+import { Mail, MapPin, Phone, Globe } from "lucide-react";
 import { useState } from "react";
+import { useServerFn } from "@tanstack/react-start";
 
+import { submitContact } from "@/lib/api/forms.functions";
 import { Section, SectionHeading } from "@/components/section";
 
 export const Route = createFileRoute("/contact")({
