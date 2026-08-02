@@ -110,8 +110,9 @@ function ContactPage() {
                 </div>
                 <Field label="Organization (optional)" name="org" />
                 <div>
-                  <label className="text-sm font-medium text-primary">Subject</label>
+                  <label htmlFor="contact-subject" className="text-sm font-medium text-primary">Subject</label>
                   <select
+                    id="contact-subject"
                     name="subject"
                     className="mt-2 w-full rounded-2xl border border-border bg-background px-4 py-3 text-sm focus:border-primary focus:outline-none"
                   >
@@ -125,8 +126,9 @@ function ContactPage() {
                   </select>
                 </div>
                 <div>
-                  <label className="text-sm font-medium text-primary">Message</label>
+                  <label htmlFor="contact-message" className="text-sm font-medium text-primary">Message</label>
                   <textarea
+                    id="contact-message"
                     name="message"
                     required
                     rows={5}
@@ -134,6 +136,7 @@ function ContactPage() {
                     placeholder="Tell us a little about what's on your mind…"
                   />
                 </div>
+
                 <button
                   type="submit"
                   className="self-start rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition hover:opacity-90"
@@ -180,10 +183,12 @@ function Field({
   type?: string;
   required?: boolean;
 }) {
+  const fieldId = `contact-field-${name}`;
   return (
     <div>
-      <label className="text-sm font-medium text-primary">{label}</label>
+      <label htmlFor={fieldId} className="text-sm font-medium text-primary">{label}</label>
       <input
+        id={fieldId}
         name={name}
         type={type}
         required={required}
@@ -192,3 +197,4 @@ function Field({
     </div>
   );
 }
+
