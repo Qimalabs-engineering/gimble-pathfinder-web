@@ -1,9 +1,30 @@
 import { Link } from "@tanstack/react-router";
 import { Instagram, Linkedin, Twitter } from "lucide-react";
+import { useState } from "react";
+import { useServerFn } from "@tanstack/react-start";
+
+import { subscribeEmail } from "@/lib/api/forms.functions";
 const wordmarkLight = "/brand/gimble-wordmark-light.png";
 
 
 export function SiteFooter() {
+  const [status, setStatus] = useState<"idle" | "sending" | "done" | "error">("idle");
+  const subscribe = useServerFn(subscribeEmail);
+
+  async function handleSubscribe(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    const form = e.currentTarget;
+    const email = String(new FormData(form).get("email") ?? "");
+    setStatus("sending");
+    try {
+      await subscribe({ data: { email, source: "newsletter" } });
+      setStatus("done");
+      form.reset();
+    } catch {
+      setStatus("error");
+    }
+  }
+
   return (
     <footer
       className="relative mt-24 overflow-hidden border-t border-border text-white"
