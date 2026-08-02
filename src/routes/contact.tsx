@@ -99,7 +99,11 @@ function ContactPage() {
               </span>
               <div>
                 <p className="text-sm font-semibold text-primary">Social Media</p>
-                <p className="text-sm text-foreground/70">Instagram, TikTok, X, Facebook, YouTube</p>
+                <div className="flex flex-wrap gap-x-3 text-sm text-foreground/70">
+                  <a href="https://www.instagram.com/gimblefoundation" target="_blank" rel="noopener noreferrer" className="hover:text-primary hover:underline">Instagram</a>
+                  <a href="https://www.tiktok.com/@gimblefoundation" target="_blank" rel="noopener noreferrer" className="hover:text-primary hover:underline">TikTok</a>
+                  <a href="https://x.com/gimbleorg" target="_blank" rel="noopener noreferrer" className="hover:text-primary hover:underline">X</a>
+                </div>
               </div>
             </div>
             <div className="flex items-start gap-4">
@@ -189,13 +193,20 @@ function ContactPage() {
           Follow our journey, join our conversations, and become part of a growing movement working to make mental wellness support accessible for Africans.
         </p>
         <div className="mt-6 flex flex-wrap justify-center gap-3">
-          {["Instagram", "TikTok", "X", "Facebook", "YouTube"].map((name) => (
-            <span
+          {[
+            { name: "Instagram", href: "https://www.instagram.com/gimblefoundation" },
+            { name: "TikTok", href: "https://www.tiktok.com/@gimblefoundation" },
+            { name: "X", href: "https://x.com/gimbleorg" },
+          ].map(({ name, href }) => (
+            <a
               key={name}
-              className="rounded-full border border-border bg-background px-4 py-2 text-sm font-medium text-primary"
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-full border border-border bg-background px-4 py-2 text-sm font-medium text-primary transition hover:border-primary hover:bg-primary/5"
             >
               {name}
-            </span>
+            </a>
           ))}
         </div>
       </div>

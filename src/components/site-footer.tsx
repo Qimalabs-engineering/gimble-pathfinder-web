@@ -1,10 +1,14 @@
 import { Link } from "@tanstack/react-router";
-import { Instagram, Linkedin, Twitter } from "lucide-react";
+import { Instagram, Twitter, Icon } from "lucide-react";
 import { useState } from "react";
 import { useServerFn } from "@tanstack/react-start";
 
 import { subscribeEmail } from "@/lib/api/forms.functions";
 const wordmarkLight = "/brand/gimble-wordmark-light.png";
+
+const tiktokIconNode = [
+  ["path", { d: "M9 12a4 4 0 1 0 4 4V4c.5.3 1.2.5 2 .5a2.5 2.5 0 0 0 2.5-2.5V2h-2a4.5 4.5 0 0 1-4.5 4.5V12Z", fill: "none", stroke: "currentColor", "stroke-width": "2", "stroke-linecap": "round", "stroke-linejoin": "round" }],
+] as import("lucide-react").IconNode;
 
 
 export function SiteFooter() {
@@ -102,14 +106,32 @@ export function SiteFooter() {
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-4 py-6 text-xs text-white/70 sm:flex-row sm:px-6 lg:px-8">
           <p>© {new Date().getFullYear()} Gimble Foundation. All rights reserved.</p>
           <div className="flex items-center gap-3">
-            <a href="#" aria-label="Twitter" className="rounded-full p-2 hover:bg-white/10">
+            <a
+              href="https://x.com/gimbleorg"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Gimble on X"
+              className="rounded-full p-2 hover:bg-white/10"
+            >
               <Twitter className="h-4 w-4" />
             </a>
-            <a href="#" aria-label="Instagram" className="rounded-full p-2 hover:bg-white/10">
+            <a
+              href="https://www.instagram.com/gimblefoundation"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Gimble on Instagram"
+              className="rounded-full p-2 hover:bg-white/10"
+            >
               <Instagram className="h-4 w-4" />
             </a>
-            <a href="#" aria-label="LinkedIn" className="rounded-full p-2 hover:bg-white/10">
-              <Linkedin className="h-4 w-4" />
+            <a
+              href="https://www.tiktok.com/@gimblefoundation"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Gimble on TikTok"
+              className="rounded-full p-2 hover:bg-white/10"
+            >
+              <Icon iconNode={tiktokIconNode} className="h-4 w-4" />
             </a>
           </div>
         </div>
