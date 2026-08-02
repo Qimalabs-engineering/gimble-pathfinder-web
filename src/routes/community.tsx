@@ -1,8 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { MessageCircle, Calendar, Mic, Trophy, Users2 } from "lucide-react";
 import { motion } from "framer-motion";
+import { useState } from "react";
+import { useServerFn } from "@tanstack/react-start";
 
 import communityImg from "@/assets/community.jpg";
+import { subscribeEmail } from "@/lib/api/forms.functions";
 import { Section, SectionHeading } from "@/components/section";
 import { CtaBanner } from "@/components/cta-banner";
 import { FadeUp, StaggerGroup, StaggerItem, Parallax } from "@/components/motion";
