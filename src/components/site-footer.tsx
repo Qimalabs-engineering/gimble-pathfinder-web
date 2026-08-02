@@ -1,10 +1,14 @@
 import { Link } from "@tanstack/react-router";
-import { Instagram, Linkedin, Twitter } from "lucide-react";
+import { Instagram, Twitter, Icon } from "lucide-react";
 import { useState } from "react";
 import { useServerFn } from "@tanstack/react-start";
 
 import { subscribeEmail } from "@/lib/api/forms.functions";
 const wordmarkLight = "/brand/gimble-wordmark-light.png";
+
+const tiktokIconNode: [string, Record<string, string>][] = [
+  ["path", { d: "M9 12a4 4 0 1 0 4 4V4c.5.3 1.2.5 2 .5a2.5 2.5 0 0 0 2.5-2.5V2h-2a4.5 4.5 0 0 1-4.5 4.5V12Z", fill: "none", stroke: "currentColor", "stroke-width": "2", "stroke-linecap": "round", "stroke-linejoin": "round" }],
+];
 
 
 export function SiteFooter() {
