@@ -12,7 +12,7 @@ export function SiteFooter() {
       <div className="mx-auto grid max-w-7xl gap-12 px-4 py-16 sm:px-6 lg:grid-cols-4 lg:px-8">
         <div className="lg:col-span-2">
           <Link to="/" className="flex items-center" aria-label="Gimble home">
-            <img src={wordmarkLight} alt="Gimble" className="h-10 w-auto sm:h-11" />
+            <img src={wordmarkLight} alt="Gimble Foundation" className="h-10 w-auto sm:h-11" />
           </Link>
 
           <p className="mt-4 max-w-md text-sm leading-relaxed text-white/80">
@@ -23,12 +23,18 @@ export function SiteFooter() {
             onSubmit={(e) => e.preventDefault()}
             className="mt-6 flex max-w-sm flex-col gap-2 sm:flex-row"
           >
+            <label htmlFor="footer-newsletter-email" className="sr-only">
+              Email address for newsletter
+            </label>
             <input
+              id="footer-newsletter-email"
+              name="email"
               type="email"
               required
               placeholder="Your email"
               className="flex-1 rounded-full border border-white/20 bg-white/10 px-4 py-2.5 text-sm text-white placeholder:text-white/60 focus:border-[color:var(--green)] focus:outline-none"
             />
+
             <button
               type="submit"
               className="rounded-full bg-[color:var(--green)] px-5 py-2.5 text-sm font-semibold text-[color:var(--ink)] transition hover:brightness-95"

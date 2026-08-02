@@ -78,12 +78,18 @@ function CommunityPage() {
               onSubmit={(e) => e.preventDefault()}
               className="mt-8 flex max-w-md flex-col gap-2 sm:flex-row"
             >
+              <label htmlFor="community-join-email" className="sr-only">
+                Email address to join the community
+              </label>
               <input
+                id="community-join-email"
+                name="email"
                 type="email"
                 required
                 placeholder="you@email.com"
                 className="flex-1 rounded-full border border-border bg-background px-4 py-3 text-sm focus:border-primary focus:outline-none"
               />
+
               <motion.button
                 whileHover={{ y: -2 }}
                 whileTap={{ scale: 0.97 }}
