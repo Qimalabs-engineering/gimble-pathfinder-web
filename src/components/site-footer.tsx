@@ -93,6 +93,7 @@ export function SiteFooter() {
             <li><Link to="/get-involved" className="hover:text-[color:var(--green)]">Volunteer</Link></li>
             <li><Link to="/get-involved" className="hover:text-[color:var(--green)]">Donate</Link></li>
             <li><Link to="/contact" className="hover:text-[color:var(--green)]">Contact</Link></li>
+            <li><Link to="/auth" rel="nofollow" className="text-white/50 hover:text-[color:var(--green)]">Admin</Link></li>
           </ul>
         </div>
       </div>
