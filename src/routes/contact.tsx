@@ -99,7 +99,11 @@ function ContactPage() {
               </span>
               <div>
                 <p className="text-sm font-semibold text-primary">Social Media</p>
-                <p className="text-sm text-foreground/70">Instagram, TikTok, X, Facebook, YouTube</p>
+                <div className="flex flex-wrap gap-x-3 text-sm text-foreground/70">
+                  <a href="https://www.instagram.com/gimblefoundation" target="_blank" rel="noopener noreferrer" className="hover:text-primary hover:underline">Instagram</a>
+                  <a href="https://www.tiktok.com/@gimblefoundation" target="_blank" rel="noopener noreferrer" className="hover:text-primary hover:underline">TikTok</a>
+                  <a href="https://x.com/gimbleorg" target="_blank" rel="noopener noreferrer" className="hover:text-primary hover:underline">X</a>
+                </div>
               </div>
             </div>
             <div className="flex items-start gap-4">
