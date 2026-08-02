@@ -110,7 +110,9 @@ function AppPage() {
             </FadeUp>
             <FadeUp delay={0.55} className="mt-8 flex flex-wrap gap-3">
               <motion.a
-                href="#"
+                href="https://apps.apple.com/ng/app/gimble/id6759309522"
+                target="_blank"
+                rel="noopener noreferrer"
                 whileHover={{ y: -3 }}
                 whileTap={{ scale: 0.97 }}
                 className="inline-flex items-center gap-3 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/20 transition"
@@ -124,7 +126,9 @@ function AppPage() {
                 </span>
               </motion.a>
               <motion.a
-                href="#"
+                href="https://play.google.com/store/apps/details?id=com.gimble"
+                target="_blank"
+                rel="noopener noreferrer"
                 whileHover={{ y: -3 }}
                 whileTap={{ scale: 0.97 }}
                 className="inline-flex items-center gap-3 rounded-full bg-secondary px-6 py-3 text-sm font-semibold text-secondary-foreground shadow-lg shadow-secondary/30 transition"
