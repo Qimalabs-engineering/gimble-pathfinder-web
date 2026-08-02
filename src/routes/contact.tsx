@@ -162,12 +162,18 @@ function ContactPage() {
                     placeholder="Tell us a little about what's on your mind…"
                   />
                 </div>
+                {error && (
+                  <p role="alert" className="text-sm font-medium text-destructive">
+                    {error}
+                  </p>
+                )}
 
                 <button
                   type="submit"
-                  className="self-start rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition hover:opacity-90"
+                  disabled={submitting}
+                  className="self-start rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition hover:opacity-90 disabled:opacity-60"
                 >
-                  Send message
+                  {submitting ? "Sending…" : "Send message"}
                 </button>
               </div>
             )}
