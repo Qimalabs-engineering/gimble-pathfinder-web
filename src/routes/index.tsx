@@ -332,7 +332,7 @@ function Home() {
                   to="/app"
                   className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/20"
                 >
-                  Explore the app
+                  Explore the App
                   <ArrowRight className="h-4 w-4" />
                 </Link>
               </motion.div>
