@@ -148,11 +148,12 @@ function ContactPage() {
                   >
                     <option>General enquiry</option>
                     <option>Partnership</option>
-                    <option>Workplace wellness</option>
+                    <option>Workplace mental fitness</option>
                     <option>Campus program</option>
                     <option>Volunteer</option>
                     <option>Press / media</option>
-                    <option>App waitlist</option>
+                    <option>App support</option>
+
                   </select>
                 </div>
                 <div>
