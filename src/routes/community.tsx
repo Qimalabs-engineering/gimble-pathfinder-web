@@ -17,13 +17,13 @@ export const Route = createFileRoute("/community")({
       {
         name: "description",
         content:
-          "Join the Gimble online community: virtual conversations, expert-led workshops, wellness challenges, and peer support.",
+          "Join the Gimble Community: mental fitness conversations, virtual events, learning sessions, and challenges for people curious about their minds.",
       },
       { property: "og:title", content: "Community — Gimble Foundation" },
       {
         property: "og:description",
         content:
-          "Safe spaces and virtual events where Africans connect around mental wellness.",
+          "A community for people who want to understand their minds and build mental fitness into everyday life.",
       },
       { property: "og:url", content: "https://www.gimblefoundation.org/community" },
     ],
@@ -35,35 +35,36 @@ export const Route = createFileRoute("/community")({
 const initiatives = [
   {
     icon: MessageCircle,
-    title: "Wellness conversations",
-    body: "Real, unscripted conversations on the things we usually keep to ourselves.",
+    title: "Mental Fitness Conversations",
+    body: "Honest conversations about how we think, feel, behave, and navigate everyday life.",
   },
   {
     icon: Calendar,
-    title: "Virtual events",
-    body: "Expert-led webinars and workshops on practical mental wellness topics.",
+    title: "Virtual Events",
+    body: "Live conversations, workshops, and sessions exploring practical mental fitness topics.",
   },
   {
     icon: Mic,
-    title: "Learning sessions",
-    body: "Sessions with psychologists, coaches, and practitioners: practical and relatable.",
+    title: "Learning Sessions",
+    body: "Sessions with psychologists, coaches, practitioners, and other experts who can help us better understand the mind.",
   },
   {
     icon: Trophy,
-    title: "Community challenges",
-    body: "Short, supportive challenges that build healthier habits together.",
+    title: "Community Challenges",
+    body: "Short, practical challenges that encourage people to put mental fitness into practice.",
   },
   {
     icon: Users2,
-    title: "Shared experiences",
-    body: "A safe, moderated space to share, listen, and learn alongside others walking similar paths.",
+    title: "Shared Experiences",
+    body: "A space to share perspectives, experiences, and lessons with other people interested in building their mental fitness.",
   },
   {
     icon: MessageCircle,
-    title: "Encouragement and accountability",
-    body: "Peer support that helps you stay consistent and motivated on your wellness journey.",
+    title: "Community Activities",
+    body: "Opportunities to learn, participate, and connect with others through Gimble's initiatives and programs.",
   },
 ];
+
 
 function CommunityPage() {
   const [status, setStatus] = useState<"idle" | "sending" | "done" | "error">("idle");
