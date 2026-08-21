@@ -143,18 +143,19 @@ function AboutPage() {
             Core message
           </p>
           <blockquote className="mt-5 font-display text-3xl font-semibold leading-tight text-primary sm:text-4xl">
-            "Mental wellness support should be accessible before people reach a
-            breaking point."
+            "Mental fitness isn't something you think about only when things go
+            wrong. It's something you build every day."
           </blockquote>
         </div>
       </section>
 
       <CtaBanner
-        title="Join us in building a healthier Africa."
-        subtitle="Whether you download the app or partner with us, every step makes early support more accessible."
+        title="Let's make mental fitness normal."
+        subtitle="Whether you download the app, follow our content, join our community, volunteer, or partner with us, you're helping make mental fitness something people understand, practise, and prioritise."
         primary={{ label: "Get the App", to: "/app" }}
-        secondary={{ label: "Partner with us", to: "/get-involved" }}
+        secondary={{ label: "Partner with Us", to: "/get-involved" }}
       />
+
     </>
   );
 }
