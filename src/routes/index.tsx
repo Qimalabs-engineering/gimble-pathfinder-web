@@ -260,9 +260,10 @@ function Home() {
                   </h3>
                   <p className="mt-3 flex-1 text-foreground/70">{body}</p>
                   <span className="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-primary">
-                    {`Explore ${title}`}
+                    {cta}
                     <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1.5" />
                   </span>
+
                 </Link>
               </motion.div>
             </StaggerItem>
