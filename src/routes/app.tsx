@@ -180,10 +180,11 @@ function AppPage() {
         <FadeUp>
           <SectionHeading
             eyebrow="What You'll Find"
-            title="Tools that meet you where you are."
+            title="Practical tools for your mind."
           />
         </FadeUp>
         <StaggerGroup className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+
           {features.map(({ icon: Icon, title, body }) => (
             <StaggerItem key={title}>
               <motion.div
