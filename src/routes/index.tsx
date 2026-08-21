@@ -306,18 +306,20 @@ function Home() {
           <div className="order-2 lg:order-1">
             <FadeUp>
               <SectionHeading
-                eyebrow="The Gimble app"
-                title="Practical wellness, in your pocket."
-                description="The app is the foundation of our work: guided journeys, daily check-ins, and coping tools designed for everyday challenges. Anyone can download it."
+                eyebrow="The Gimble App"
+                title="Your mind, in your pocket."
+                description="The Gimble app gives you practical ways to work on your mental fitness wherever you are."
               />
             </FadeUp>
             <StaggerGroup className="mt-8 space-y-3 text-foreground/80" as="ul">
               {[
-                "Guided wellness journeys",
-                "Daily emotional check-ins",
-                "Coping tools and exercises",
-                "Build healthier mental habits",
+                "Guided mental fitness experiences",
+                "Everyday check-ins",
+                "Practical tools and exercises",
+                "Resources to help you understand your mind",
+                "Habits that support long-term mental fitness",
               ].map((f) => (
+
                 <StaggerItem key={f} as="li" className="flex items-start gap-3">
                   <CheckCircle2 className="mt-0.5 h-5 w-5 flex-shrink-0 text-highlight" />
                   <span>{f}</span>
