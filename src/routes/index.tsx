@@ -380,20 +380,21 @@ function Home() {
             <div className="p-8 sm:p-12 lg:p-16">
               <SectionEyebrow>Community</SectionEyebrow>
               <h3 className="mt-4 font-display text-3xl font-semibold leading-tight text-primary sm:text-4xl">
-                You don't have to do it alone.
+                Mental fitness is better when it's part of everyday life.
               </h3>
               <p className="mt-4 text-foreground/75">
-                Through our online community, virtual conversations, and
-                workshops, we're building safe spaces for Africans to learn,
-                share, and support one another.
+                We're building a community where people can discover ideas, have
+                conversations, learn about their minds, and make mental fitness
+                part of how they live.
               </p>
               <motion.div whileHover={{ y: -3 }} whileTap={{ scale: 0.97 }} className="inline-block">
                 <Link
                   to="/community"
                   className="mt-8 inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/20"
                 >
-                  Join the conversation
+                  Join the Community
                   <ArrowRight className="h-4 w-4" />
+
                 </Link>
               </motion.div>
             </div>
