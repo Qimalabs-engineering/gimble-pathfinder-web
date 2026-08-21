@@ -116,14 +116,17 @@ function Home() {
               <SectionEyebrow>Gimble Foundation</SectionEyebrow>
             </FadeUp>
             <h1 className="mt-5 font-display text-5xl font-semibold leading-[1.02] text-primary sm:text-6xl lg:text-7xl">
-              <WordReveal text="Mental wellness support for everyday life." />
+              <WordReveal text="Mental fitness for everyday life." />
             </h1>
 
             <FadeUp delay={0.4} className="mt-6 max-w-xl text-lg leading-relaxed text-foreground/75">
-              Life can be overwhelming. Stress, burnout, anxiety, and emotional pressure affect millions of Africans every day, yet many people never receive support until they reach a breaking point.
+              Your mind is working every day. It handles pressure, makes decisions, manages emotions, solves problems, and keeps up with everything life throws at you.
               <br /><br />
-              Gimble Foundation exists to change that. Through our mobile app, community, and outreach programs, we're making mental wellness support more accessible, practical, and stigma-free across Africa.
+              So why do we only think about our mental health when something goes wrong?
+              <br /><br />
+              Gimble Foundation is making mental fitness part of everyday life across Africa, through technology, education, and community.
             </FadeUp>
+
             <FadeUp delay={0.6} className="mt-8 flex flex-wrap gap-3">
               <motion.div whileHover={{ y: -3 }} whileTap={{ scale: 0.97 }}>
                 <Link
