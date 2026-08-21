@@ -13,13 +13,13 @@ export const Route = createFileRoute("/about")({
       {
         name: "description",
         content:
-          "Gimble Foundation is a mental wellness nonprofit making support accessible, practical, and stigma-free for Africans everywhere.",
+          "Gimble Foundation is a nonprofit making mental fitness a part of everyday life across Africa through technology, education, and community.",
       },
       { property: "og:title", content: "About — Gimble Foundation" },
       {
         property: "og:description",
         content:
-          "Our vision, mission, and the values that guide our work in mental wellness across Africa.",
+          "Our vision, mission, and the values that guide our mental fitness work across Africa.",
       },
       { property: "og:url", content: "https://www.gimblefoundation.org/about" },
     ],
@@ -31,21 +31,26 @@ export const Route = createFileRoute("/about")({
 const values = [
   {
     title: "Accessibility",
-    body: "Support should be available to everyone, regardless of background or location.",
+    body: "Mental fitness should be accessible to everyone, regardless of background, location, or circumstance.",
   },
   {
-    title: "Prevention",
-    body: "Early support changes lives.",
+    title: "Proactivity",
+    body: "You shouldn't have to wait until something is wrong to start caring for your mind.",
+  },
+  {
+    title: "Curiosity",
+    body: "We encourage people to understand their minds, question their patterns, and keep learning about how they work.",
   },
   {
     title: "Community",
-    body: "Healing and growth happen better together.",
+    body: "Building a healthier relationship with your mind doesn't have to happen alone. We grow through connection, shared experiences, and learning from one another.",
   },
   {
-    title: "Compassion",
-    body: "We meet people with empathy, respect, and understanding.",
+    title: "Action",
+    body: "Knowing more is only the beginning. We want people to turn what they learn into everyday habits and practices.",
   },
 ];
+
 
 function AboutPage() {
   return (
