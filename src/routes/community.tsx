@@ -92,9 +92,10 @@ function CommunityPage() {
             <SectionHeading
               as="h1"
               eyebrow="Community & Connection"
-              title="You don't have to do it alone."
-              description="The Gimble Community is a supportive space where people come together to learn, grow, and have honest conversations about mental wellbeing. We believe that connection is an important part of emotional wellness."
+              title="A community for people who want to understand their minds."
+              description="The Gimble Community brings people together to learn, exchange ideas, ask questions, and have honest conversations about mental fitness and everyday life. We're creating a space where being curious about your mind is normal, whether you're learning about mental fitness for the first time or already building it into your everyday life."
             />
+
             <form
               onSubmit={handleJoin}
               className="mt-8 flex max-w-md flex-col gap-2 sm:flex-row"
