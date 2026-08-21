@@ -123,10 +123,10 @@ function GetInvolvedPage() {
         <FadeUp>
           <div className="mx-auto max-w-3xl rounded-3xl border border-border bg-card p-8 text-center sm:p-12">
             <h2 className="font-display text-2xl font-semibold text-primary sm:text-3xl">
-              Together, we can make mental wellness support more accessible across Africa.
+              Together, we can make mental fitness normal across Africa.
             </h2>
             <p className="mt-4 text-foreground/70">
-              Every contribution, partnership, and conversation brings us closer to a continent where no one has to struggle alone.
+              Every contribution, partnership, and conversation helps more people understand their minds and build healthier mental habits.
             </p>
             <motion.div whileHover={{ y: -3 }} whileTap={{ scale: 0.97 }} className="mt-8 inline-block">
               <Link
@@ -141,10 +141,11 @@ function GetInvolvedPage() {
       </Section>
 
       <CtaBanner
-        title="Ready to make a difference?"
-        subtitle="Reach out and let us know how you'd like to get involved."
-        primary={{ label: "Contact us", to: "/contact" }}
-        secondary={{ label: "Explore our programs", to: "/programs" }}
+        title="Ready to be part of it?"
+        subtitle="Reach out and tell us how you'd like to get involved."
+        primary={{ label: "Contact Us", to: "/contact" }}
+        secondary={{ label: "Explore Our Programs", to: "/programs" }}
+
       />
     </>
   );
