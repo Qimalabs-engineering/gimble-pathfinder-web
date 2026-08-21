@@ -429,11 +429,14 @@ function Home() {
               Join the Movement
             </p>
             <h2 className="mt-3 font-display text-4xl font-semibold leading-[1.05] sm:text-5xl">
-              Mental wellness is everyone's responsibility.
+              Let's make mental fitness normal.
             </h2>
             <p className="mt-4 text-lg text-white/85">
-              Whether you download the app, join our community, volunteer your time, or partner with us, you're helping create a future where no one has to struggle alone.
+              Download the app. Follow our content. Join the community. Volunteer. Partner with us.
+              <br /><br />
+              However you choose to participate, you're helping make mental fitness something people understand, practise, and prioritise, not something we only talk about when there's a crisis.
             </p>
+
             <div className="mt-8 flex flex-wrap gap-3">
               <motion.div whileHover={{ y: -3 }} whileTap={{ scale: 0.97 }}>
                 <Link
