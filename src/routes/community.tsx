@@ -185,12 +185,21 @@ function CommunityPage() {
       <Section className="!pt-0">
         <FadeUp>
           <div className="mx-auto max-w-3xl rounded-3xl border border-border bg-card p-8 text-center sm:p-12">
-            <h3 className="font-display text-2xl font-semibold text-primary sm:text-3xl">
-              Whether you're beginning your wellness journey or simply looking for a supportive community, there's a place for you here.
-            </h3>
+            <h2 className="font-display text-2xl font-semibold text-primary sm:text-3xl">
+              There's always something new to discover.
+            </h2>
+            <p className="mt-4 text-foreground/70">
+              Whether you're curious about how your mind works, looking for practical ways to build your mental fitness, or simply want to be part of the conversation, there's a place for you here.
+            </p>
             <motion.button
               whileHover={{ y: -3 }}
               whileTap={{ scale: 0.97 }}
+              type="button"
+              onClick={() => {
+                const el = document.getElementById("community-join-email");
+                el?.scrollIntoView({ behavior: "smooth", block: "center" });
+                (el as HTMLInputElement | null)?.focus();
+              }}
               className="mt-8 inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/20"
             >
               Join the Community
@@ -201,9 +210,10 @@ function CommunityPage() {
 
       <CtaBanner
         title="Be part of the conversation."
-        subtitle="Subscribe to hear about upcoming events, workshops, and community challenges."
+        subtitle="Get updates about upcoming events, learning sessions, challenges, and other Gimble initiatives."
         primary={{ label: "Subscribe", to: "/contact" }}
-        secondary={{ label: "See our programs", to: "/programs" }}
+        secondary={{ label: "See Our Programs", to: "/programs" }}
+
       />
     </>
   );
