@@ -156,7 +156,7 @@ function CommunityPage() {
 
       <Section className="!pt-0">
         <FadeUp>
-          <SectionHeading eyebrow="Inside the Community" title="Ways to connect with Gimble." />
+          <SectionHeading eyebrow="Inside the Community" title="More ways to learn, connect, and practise mental fitness." />
         </FadeUp>
         <StaggerGroup className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {initiatives.map(({ icon: Icon, title, body }) => (
