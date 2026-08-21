@@ -189,10 +189,11 @@ function ProgramsPage() {
       </Section>
 
       <CtaBanner
-        title="Partner with a program."
-        subtitle="Bring Gimble's programs to your campus, workplace, or community."
-        primary={{ label: "Partner with us", to: "/get-involved" }}
-        secondary={{ label: "Contact us", to: "/contact" }}
+        title="Help us make mental fitness part of everyday life."
+        subtitle="Bring Gimble's mental fitness programs to your campus, workplace, organisation, or community."
+        primary={{ label: "Partner With Us", to: "/get-involved" }}
+        secondary={{ label: "Contact Us", to: "/contact" }}
+
       />
     </>
   );
