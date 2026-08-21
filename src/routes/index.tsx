@@ -205,10 +205,11 @@ function Home() {
 
                 <div>
                   <p className="font-display text-sm font-semibold text-primary">
-                    Today, take a breath.
+                    Today, check in with your mind.
                   </p>
-                  <p className="text-xs text-foreground/60">2-min wellness check-in</p>
+                  <p className="text-xs text-foreground/60">2-min mental fitness check-in</p>
                 </div>
+
               </div>
             </motion.div>
           </div>
