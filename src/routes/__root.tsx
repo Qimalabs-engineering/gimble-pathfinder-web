@@ -109,7 +109,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           url: "https://www.gimblefoundation.org",
           logo: "https://www.gimblefoundation.org/favicon.ico",
           description:
-            "Nonprofit mental wellness organization using technology, education, and community to make support accessible for Africans.",
+            "Nonprofit making mental fitness part of everyday life across Africa through technology, education, and community.",
+
           sameAs: [],
         }),
       },
