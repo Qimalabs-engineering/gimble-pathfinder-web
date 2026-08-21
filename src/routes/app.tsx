@@ -104,11 +104,14 @@ function AppPage() {
               <SectionEyebrow>The Gimble App</SectionEyebrow>
             </FadeUp>
             <h1 className="mt-5 font-display text-5xl font-semibold leading-[1.05] text-primary sm:text-6xl">
-              <WordReveal text="Mental wellness support in your pocket." />
+              <WordReveal text="Mental fitness in your pocket." />
             </h1>
             <FadeUp delay={0.4} className="mt-6 max-w-xl text-lg leading-relaxed text-foreground/75">
-              The Gimble app is designed to help you navigate everyday emotional challenges through guided support, practical tools, and healthy habits. Whether you're dealing with stress, burnout, anxiety, or emotional exhaustion, Gimble provides a safe and supportive space to take care of your mental wellbeing.
+              The Gimble app is designed to help you understand your mind, build healthier mental habits, and practise mental fitness in everyday life.
+              <br /><br />
+              Through guided experiences, practical tools, self-reflection, and educational content, Gimble gives you simple ways to work on your mental fitness, wherever you are.
             </FadeUp>
+
             <FadeUp delay={0.55} className="mt-8 flex flex-wrap gap-3">
               <motion.a
                 href="https://apps.apple.com/ng/app/gimble/id6759309522"
