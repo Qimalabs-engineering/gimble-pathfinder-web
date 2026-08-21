@@ -25,17 +25,17 @@ import {
 export const Route = createFileRoute("/app")({
   head: () => ({
     meta: [
-      { title: "The Gimble App — Wellness in your pocket" },
+      { title: "The Gimble App — Mental fitness in your pocket" },
       {
         name: "description",
         content:
-          "Download the Gimble app: guided wellness journeys, daily check-ins, coping tools, and habit-building for everyday mental wellness.",
+          "Download the Gimble app: guided mental fitness journeys, daily check-ins, practical tools, and educational content for everyday life.",
       },
-      { property: "og:title", content: "The Gimble App — Wellness in your pocket" },
+      { property: "og:title", content: "The Gimble App — Mental fitness in your pocket" },
       {
         property: "og:description",
         content:
-          "Mobile-first mental wellness support: guided journeys, check-ins, coping tools, habits.",
+          "Guided experiences, practical tools, self-reflection, and educational content to build your mental fitness.",
       },
       { property: "og:url", content: "https://www.gimblefoundation.org/app" },
     ],
@@ -50,7 +50,7 @@ export const Route = createFileRoute("/app")({
           applicationCategory: "HealthApplication",
           operatingSystem: "iOS, Android",
           description:
-            "Gimble is a mental wellness app for everyday emotional support: guided wellness journeys, daily check-ins, coping tools, and habit-building.",
+            "Gimble is a mental fitness app for everyday life: guided experiences, daily check-ins, practical tools, self-reflection, and educational content.",
           publisher: { "@type": "Organization", name: "Gimble Foundation" },
           offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
         }),
@@ -63,35 +63,36 @@ export const Route = createFileRoute("/app")({
 const features = [
   {
     icon: Compass,
-    title: "Guided wellness journeys",
-    body: "Step-by-step paths for stress, burnout, anxiety, and life transitions, at your own pace.",
+    title: "Guided mental fitness journeys",
+    body: "Explore guided experiences designed to help you understand yourself, work through everyday challenges, and build healthier mental habits.",
   },
   {
     icon: Heart,
-    title: "Daily emotional check-ins",
-    body: "A two-minute moment with yourself, every day. Notice patterns, name what you feel.",
+    title: "Daily mental fitness check-ins",
+    body: "A two-minute moment to check in with yourself, notice patterns, and become more aware of what's happening in your mind.",
   },
   {
     icon: Sparkles,
-    title: "Stress and burnout support",
-    body: "Practical tools and exercises designed to help you manage everyday emotional challenges.",
+    title: "Practical tools & exercises",
+    body: "Simple exercises to help you work through stress, difficult emotions, overwhelming moments, and everyday mental challenges.",
   },
   {
     icon: BookOpen,
     title: "Educational content",
-    body: "Short, honest reads on mental wellness, written for an African audience.",
+    body: "Short, accessible content that helps you understand how your mind works and make sense of the things you experience every day.",
   },
   {
     icon: Repeat,
-    title: "Practical coping tools",
-    body: "Breathing, grounding, reframing: practical techniques for the hard moments.",
+    title: "Self-reflection exercises",
+    body: "Prompts and activities designed to help you notice your thoughts, emotions, behaviours, and patterns.",
   },
   {
     icon: Activity,
-    title: "Self-reflection exercises",
-    body: "Small consistent actions that compound into healthier mental habits.",
+    title: "Habit-building activities",
+    body: "Small, consistent practices that help you turn what you learn about yourself into healthier mental habits.",
   },
 ];
+
 
 function AppPage() {
   return (
