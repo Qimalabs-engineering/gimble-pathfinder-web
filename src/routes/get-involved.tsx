@@ -14,13 +14,13 @@ export const Route = createFileRoute("/get-involved")({
       {
         name: "description",
         content:
-          "Volunteer, partner, or become an ambassador to help build a mentally healthier Africa with Gimble Foundation.",
+          "Volunteer, partner, or become an ambassador and help make mental fitness part of everyday life across Africa.",
       },
       { property: "og:title", content: "Join Us — Gimble Foundation" },
       {
         property: "og:description",
         content:
-          "Be part of making mental wellness support more accessible across Africa.",
+          "Help make mental fitness something people understand, practise, and prioritise.",
       },
       { property: "og:url", content: "https://www.gimblefoundation.org/get-involved" },
     ],
@@ -33,19 +33,19 @@ const ways = [
   {
     icon: HandHeart,
     title: "Volunteer",
-    body: "Support outreach programs, events, and community initiatives.",
+    body: "Support our programs, events, campaigns, and community initiatives.",
     cta: "Become a Volunteer",
   },
   {
     icon: Building2,
     title: "Partner With Us",
-    body: "Collaborate with us to bring mental wellness support to schools, organizations, and communities.",
+    body: "Work with us to bring mental fitness education and practical tools to schools, workplaces, organisations, and communities.",
     cta: "Partner With Us",
   },
   {
     icon: Award,
     title: "Become an Ambassador",
-    body: "Help spread awareness and inspire more people to prioritize their mental wellbeing.",
+    body: "Help spread mental fitness education and encourage more people to build healthier mental habits.",
     cta: "Become an Ambassador",
   },
 ];
@@ -59,10 +59,11 @@ function GetInvolvedPage() {
             <SectionHeading
               as="h1"
               eyebrow="Join Us"
-              title="Help us build a mentally healthier Africa."
-              description="Creating a culture where mental wellbeing is valued requires all of us. Whether you volunteer your time, partner with us, or advocate for mental wellness in your community, you can make a meaningful difference."
+              title="Help make mental fitness part of everyday life."
+              description="Building a culture where mental fitness is understood and practised takes all of us. Whether you volunteer your time, partner with us, or help spread mental fitness education in your community, you can help more people learn how to take care of their minds."
             />
           </FadeUp>
+
           <Parallax offset={30} className="lg:col-span-5">
             <motion.div
               initial={{ opacity: 0, scale: 0.96 }}
