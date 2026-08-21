@@ -150,17 +150,18 @@ function Home() {
             <FadeUp delay={0.8} className="mt-12 flex flex-wrap items-center gap-x-8 gap-y-3 text-sm text-foreground/70">
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="h-4 w-4 text-highlight" />
-                Mobile-first
+                Built for everyday life
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="h-4 w-4 text-highlight" />
-                Stigma-free
+                Practical
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="h-4 w-4 text-highlight" />
                 Built for Africa
               </div>
             </FadeUp>
+
           </div>
 
           <div className="relative lg:col-span-5">
