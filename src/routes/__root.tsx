@@ -78,12 +78,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Gimble Foundation — Mental wellness for Africans, everyday." },
+      { title: "Gimble Foundation — Mental fitness for everyday life." },
       {
         name: "description",
         content:
-          "Practical, stigma-free mental wellness support for Africans through the Gimble app, community, and outreach.",
+          "Making mental fitness part of everyday life across Africa through the Gimble app, education, and community.",
       },
+
       { name: "author", content: "Gimble Foundation" },
       { property: "og:site_name", content: "Gimble Foundation" },
       { property: "og:type", content: "website" },
@@ -108,7 +109,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           url: "https://www.gimblefoundation.org",
           logo: "https://www.gimblefoundation.org/favicon.ico",
           description:
-            "Nonprofit mental wellness organization using technology, education, and community to make support accessible for Africans.",
+            "Nonprofit making mental fitness part of everyday life across Africa through technology, education, and community.",
+
           sameAs: [],
         }),
       },

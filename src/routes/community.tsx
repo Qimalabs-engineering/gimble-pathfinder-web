@@ -17,13 +17,13 @@ export const Route = createFileRoute("/community")({
       {
         name: "description",
         content:
-          "Join the Gimble online community: virtual conversations, expert-led workshops, wellness challenges, and peer support.",
+          "Join the Gimble Community: mental fitness conversations, virtual events, learning sessions, and challenges for people curious about their minds.",
       },
       { property: "og:title", content: "Community — Gimble Foundation" },
       {
         property: "og:description",
         content:
-          "Safe spaces and virtual events where Africans connect around mental wellness.",
+          "A community for people who want to understand their minds and build mental fitness into everyday life.",
       },
       { property: "og:url", content: "https://www.gimblefoundation.org/community" },
     ],
@@ -35,35 +35,36 @@ export const Route = createFileRoute("/community")({
 const initiatives = [
   {
     icon: MessageCircle,
-    title: "Wellness conversations",
-    body: "Real, unscripted conversations on the things we usually keep to ourselves.",
+    title: "Mental Fitness Conversations",
+    body: "Honest conversations about how we think, feel, behave, and navigate everyday life.",
   },
   {
     icon: Calendar,
-    title: "Virtual events",
-    body: "Expert-led webinars and workshops on practical mental wellness topics.",
+    title: "Virtual Events",
+    body: "Live conversations, workshops, and sessions exploring practical mental fitness topics.",
   },
   {
     icon: Mic,
-    title: "Learning sessions",
-    body: "Sessions with psychologists, coaches, and practitioners: practical and relatable.",
+    title: "Learning Sessions",
+    body: "Sessions with psychologists, coaches, practitioners, and other experts who can help us better understand the mind.",
   },
   {
     icon: Trophy,
-    title: "Community challenges",
-    body: "Short, supportive challenges that build healthier habits together.",
+    title: "Community Challenges",
+    body: "Short, practical challenges that encourage people to put mental fitness into practice.",
   },
   {
     icon: Users2,
-    title: "Shared experiences",
-    body: "A safe, moderated space to share, listen, and learn alongside others walking similar paths.",
+    title: "Shared Experiences",
+    body: "A space to share perspectives, experiences, and lessons with other people interested in building their mental fitness.",
   },
   {
     icon: MessageCircle,
-    title: "Encouragement and accountability",
-    body: "Peer support that helps you stay consistent and motivated on your wellness journey.",
+    title: "Community Activities",
+    body: "Opportunities to learn, participate, and connect with others through Gimble's initiatives and programs.",
   },
 ];
+
 
 function CommunityPage() {
   const [status, setStatus] = useState<"idle" | "sending" | "done" | "error">("idle");
@@ -91,9 +92,10 @@ function CommunityPage() {
             <SectionHeading
               as="h1"
               eyebrow="Community & Connection"
-              title="You don't have to do it alone."
-              description="The Gimble Community is a supportive space where people come together to learn, grow, and have honest conversations about mental wellbeing. We believe that connection is an important part of emotional wellness."
+              title="A community for people who want to understand their minds."
+              description="The Gimble Community brings people together to learn, exchange ideas, ask questions, and have honest conversations about mental fitness and everyday life. We're creating a space where being curious about your mind is normal, whether you're learning about mental fitness for the first time or already building it into your everyday life."
             />
+
             <form
               onSubmit={handleJoin}
               className="mt-8 flex max-w-md flex-col gap-2 sm:flex-row"
@@ -154,7 +156,7 @@ function CommunityPage() {
 
       <Section className="!pt-0">
         <FadeUp>
-          <SectionHeading eyebrow="Inside the Community" title="Ways to connect with Gimble." />
+          <SectionHeading eyebrow="Inside the Community" title="More ways to learn, connect, and practise mental fitness." />
         </FadeUp>
         <StaggerGroup className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {initiatives.map(({ icon: Icon, title, body }) => (
@@ -183,12 +185,21 @@ function CommunityPage() {
       <Section className="!pt-0">
         <FadeUp>
           <div className="mx-auto max-w-3xl rounded-3xl border border-border bg-card p-8 text-center sm:p-12">
-            <h3 className="font-display text-2xl font-semibold text-primary sm:text-3xl">
-              Whether you're beginning your wellness journey or simply looking for a supportive community, there's a place for you here.
-            </h3>
+            <h2 className="font-display text-2xl font-semibold text-primary sm:text-3xl">
+              There's always something new to discover.
+            </h2>
+            <p className="mt-4 text-foreground/70">
+              Whether you're curious about how your mind works, looking for practical ways to build your mental fitness, or simply want to be part of the conversation, there's a place for you here.
+            </p>
             <motion.button
               whileHover={{ y: -3 }}
               whileTap={{ scale: 0.97 }}
+              type="button"
+              onClick={() => {
+                const el = document.getElementById("community-join-email");
+                el?.scrollIntoView({ behavior: "smooth", block: "center" });
+                (el as HTMLInputElement | null)?.focus();
+              }}
               className="mt-8 inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/20"
             >
               Join the Community
@@ -199,9 +210,10 @@ function CommunityPage() {
 
       <CtaBanner
         title="Be part of the conversation."
-        subtitle="Subscribe to hear about upcoming events, workshops, and community challenges."
+        subtitle="Get updates about upcoming events, learning sessions, challenges, and other Gimble initiatives."
         primary={{ label: "Subscribe", to: "/contact" }}
-        secondary={{ label: "See our programs", to: "/programs" }}
+        secondary={{ label: "See Our Programs", to: "/programs" }}
+
       />
     </>
   );

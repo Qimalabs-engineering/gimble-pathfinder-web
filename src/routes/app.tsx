@@ -25,17 +25,17 @@ import {
 export const Route = createFileRoute("/app")({
   head: () => ({
     meta: [
-      { title: "The Gimble App — Wellness in your pocket" },
+      { title: "The Gimble App — Mental fitness in your pocket" },
       {
         name: "description",
         content:
-          "Download the Gimble app: guided wellness journeys, daily check-ins, coping tools, and habit-building for everyday mental wellness.",
+          "Download the Gimble app: guided mental fitness journeys, daily check-ins, practical tools, and educational content for everyday life.",
       },
-      { property: "og:title", content: "The Gimble App — Wellness in your pocket" },
+      { property: "og:title", content: "The Gimble App — Mental fitness in your pocket" },
       {
         property: "og:description",
         content:
-          "Mobile-first mental wellness support: guided journeys, check-ins, coping tools, habits.",
+          "Guided experiences, practical tools, self-reflection, and educational content to build your mental fitness.",
       },
       { property: "og:url", content: "https://www.gimblefoundation.org/app" },
     ],
@@ -50,7 +50,7 @@ export const Route = createFileRoute("/app")({
           applicationCategory: "HealthApplication",
           operatingSystem: "iOS, Android",
           description:
-            "Gimble is a mental wellness app for everyday emotional support: guided wellness journeys, daily check-ins, coping tools, and habit-building.",
+            "Gimble is a mental fitness app for everyday life: guided experiences, daily check-ins, practical tools, self-reflection, and educational content.",
           publisher: { "@type": "Organization", name: "Gimble Foundation" },
           offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
         }),
@@ -63,35 +63,36 @@ export const Route = createFileRoute("/app")({
 const features = [
   {
     icon: Compass,
-    title: "Guided wellness journeys",
-    body: "Step-by-step paths for stress, burnout, anxiety, and life transitions, at your own pace.",
+    title: "Guided mental fitness journeys",
+    body: "Explore guided experiences designed to help you understand yourself, work through everyday challenges, and build healthier mental habits.",
   },
   {
     icon: Heart,
-    title: "Daily emotional check-ins",
-    body: "A two-minute moment with yourself, every day. Notice patterns, name what you feel.",
+    title: "Daily mental fitness check-ins",
+    body: "A two-minute moment to check in with yourself, notice patterns, and become more aware of what's happening in your mind.",
   },
   {
     icon: Sparkles,
-    title: "Stress and burnout support",
-    body: "Practical tools and exercises designed to help you manage everyday emotional challenges.",
+    title: "Practical tools & exercises",
+    body: "Simple exercises to help you work through stress, difficult emotions, overwhelming moments, and everyday mental challenges.",
   },
   {
     icon: BookOpen,
     title: "Educational content",
-    body: "Short, honest reads on mental wellness, written for an African audience.",
+    body: "Short, accessible content that helps you understand how your mind works and make sense of the things you experience every day.",
   },
   {
     icon: Repeat,
-    title: "Practical coping tools",
-    body: "Breathing, grounding, reframing: practical techniques for the hard moments.",
+    title: "Self-reflection exercises",
+    body: "Prompts and activities designed to help you notice your thoughts, emotions, behaviours, and patterns.",
   },
   {
     icon: Activity,
-    title: "Self-reflection exercises",
-    body: "Small consistent actions that compound into healthier mental habits.",
+    title: "Habit-building activities",
+    body: "Small, consistent practices that help you turn what you learn about yourself into healthier mental habits.",
   },
 ];
+
 
 function AppPage() {
   return (
@@ -103,11 +104,14 @@ function AppPage() {
               <SectionEyebrow>The Gimble App</SectionEyebrow>
             </FadeUp>
             <h1 className="mt-5 font-display text-5xl font-semibold leading-[1.05] text-primary sm:text-6xl">
-              <WordReveal text="Mental wellness support in your pocket." />
+              <WordReveal text="Mental fitness in your pocket." />
             </h1>
             <FadeUp delay={0.4} className="mt-6 max-w-xl text-lg leading-relaxed text-foreground/75">
-              The Gimble app is designed to help you navigate everyday emotional challenges through guided support, practical tools, and healthy habits. Whether you're dealing with stress, burnout, anxiety, or emotional exhaustion, Gimble provides a safe and supportive space to take care of your mental wellbeing.
+              The Gimble app is designed to help you understand your mind, build healthier mental habits, and practise mental fitness in everyday life.
+              <br /><br />
+              Through guided experiences, practical tools, self-reflection, and educational content, Gimble gives you simple ways to work on your mental fitness, wherever you are.
             </FadeUp>
+
             <FadeUp delay={0.55} className="mt-8 flex flex-wrap gap-3">
               <motion.a
                 href="https://apps.apple.com/ng/app/gimble/id6759309522"
@@ -176,10 +180,11 @@ function AppPage() {
         <FadeUp>
           <SectionHeading
             eyebrow="What You'll Find"
-            title="Tools that meet you where you are."
+            title="Practical tools for your mind."
           />
         </FadeUp>
         <StaggerGroup className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+
           {features.map(({ icon: Icon, title, body }) => (
             <StaggerItem key={title}>
               <motion.div
@@ -207,13 +212,18 @@ function AppPage() {
         <FadeUp>
           <div className="mx-auto max-w-3xl rounded-3xl border border-border bg-card p-8 text-center sm:p-12">
             <p className="font-display text-xs font-semibold uppercase tracking-[0.2em] text-primary/80">
-              A daily practice
+              Mental fitness is a practice
             </p>
-            <h3 className="mt-4 font-display text-3xl font-semibold leading-tight text-primary sm:text-4xl">
-              "Mental wellness isn't a one-time event. It's a daily practice."
-            </h3>
+            <h2 className="mt-4 font-display text-3xl font-semibold leading-tight text-primary sm:text-4xl">
+              You don't have to wait until something is wrong to start.
+            </h2>
+            <p className="mt-4 text-foreground/70">
+              Just like physical fitness, mental fitness develops through regular practice. The Gimble app gives you practical ways to keep learning about your mind and building your mental fitness, one day at a time.
+            </p>
             <motion.a
-              href="#"
+              href="https://apps.apple.com/ng/app/gimble/id6759309522"
+              target="_blank"
+              rel="noopener noreferrer"
               whileHover={{ y: -3 }}
               whileTap={{ scale: 0.97 }}
               className="mt-8 inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/20 transition"
@@ -226,11 +236,12 @@ function AppPage() {
       </Section>
 
       <CtaBanner
-        title="Start with one small check-in."
-        subtitle="The Gimble app is mobile-first, designed for everyday African life."
-        primary={{ label: "Join the waitlist", to: "/contact" }}
-        secondary={{ label: "Explore the community", to: "/community" }}
+        title="Built for everyday African life."
+        subtitle="Gimble is designed with African users in mind, making mental fitness education and practical tools more accessible, relevant, and easy to use."
+        primary={{ label: "Explore the Community", to: "/community" }}
+        secondary={{ label: "See our programs", to: "/programs" }}
       />
+
     </>
   );
 }

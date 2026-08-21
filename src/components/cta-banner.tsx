@@ -3,10 +3,11 @@ import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 
 export function CtaBanner({
-  title = "Mental wellness, before the breaking point.",
-  subtitle = "Download the Gimble app and start with one small check-in today.",
+  title = "Mental fitness for everyday life.",
+  subtitle = "Download the Gimble app and start building your mental fitness today.",
   primary = { label: "Get the App", to: "/app" as const },
-  secondary = { label: "Join the community", to: "/community" as const },
+  secondary = { label: "Join the Community", to: "/community" as const },
+
 }: {
   title?: string;
   subtitle?: string;

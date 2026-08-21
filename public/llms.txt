@@ -1,15 +1,15 @@
 # Gimble Foundation
 
-> Nonprofit mental wellness organization using technology, education, and community to make support accessible, practical, and stigma-free for Africans navigating everyday stress, burnout, anxiety, and emotional strain.
+> Nonprofit making mental fitness part of everyday life across Africa through technology, education, and community.
 
-Gimble Foundation runs three programs: the Gimble mobile app (guided wellness journeys, daily check-ins, coping tools), an online community and virtual events, and outreach through campus programs, workplace partnerships, and community workshops across Africa.
+Gimble Foundation helps people understand how their minds work and build healthier mental habits through three programs: the Gimble mobile app (guided mental fitness experiences, daily check-ins, practical tools), community and education (online community, virtual events, expert-led conversations), and outreach programs (campus programs, workplace initiatives, community workshops, partnerships).
 
 ## Pages
 
-- [Home](/): Overview of Gimble Foundation's mission and programs.
-- [About](/about): Vision, mission, and how Gimble shows up.
-- [Programs](/programs): Digital Support, Community & Connection, and Outreach & Awareness.
-- [The App](/app): Features of the Gimble mobile app and download links.
-- [Community](/community): Online community, virtual conversations, and webinars.
-- [Get Involved](/get-involved): Partnerships, volunteering, and donations.
+- [Home](/): Mental fitness for everyday life — Gimble Foundation's mission and programs.
+- [About](/about): Vision, mission, and the values behind our work.
+- [Programs](/programs): Digital Mental Fitness, Community & Education, and Outreach & Programs.
+- [The App](/app): Mental fitness in your pocket — features and download links.
+- [Community](/community): Conversations, virtual events, learning sessions, and challenges.
+- [Join Us](/get-involved): Volunteer, partner with us, or become an ambassador.
 - [Contact](/contact): Reach the Gimble Foundation team.

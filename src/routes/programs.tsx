@@ -14,13 +14,13 @@ export const Route = createFileRoute("/programs")({
       {
         name: "description",
         content:
-          "Three programs creating impact across Africa: Digital Support through the Gimble app, Community & Connection, and Outreach & Awareness.",
+          "Three programs making mental fitness part of everyday life: Digital Mental Fitness, Community & Education, and Outreach & Programs.",
       },
       { property: "og:title", content: "Programs — Gimble Foundation" },
       {
         property: "og:description",
         content:
-          "How Gimble Foundation delivers mental wellness support: app, community, and outreach.",
+          "How Gimble Foundation helps people understand, practise, and build mental fitness across Africa.",
       },
       { property: "og:url", content: "https://www.gimblefoundation.org/programs" },
     ],
@@ -33,30 +33,30 @@ export const Route = createFileRoute("/programs")({
           "@graph": [
             {
               "@type": "Service",
-              name: "Digital Support",
-              serviceType: "Mental wellness mobile application",
+              name: "Digital Mental Fitness",
+              serviceType: "Mental fitness mobile application",
               provider: { "@type": "Organization", name: "Gimble Foundation" },
               areaServed: "Africa",
               description:
-                "Mobile app delivering guided wellness journeys, daily check-ins, coping tools, and educational resources.",
+                "Mobile app with practical tools and guided experiences that help people understand their minds and build healthier mental habits.",
             },
             {
               "@type": "Service",
-              name: "Community & Connection",
-              serviceType: "Online peer support community",
+              name: "Community & Education",
+              serviceType: "Mental fitness education and community",
               provider: { "@type": "Organization", name: "Gimble Foundation" },
               areaServed: "Africa",
               description:
-                "Safe online community, virtual wellness events, and expert conversations that reduce stigma and build emotional wellbeing.",
+                "Online community, virtual events, educational content, and expert-led conversations about mental fitness.",
             },
             {
               "@type": "Service",
-              name: "Outreach & Awareness",
-              serviceType: "Mental wellness outreach and education",
+              name: "Outreach & Programs",
+              serviceType: "Mental fitness outreach and partnerships",
               provider: { "@type": "Organization", name: "Gimble Foundation" },
               areaServed: "Africa",
               description:
-                "Campus programs, community workshops, awareness campaigns, and partnerships that expand access to mental wellness support.",
+                "Campus programs, community workshops, campaigns, and partnerships that bring mental fitness education to more people.",
             },
           ],
         }),
@@ -70,13 +70,13 @@ const programs = [
   {
     icon: HeartPulse,
     number: "01",
-    title: "Digital Support",
+    title: "Digital Mental Fitness",
     intro:
-      "Our mobile app provides guided support for everyday emotional challenges, helping people build healthier habits and improve their wellbeing through accessible, practical tools.",
+      "Our mobile app gives people practical tools and guided experiences to help them understand their minds, build healthier habits, and practise mental fitness in everyday life.",
     initiatives: [
-      "Guided wellness journeys",
-      "Daily emotional check-ins",
-      "Wellness exercises",
+      "Guided mental fitness experiences",
+      "Daily mental fitness check-ins",
+      "Practical exercises and tools",
       "Educational resources",
       "Habit-building activities",
     ],
@@ -84,29 +84,29 @@ const programs = [
   {
     icon: Users,
     number: "02",
-    title: "Community & Connection",
+    title: "Community & Education",
     intro:
-      "We create safe online spaces where people can learn, connect, share experiences, and participate in conversations that reduce stigma and promote emotional wellbeing.",
+      "We create opportunities for people to learn about mental fitness, exchange ideas, and have meaningful conversations about how we think, feel, and navigate everyday life.",
     initiatives: [
       "Online community",
-      "Virtual wellness events",
-      "Expert conversations",
-      "Community challenges",
-      "Peer support discussions",
+      "Virtual events and conversations",
+      "Educational content",
+      "Mental fitness challenges",
+      "Expert-led conversations",
     ],
   },
   {
     icon: Megaphone,
     number: "03",
-    title: "Outreach & Awareness",
+    title: "Outreach & Programs",
     intro:
-      "We take mental wellness beyond digital spaces through physical events and partnerships that increase awareness and access across communities.",
+      "We take mental fitness beyond digital spaces through physical programs, partnerships, and initiatives that bring education and practical tools to more people and communities.",
     initiatives: [
-      "Campus wellness programs",
+      "Campus mental fitness programs",
       "Community workshops",
-      "Awareness campaigns",
-      "NGO partnerships",
-      "Workplace wellness initiatives",
+      "Mental fitness campaigns",
+      "NGO and community partnerships",
+      "Workplace mental fitness initiatives",
     ],
   },
 ];
@@ -118,12 +118,13 @@ function ProgramsPage() {
         <FadeUp>
           <SectionHeading
             as="h1"
-            eyebrow="Our programs"
-            title="A complete ecosystem for mental wellness."
-            description="Gimble Foundation delivers its mission through three core programs that make mental wellness support accessible, practical, and community-driven for Africans."
+            eyebrow="Our Programs"
+            title="Three ways we make mental fitness part of everyday life."
+            description="Gimble Foundation delivers its mission through three core programs that help people understand, practise, and build mental fitness through technology, education, and community."
           />
         </FadeUp>
       </Section>
+
 
       <Section className="!pt-0">
         <div className="space-y-10">
@@ -188,10 +189,11 @@ function ProgramsPage() {
       </Section>
 
       <CtaBanner
-        title="Partner with a program."
-        subtitle="Bring Gimble's programs to your campus, workplace, or community."
-        primary={{ label: "Partner with us", to: "/get-involved" }}
-        secondary={{ label: "Contact us", to: "/contact" }}
+        title="Help us make mental fitness part of everyday life."
+        subtitle="Bring Gimble's mental fitness programs to your campus, workplace, organisation, or community."
+        primary={{ label: "Partner With Us", to: "/get-involved" }}
+        secondary={{ label: "Contact Us", to: "/contact" }}
+
       />
     </>
   );

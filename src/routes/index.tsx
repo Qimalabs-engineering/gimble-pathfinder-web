@@ -27,17 +27,17 @@ import {
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Gimble Foundation — Mental wellness for Africans, everyday." },
+      { title: "Gimble Foundation — Mental fitness for everyday life." },
       {
         name: "description",
         content:
-          "Practical, stigma-free mental wellness support for Africans through the Gimble app, community, and outreach. Support before the breaking point.",
+          "Gimble Foundation is making mental fitness part of everyday life across Africa through technology, education, and community.",
       },
-      { property: "og:title", content: "Gimble Foundation — Mental wellness for Africans, everyday." },
+      { property: "og:title", content: "Gimble Foundation — Mental fitness for everyday life." },
       {
         property: "og:description",
         content:
-          "Practical, stigma-free mental wellness support for Africans through the Gimble app, community, and outreach.",
+          "Making mental fitness part of everyday life across Africa through technology, education, and community.",
       },
       { property: "og:url", content: "https://www.gimblefoundation.org/" },
     ],
@@ -53,7 +53,7 @@ export const Route = createFileRoute("/")({
           name: "Gimble Foundation",
           url: "https://www.gimblefoundation.org",
           description:
-            "Nonprofit mental wellness support for Africans through the Gimble app, community, and outreach.",
+            "Nonprofit making mental fitness part of everyday life across Africa through technology, education, and community.",
         }),
       },
     ],
@@ -64,23 +64,27 @@ export const Route = createFileRoute("/")({
 const programs = [
   {
     icon: HeartPulse,
-    title: "Digital Support",
-    body: "Our mobile app provides guided support, wellness tools, and educational resources that help people build healthier mental habits every day.",
+    title: "Digital Tools",
+    body: "Our mobile app gives you practical tools and guided experiences to help you understand your mind and build healthier mental habits.",
+    cta: "Explore the App",
     to: "/app" as const,
   },
   {
     icon: Users,
-    title: "Community & Connection",
-    body: "We bring people together through our online community and virtual events, creating safe spaces for learning, encouragement, and meaningful conversations about mental wellbeing.",
+    title: "Education & Content",
+    body: "We make mental fitness easier to understand through educational content, conversations, events, and resources that connect the science of the mind to everyday life.",
+    cta: "Explore Our Content",
     to: "/community" as const,
   },
   {
     icon: Megaphone,
-    title: "Outreach & Awareness",
-    body: "Through workshops, campus initiatives, and community programs, we take mental wellness education directly to the people and communities that need it most.",
+    title: "Community & Programs",
+    body: "Through community initiatives, workshops, campus programs, and partnerships, we take mental fitness beyond the screen and into everyday life.",
+    cta: "Explore Our Programs",
     to: "/programs" as const,
   },
 ];
+
 
 function Home() {
   return (
@@ -112,14 +116,17 @@ function Home() {
               <SectionEyebrow>Gimble Foundation</SectionEyebrow>
             </FadeUp>
             <h1 className="mt-5 font-display text-5xl font-semibold leading-[1.02] text-primary sm:text-6xl lg:text-7xl">
-              <WordReveal text="Mental wellness support for everyday life." />
+              <WordReveal text="Mental fitness for everyday life." />
             </h1>
 
             <FadeUp delay={0.4} className="mt-6 max-w-xl text-lg leading-relaxed text-foreground/75">
-              Life can be overwhelming. Stress, burnout, anxiety, and emotional pressure affect millions of Africans every day, yet many people never receive support until they reach a breaking point.
+              Your mind is working every day. It handles pressure, makes decisions, manages emotions, solves problems, and keeps up with everything life throws at you.
               <br /><br />
-              Gimble Foundation exists to change that. Through our mobile app, community, and outreach programs, we're making mental wellness support more accessible, practical, and stigma-free across Africa.
+              So why do we only think about our mental health when something goes wrong?
+              <br /><br />
+              Gimble Foundation is making mental fitness part of everyday life across Africa, through technology, education, and community.
             </FadeUp>
+
             <FadeUp delay={0.6} className="mt-8 flex flex-wrap gap-3">
               <motion.div whileHover={{ y: -3 }} whileTap={{ scale: 0.97 }}>
                 <Link
@@ -143,17 +150,18 @@ function Home() {
             <FadeUp delay={0.8} className="mt-12 flex flex-wrap items-center gap-x-8 gap-y-3 text-sm text-foreground/70">
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="h-4 w-4 text-highlight" />
-                Mobile-first
+                Built for everyday life
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="h-4 w-4 text-highlight" />
-                Stigma-free
+                Practical
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="h-4 w-4 text-highlight" />
                 Built for Africa
               </div>
             </FadeUp>
+
           </div>
 
           <div className="relative lg:col-span-5">
@@ -197,10 +205,11 @@ function Home() {
 
                 <div>
                   <p className="font-display text-sm font-semibold text-primary">
-                    Today, take a breath.
+                    Today, check in with your mind.
                   </p>
-                  <p className="text-xs text-foreground/60">2-min wellness check-in</p>
+                  <p className="text-xs text-foreground/60">2-min mental fitness check-in</p>
                 </div>
+
               </div>
             </motion.div>
           </div>
@@ -212,8 +221,8 @@ function Home() {
         <FadeUp>
           <SectionHeading
             eyebrow="Why Gimble?"
-            title="Mental wellbeing shouldn't only matter during a crisis."
-            description="We believe everyone deserves access to support that helps them navigate everyday challenges before they become overwhelming. Whether you're feeling stressed, emotionally exhausted, burned out, or simply trying to build healthier habits, Gimble is here to support you."
+            title="Your mind is something you can build."
+            description="Physical fitness isn't just about what you do when you're out of shape. You build it through regular practice. We believe your mind deserves the same approach. Mental fitness is about understanding how your mind works, recognising your patterns, handling challenges, managing your attention, and developing the skills to navigate everyday life better. You don't have to wait until something is wrong to start."
           />
         </FadeUp>
       </Section>
@@ -223,12 +232,13 @@ function Home() {
         <FadeUp>
           <SectionHeading
             eyebrow="How We Create Impact"
-            title="Three ways we show up."
-            description="A complete ecosystem for mental wellness: digital support, ongoing connection, and broader community impact."
+            title="Three ways we build mental fitness."
+            description="A growing ecosystem helping people understand, practise, and strengthen their mental fitness."
           />
         </FadeUp>
         <StaggerGroup className="mt-12 grid gap-6 lg:grid-cols-3">
-          {programs.map(({ icon: Icon, title, body, to }, i) => (
+          {programs.map(({ icon: Icon, title, body, cta, to }, i) => (
+
             <StaggerItem key={title}>
               <motion.div
                 whileHover={{ y: -8 }}
@@ -250,9 +260,10 @@ function Home() {
                   </h3>
                   <p className="mt-3 flex-1 text-foreground/70">{body}</p>
                   <span className="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-primary">
-                    {`Explore ${title}`}
+                    {cta}
                     <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1.5" />
                   </span>
+
                 </Link>
               </motion.div>
             </StaggerItem>
@@ -279,11 +290,12 @@ function Home() {
             </FadeUp>
             <FadeUp delay={0.15}>
               <blockquote className="mt-6 font-display text-3xl font-semibold leading-[1.15] text-primary sm:text-4xl lg:text-5xl">
-                "Mental wellness support should be accessible{" "}
-                <span className="italic">before</span> people reach a breaking
-                point."
+                "Mental fitness isn't something you think about only when things
+                go wrong. It's something you{" "}
+                <span className="italic">build every day</span>."
               </blockquote>
             </FadeUp>
+
           </div>
         </div>
       </section>
@@ -294,18 +306,20 @@ function Home() {
           <div className="order-2 lg:order-1">
             <FadeUp>
               <SectionHeading
-                eyebrow="The Gimble app"
-                title="Practical wellness, in your pocket."
-                description="The app is the foundation of our work: guided journeys, daily check-ins, and coping tools designed for everyday challenges. Anyone can download it."
+                eyebrow="The Gimble App"
+                title="Your mind, in your pocket."
+                description="The Gimble app gives you practical ways to work on your mental fitness wherever you are."
               />
             </FadeUp>
             <StaggerGroup className="mt-8 space-y-3 text-foreground/80" as="ul">
               {[
-                "Guided wellness journeys",
-                "Daily emotional check-ins",
-                "Coping tools and exercises",
-                "Build healthier mental habits",
+                "Guided mental fitness experiences",
+                "Everyday check-ins",
+                "Practical tools and exercises",
+                "Resources to help you understand your mind",
+                "Habits that support long-term mental fitness",
               ].map((f) => (
+
                 <StaggerItem key={f} as="li" className="flex items-start gap-3">
                   <CheckCircle2 className="mt-0.5 h-5 w-5 flex-shrink-0 text-highlight" />
                   <span>{f}</span>
@@ -318,7 +332,7 @@ function Home() {
                   to="/app"
                   className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/20"
                 >
-                  Explore the app
+                  Explore the App
                   <ArrowRight className="h-4 w-4" />
                 </Link>
               </motion.div>
@@ -366,20 +380,21 @@ function Home() {
             <div className="p-8 sm:p-12 lg:p-16">
               <SectionEyebrow>Community</SectionEyebrow>
               <h3 className="mt-4 font-display text-3xl font-semibold leading-tight text-primary sm:text-4xl">
-                You don't have to do it alone.
+                Mental fitness is better when it's part of everyday life.
               </h3>
               <p className="mt-4 text-foreground/75">
-                Through our online community, virtual conversations, and
-                workshops, we're building safe spaces for Africans to learn,
-                share, and support one another.
+                We're building a community where people can discover ideas, have
+                conversations, learn about their minds, and make mental fitness
+                part of how they live.
               </p>
               <motion.div whileHover={{ y: -3 }} whileTap={{ scale: 0.97 }} className="inline-block">
                 <Link
                   to="/community"
                   className="mt-8 inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/20"
                 >
-                  Join the conversation
+                  Join the Community
                   <ArrowRight className="h-4 w-4" />
+
                 </Link>
               </motion.div>
             </div>
@@ -414,11 +429,14 @@ function Home() {
               Join the Movement
             </p>
             <h2 className="mt-3 font-display text-4xl font-semibold leading-[1.05] sm:text-5xl">
-              Mental wellness is everyone's responsibility.
+              Let's make mental fitness normal.
             </h2>
             <p className="mt-4 text-lg text-white/85">
-              Whether you download the app, join our community, volunteer your time, or partner with us, you're helping create a future where no one has to struggle alone.
+              Download the app. Follow our content. Join the community. Volunteer. Partner with us.
+              <br /><br />
+              However you choose to participate, you're helping make mental fitness something people understand, practise, and prioritise, not something we only talk about when there's a crisis.
             </p>
+
             <div className="mt-8 flex flex-wrap gap-3">
               <motion.div whileHover={{ y: -3 }} whileTap={{ scale: 0.97 }}>
                 <Link

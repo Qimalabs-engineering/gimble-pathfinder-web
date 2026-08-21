@@ -13,13 +13,13 @@ export const Route = createFileRoute("/about")({
       {
         name: "description",
         content:
-          "Gimble Foundation is a mental wellness nonprofit making support accessible, practical, and stigma-free for Africans everywhere.",
+          "Gimble Foundation is a nonprofit making mental fitness a part of everyday life across Africa through technology, education, and community.",
       },
       { property: "og:title", content: "About — Gimble Foundation" },
       {
         property: "og:description",
         content:
-          "Our vision, mission, and the values that guide our work in mental wellness across Africa.",
+          "Our vision, mission, and the values that guide our mental fitness work across Africa.",
       },
       { property: "og:url", content: "https://www.gimblefoundation.org/about" },
     ],
@@ -31,21 +31,26 @@ export const Route = createFileRoute("/about")({
 const values = [
   {
     title: "Accessibility",
-    body: "Support should be available to everyone, regardless of background or location.",
+    body: "Mental fitness should be accessible to everyone, regardless of background, location, or circumstance.",
   },
   {
-    title: "Prevention",
-    body: "Early support changes lives.",
+    title: "Proactivity",
+    body: "You shouldn't have to wait until something is wrong to start caring for your mind.",
+  },
+  {
+    title: "Curiosity",
+    body: "We encourage people to understand their minds, question their patterns, and keep learning about how they work.",
   },
   {
     title: "Community",
-    body: "Healing and growth happen better together.",
+    body: "Building a healthier relationship with your mind doesn't have to happen alone. We grow through connection, shared experiences, and learning from one another.",
   },
   {
-    title: "Compassion",
-    body: "We meet people with empathy, respect, and understanding.",
+    title: "Action",
+    body: "Knowing more is only the beginning. We want people to turn what they learn into everyday habits and practices.",
   },
 ];
+
 
 function AboutPage() {
   return (
@@ -55,10 +60,11 @@ function AboutPage() {
           <FadeUp className="lg:col-span-7">
             <SectionHeading
               as="h1"
-              eyebrow="Who We Are"
-              title="Gimble Foundation is a nonprofit organization committed to making mental wellness support accessible to Africans."
-              description="We believe that mental wellbeing should not be a privilege or something people only seek when they reach a crisis. Everyone deserves practical, everyday support that helps them manage life's pressures and build emotional resilience. By combining technology, community, and outreach, we're creating a future where mental wellness is understood, prioritized, and accessible to all."
+              eyebrow="About Gimble Foundation"
+              title="Gimble Foundation is a nonprofit organization making mental fitness a part of everyday life across Africa."
+              description="We believe your mind deserves the same attention you give your body. You don't have to wait until something is wrong to start taking care of it. Through technology, education, and community, we're helping people understand how their minds work, build healthier mental habits, and develop the skills to navigate everyday life better. Our goal is simple: make mental fitness normal, practical, and accessible."
             />
+
           </FadeUp>
           <Parallax offset={30} className="lg:col-span-5">
             <motion.div
@@ -88,8 +94,8 @@ function AboutPage() {
               Vision
             </p>
             <h2 className="mt-3 font-display text-3xl font-semibold leading-tight text-primary">
-              To make mental wellness support accessible, practical, and
-              stigma-free for Africans everywhere.
+              A future where mental fitness is a normal part of everyday life
+              across Africa.
             </h2>
           </StaggerItem>
           <StaggerItem as="article" className="rounded-3xl border border-border bg-primary p-8 text-primary-foreground lg:p-10">
@@ -97,8 +103,9 @@ function AboutPage() {
               Mission
             </p>
             <h2 className="mt-3 font-display text-3xl font-semibold leading-tight">
-              To empower Africans with accessible mental wellness support through technology, education, and community-driven initiatives.
+              To make mental fitness more understood, practised, and accessible through technology, education, and community.
             </h2>
+
           </StaggerItem>
         </StaggerGroup>
       </Section>
@@ -136,18 +143,19 @@ function AboutPage() {
             Core message
           </p>
           <blockquote className="mt-5 font-display text-3xl font-semibold leading-tight text-primary sm:text-4xl">
-            "Mental wellness support should be accessible before people reach a
-            breaking point."
+            "Mental fitness isn't something you think about only when things go
+            wrong. It's something you build every day."
           </blockquote>
         </div>
       </section>
 
       <CtaBanner
-        title="Join us in building a healthier Africa."
-        subtitle="Whether you download the app or partner with us, every step makes early support more accessible."
+        title="Let's make mental fitness normal."
+        subtitle="Whether you download the app, follow our content, join our community, volunteer, or partner with us, you're helping make mental fitness something people understand, practise, and prioritise."
         primary={{ label: "Get the App", to: "/app" }}
-        secondary={{ label: "Partner with us", to: "/get-involved" }}
+        secondary={{ label: "Partner with Us", to: "/get-involved" }}
       />
+
     </>
   );
 }
