@@ -94,8 +94,8 @@ function AboutPage() {
               Vision
             </p>
             <h2 className="mt-3 font-display text-3xl font-semibold leading-tight text-primary">
-              To make mental wellness support accessible, practical, and
-              stigma-free for Africans everywhere.
+              A future where mental fitness is a normal part of everyday life
+              across Africa.
             </h2>
           </StaggerItem>
           <StaggerItem as="article" className="rounded-3xl border border-border bg-primary p-8 text-primary-foreground lg:p-10">
@@ -103,8 +103,9 @@ function AboutPage() {
               Mission
             </p>
             <h2 className="mt-3 font-display text-3xl font-semibold leading-tight">
-              To empower Africans with accessible mental wellness support through technology, education, and community-driven initiatives.
+              To make mental fitness more understood, practised, and accessible through technology, education, and community.
             </h2>
+
           </StaggerItem>
         </StaggerGroup>
       </Section>
