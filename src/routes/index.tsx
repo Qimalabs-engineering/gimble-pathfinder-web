@@ -221,8 +221,8 @@ function Home() {
         <FadeUp>
           <SectionHeading
             eyebrow="Why Gimble?"
-            title="Mental wellbeing shouldn't only matter during a crisis."
-            description="We believe everyone deserves access to support that helps them navigate everyday challenges before they become overwhelming. Whether you're feeling stressed, emotionally exhausted, burned out, or simply trying to build healthier habits, Gimble is here to support you."
+            title="Your mind is something you can build."
+            description="Physical fitness isn't just about what you do when you're out of shape. You build it through regular practice. We believe your mind deserves the same approach. Mental fitness is about understanding how your mind works, recognising your patterns, handling challenges, managing your attention, and developing the skills to navigate everyday life better. You don't have to wait until something is wrong to start."
           />
         </FadeUp>
       </Section>
@@ -232,12 +232,13 @@ function Home() {
         <FadeUp>
           <SectionHeading
             eyebrow="How We Create Impact"
-            title="Three ways we show up."
-            description="A complete ecosystem for mental wellness: digital support, ongoing connection, and broader community impact."
+            title="Three ways we build mental fitness."
+            description="A growing ecosystem helping people understand, practise, and strengthen their mental fitness."
           />
         </FadeUp>
         <StaggerGroup className="mt-12 grid gap-6 lg:grid-cols-3">
-          {programs.map(({ icon: Icon, title, body, to }, i) => (
+          {programs.map(({ icon: Icon, title, body, cta, to }, i) => (
+
             <StaggerItem key={title}>
               <motion.div
                 whileHover={{ y: -8 }}
