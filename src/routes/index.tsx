@@ -290,11 +290,12 @@ function Home() {
             </FadeUp>
             <FadeUp delay={0.15}>
               <blockquote className="mt-6 font-display text-3xl font-semibold leading-[1.15] text-primary sm:text-4xl lg:text-5xl">
-                "Mental wellness support should be accessible{" "}
-                <span className="italic">before</span> people reach a breaking
-                point."
+                "Mental fitness isn't something you think about only when things
+                go wrong. It's something you{" "}
+                <span className="italic">build every day</span>."
               </blockquote>
             </FadeUp>
+
           </div>
         </div>
       </section>
