@@ -212,13 +212,18 @@ function AppPage() {
         <FadeUp>
           <div className="mx-auto max-w-3xl rounded-3xl border border-border bg-card p-8 text-center sm:p-12">
             <p className="font-display text-xs font-semibold uppercase tracking-[0.2em] text-primary/80">
-              A daily practice
+              Mental fitness is a practice
             </p>
-            <h3 className="mt-4 font-display text-3xl font-semibold leading-tight text-primary sm:text-4xl">
-              "Mental wellness isn't a one-time event. It's a daily practice."
-            </h3>
+            <h2 className="mt-4 font-display text-3xl font-semibold leading-tight text-primary sm:text-4xl">
+              You don't have to wait until something is wrong to start.
+            </h2>
+            <p className="mt-4 text-foreground/70">
+              Just like physical fitness, mental fitness develops through regular practice. The Gimble app gives you practical ways to keep learning about your mind and building your mental fitness, one day at a time.
+            </p>
             <motion.a
-              href="#"
+              href="https://apps.apple.com/ng/app/gimble/id6759309522"
+              target="_blank"
+              rel="noopener noreferrer"
               whileHover={{ y: -3 }}
               whileTap={{ scale: 0.97 }}
               className="mt-8 inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/20 transition"
@@ -231,11 +236,12 @@ function AppPage() {
       </Section>
 
       <CtaBanner
-        title="Start with one small check-in."
-        subtitle="The Gimble app is mobile-first, designed for everyday African life."
-        primary={{ label: "Join the waitlist", to: "/contact" }}
-        secondary={{ label: "Explore the community", to: "/community" }}
+        title="Built for everyday African life."
+        subtitle="Gimble is designed with African users in mind, making mental fitness education and practical tools more accessible, relevant, and easy to use."
+        primary={{ label: "Explore the Community", to: "/community" }}
+        secondary={{ label: "See our programs", to: "/programs" }}
       />
+
     </>
   );
 }
