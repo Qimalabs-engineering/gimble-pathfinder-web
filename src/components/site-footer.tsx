@@ -41,8 +41,9 @@ export function SiteFooter() {
           </Link>
 
           <p className="mt-4 max-w-md text-sm leading-relaxed text-white/80">
-            Mental wellness support should be accessible before people reach a breaking point.
-            Practical, stigma-free wellness for Africans, everyday.
+            Your mind works every day. Mental fitness is how you take care of it.
+            Practical tools, education, and community for everyday life.
+
           </p>
           <form
             onSubmit={handleSubscribe}
