@@ -60,10 +60,11 @@ function AboutPage() {
           <FadeUp className="lg:col-span-7">
             <SectionHeading
               as="h1"
-              eyebrow="Who We Are"
-              title="Gimble Foundation is a nonprofit organization committed to making mental wellness support accessible to Africans."
-              description="We believe that mental wellbeing should not be a privilege or something people only seek when they reach a crisis. Everyone deserves practical, everyday support that helps them manage life's pressures and build emotional resilience. By combining technology, community, and outreach, we're creating a future where mental wellness is understood, prioritized, and accessible to all."
+              eyebrow="About Gimble Foundation"
+              title="Gimble Foundation is a nonprofit organization making mental fitness a part of everyday life across Africa."
+              description="We believe your mind deserves the same attention you give your body. You don't have to wait until something is wrong to start taking care of it. Through technology, education, and community, we're helping people understand how their minds work, build healthier mental habits, and develop the skills to navigate everyday life better. Our goal is simple: make mental fitness normal, practical, and accessible."
             />
+
           </FadeUp>
           <Parallax offset={30} className="lg:col-span-5">
             <motion.div
