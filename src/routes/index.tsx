@@ -27,17 +27,17 @@ import {
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Gimble Foundation — Mental wellness for Africans, everyday." },
+      { title: "Gimble Foundation — Mental fitness for everyday life." },
       {
         name: "description",
         content:
-          "Practical, stigma-free mental wellness support for Africans through the Gimble app, community, and outreach. Support before the breaking point.",
+          "Gimble Foundation is making mental fitness part of everyday life across Africa through technology, education, and community.",
       },
-      { property: "og:title", content: "Gimble Foundation — Mental wellness for Africans, everyday." },
+      { property: "og:title", content: "Gimble Foundation — Mental fitness for everyday life." },
       {
         property: "og:description",
         content:
-          "Practical, stigma-free mental wellness support for Africans through the Gimble app, community, and outreach.",
+          "Making mental fitness part of everyday life across Africa through technology, education, and community.",
       },
       { property: "og:url", content: "https://www.gimblefoundation.org/" },
     ],
@@ -53,7 +53,7 @@ export const Route = createFileRoute("/")({
           name: "Gimble Foundation",
           url: "https://www.gimblefoundation.org",
           description:
-            "Nonprofit mental wellness support for Africans through the Gimble app, community, and outreach.",
+            "Nonprofit making mental fitness part of everyday life across Africa through technology, education, and community.",
         }),
       },
     ],
@@ -64,23 +64,27 @@ export const Route = createFileRoute("/")({
 const programs = [
   {
     icon: HeartPulse,
-    title: "Digital Support",
-    body: "Our mobile app provides guided support, wellness tools, and educational resources that help people build healthier mental habits every day.",
+    title: "Digital Tools",
+    body: "Our mobile app gives you practical tools and guided experiences to help you understand your mind and build healthier mental habits.",
+    cta: "Explore the App",
     to: "/app" as const,
   },
   {
     icon: Users,
-    title: "Community & Connection",
-    body: "We bring people together through our online community and virtual events, creating safe spaces for learning, encouragement, and meaningful conversations about mental wellbeing.",
+    title: "Education & Content",
+    body: "We make mental fitness easier to understand through educational content, conversations, events, and resources that connect the science of the mind to everyday life.",
+    cta: "Explore Our Content",
     to: "/community" as const,
   },
   {
     icon: Megaphone,
-    title: "Outreach & Awareness",
-    body: "Through workshops, campus initiatives, and community programs, we take mental wellness education directly to the people and communities that need it most.",
+    title: "Community & Programs",
+    body: "Through community initiatives, workshops, campus programs, and partnerships, we take mental fitness beyond the screen and into everyday life.",
+    cta: "Explore Our Programs",
     to: "/programs" as const,
   },
 ];
+
 
 function Home() {
   return (
