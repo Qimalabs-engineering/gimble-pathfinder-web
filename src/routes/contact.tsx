@@ -191,8 +191,9 @@ function ContactPage() {
       <div className="mx-auto max-w-3xl rounded-3xl border border-border bg-card p-8 text-center sm:p-12">
         <h2 className="font-display text-2xl font-semibold text-primary">Stay Connected</h2>
         <p className="mt-3 text-foreground/70">
-          Follow our journey, join our conversations, and become part of a growing movement working to make mental wellness support accessible for Africans.
+          Follow our journey, join our conversations, and be part of a growing movement making mental fitness part of everyday life across Africa.
         </p>
+
         <div className="mt-6 flex flex-wrap justify-center gap-3">
           {[
             { name: "Instagram", href: "https://www.instagram.com/gimblefoundation" },
