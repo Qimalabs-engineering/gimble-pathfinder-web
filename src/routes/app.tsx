@@ -11,7 +11,6 @@ import {
 } from "lucide-react";
 import { motion } from "framer-motion";
 
-import appUserImg from "@/assets/app-phone.jpg.asset.json";
 import { Section, SectionEyebrow, SectionHeading } from "@/components/section";
 import { CtaBanner } from "@/components/cta-banner";
 import {
@@ -163,7 +162,7 @@ function AppPage() {
                 className="overflow-hidden rounded-4xl border border-border bg-card shadow-xl"
               >
                 <img
-                  src={appUserImg.url}
+                  src="/brand/app-phone.jpg"
                   alt="A woman smiling while using the Gimble app on her phone"
                   loading="lazy"
                   width={1920}
