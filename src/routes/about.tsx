@@ -76,10 +76,10 @@ function AboutPage() {
             >
               <img
                 src={heroImg}
-                alt="Portrait of a calm young African woman in golden light"
+                alt="A woman laughing freely with curly hair against a soft white background"
                 loading="lazy"
-                width={1536}
-                height={1280}
+                width={1280}
+                height={1920}
                 className="h-full w-full object-cover"
               />
             </motion.div>
