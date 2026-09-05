@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 
-import heroImg from "@/assets/hero-woman.jpg";
+import heroImg from "@/assets/about-joy.jpg";
 import { Section, SectionHeading } from "@/components/section";
 import { CtaBanner } from "@/components/cta-banner";
 import { FadeUp, StaggerGroup, StaggerItem, Parallax } from "@/components/motion";
@@ -76,10 +76,10 @@ function AboutPage() {
             >
               <img
                 src={heroImg}
-                alt="Portrait of a calm young African woman in golden light"
+                alt="A woman laughing freely with curly hair against a soft white background"
                 loading="lazy"
-                width={1536}
-                height={1280}
+                width={1280}
+                height={1920}
                 className="h-full w-full object-cover"
               />
             </motion.div>
