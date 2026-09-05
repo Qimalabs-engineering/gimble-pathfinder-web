@@ -465,10 +465,10 @@ function Home() {
             <div className="mt-8 flex flex-wrap gap-3">
               <motion.div whileHover={{ y: -3 }} whileTap={{ scale: 0.97 }}>
                 <Link
-                  to="/app"
+                  to="/get-involved"
                   className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-semibold text-[color:var(--teal)] shadow-lg transition hover:brightness-95"
                 >
-                  Download the App
+                  Get Involved
                   <ArrowRight className="h-4 w-4" />
                 </Link>
               </motion.div>
@@ -482,10 +482,10 @@ function Home() {
               </motion.div>
               <motion.div whileHover={{ y: -3 }} whileTap={{ scale: 0.97 }}>
                 <Link
-                  to="/get-involved"
+                  to="/app"
                   className="inline-flex items-center gap-2 rounded-full border border-white/30 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
                 >
-                  Volunteer With Us
+                  Download the App
                 </Link>
               </motion.div>
             </div>
