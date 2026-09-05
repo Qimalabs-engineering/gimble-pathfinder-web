@@ -183,7 +183,7 @@ function Home() {
                   alt="A smiling woman with curly hair against a deep green backdrop"
                   width={1280}
                   height={1920}
-                  className="h-full w-full object-cover"
+                  className="aspect-[4/5] w-full object-cover lg:max-h-[520px]"
                 />
               </motion.div>
             </Parallax>
