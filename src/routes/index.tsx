@@ -113,7 +113,7 @@ function Home() {
         <div className="mx-auto grid max-w-7xl items-start gap-12 px-4 pb-16 pt-12 sm:px-6 lg:grid-cols-12 lg:gap-8 lg:px-8 lg:pb-24 lg:pt-20">
           <div className="lg:col-span-7">
             <FadeUp>
-              <SectionEyebrow>Gimble Foundation</SectionEyebrow>
+              <SectionEyebrow>Gimble Foundation · Nonprofit</SectionEyebrow>
             </FadeUp>
             <h1 className="mt-5 font-display text-5xl font-semibold leading-[1.02] text-primary sm:text-6xl lg:text-7xl">
               <WordReveal text="Mental fitness for everyday life." />
@@ -127,24 +127,31 @@ function Home() {
               Gimble Foundation is making mental fitness part of everyday life across Africa, through technology, education, and community.
             </FadeUp>
 
-            <FadeUp delay={0.6} className="mt-8 flex flex-wrap gap-3">
+            <FadeUp delay={0.6} className="mt-8 flex flex-wrap items-center gap-3">
               <motion.div whileHover={{ y: -3 }} whileTap={{ scale: 0.97 }}>
                 <Link
-                  to="/app"
+                  to="/get-involved"
                   className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/20 transition hover:opacity-90"
                 >
-                  Download the App
+                  Join the Movement
                   <ArrowRight className="h-4 w-4" />
                 </Link>
               </motion.div>
               <motion.div whileHover={{ y: -3 }} whileTap={{ scale: 0.97 }}>
                 <Link
-                  to="/community"
+                  to="/programs"
                   className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-background px-6 py-3 text-sm font-semibold text-primary transition hover:bg-primary/5"
                 >
-                  Join Our Community
+                  Explore Our Programs
                 </Link>
               </motion.div>
+              <Link
+                to="/app"
+                className="inline-flex items-center gap-1.5 px-2 py-3 text-sm font-semibold text-primary/80 underline-offset-4 transition hover:text-primary hover:underline"
+              >
+                or get the app
+                <ArrowRight className="h-3.5 w-3.5" />
+              </Link>
             </FadeUp>
 
             <FadeUp delay={0.8} className="mt-12 flex flex-wrap items-center gap-x-8 gap-y-3 text-sm text-foreground/70">
@@ -213,6 +220,24 @@ function Home() {
               </div>
             </motion.div>
           </div>
+        </div>
+      </section>
+
+      {/* IMPACT BAND */}
+      <section className="border-y border-border bg-card/60">
+        <div className="mx-auto grid max-w-7xl grid-cols-2 gap-8 px-4 py-12 sm:px-6 lg:grid-cols-4 lg:px-8">
+          {[
+            { value: "3", label: "Pillars of impact", note: "Digital tools, education, community" },
+            { value: "100%", label: "Free to use", note: "Every tool and resource" },
+            { value: "2", label: "App platforms", note: "iOS and Android" },
+            { value: "1", label: "Mission", note: "Mental fitness for everyday life" },
+          ].map(({ value, label, note }, i) => (
+            <FadeUp key={label} delay={i * 0.1}>
+              <p className="font-display text-4xl font-semibold text-primary sm:text-5xl">{value}</p>
+              <p className="mt-2 text-sm font-semibold uppercase tracking-wider text-foreground/80">{label}</p>
+              <p className="mt-1 text-xs text-foreground/60">{note}</p>
+            </FadeUp>
+          ))}
         </div>
       </section>
 
