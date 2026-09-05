@@ -348,9 +348,9 @@ function Home() {
             >
               <img
                 src={calmHands}
-                alt="Hands cradling a warm cup of tea in soft window light"
+                alt="Hands wrapped in a cozy blanket holding a warm cup of tea outdoors"
                 loading="lazy"
-                width={1280}
+                width={1920}
                 height={1280}
                 className="h-full w-full object-cover"
               />
