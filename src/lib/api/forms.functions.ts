@@ -56,8 +56,9 @@ export const subscribeEmail = createServerFn({ method: "POST" })
     const supabase = getPublicClient();
     const { error } = await supabase
       .from("subscribers")
-      .upsert({ email: data.email, source: data.source }, { onConflict: "email,source" });
-    if (error) {
+      .insert({ email: data.email, source: data.source });
+    // 23505 = already subscribed; treat as success
+    if (error && error.code !== "23505") {
       console.error("[subscribe] insert failed", error.message);
       throw new Error("We couldn't sign you up. Please try again.");
     }
