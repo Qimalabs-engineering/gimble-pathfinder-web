@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { HeartPulse, Users, Megaphone } from "lucide-react";
 import { motion } from "framer-motion";
 
-import workshopImg from "@/assets/workshop.jpg";
+import programsImg from "@/assets/programs-campus.jpg.asset.json";
 import { Section, SectionHeading } from "@/components/section";
 import { CtaBanner } from "@/components/cta-banner";
 import { FadeUp, StaggerGroup, StaggerItem } from "@/components/motion";
@@ -153,11 +153,11 @@ function ProgramsPage() {
                 {idx === 2 && (
                   <div className="mt-8 overflow-hidden rounded-2xl border border-border">
                     <motion.img
-                      src={workshopImg}
-                      alt="A wellness workshop in a bright community room"
+                      src={programsImg.url}
+                      alt="A group of young people laughing together during a campus mental fitness program"
                       loading="lazy"
-                      width={1536}
-                      height={1024}
+                      width={1920}
+                      height={1389}
                       initial={{ scale: 1.1 }}
                       whileInView={{ scale: 1 }}
                       viewport={{ once: true, margin: "-80px" }}

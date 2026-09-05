@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { HandHeart, Building2, Award } from "lucide-react";
 import { motion } from "framer-motion";
 
-import workshopImg from "@/assets/workshop.jpg";
+import getInvolvedImg from "@/assets/join-us-dinner.jpg.asset.json";
 import { Section, SectionHeading } from "@/components/section";
 import { CtaBanner } from "@/components/cta-banner";
 import { FadeUp, StaggerGroup, StaggerItem, Parallax } from "@/components/motion";
@@ -73,11 +73,11 @@ function GetInvolvedPage() {
               className="overflow-hidden rounded-4xl border border-border bg-card shadow-lg"
             >
               <img
-                src={workshopImg}
-                alt="A community wellness workshop"
+                src={getInvolvedImg.url}
+                alt="A group of friends enjoying a meal together and taking a selfie"
                 loading="lazy"
-                width={1536}
-                height={1024}
+                width={1920}
+                height={1282}
                 className="h-full w-full object-cover"
               />
             </motion.div>

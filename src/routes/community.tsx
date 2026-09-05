@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import { useServerFn } from "@tanstack/react-start";
 
-import communityImg from "@/assets/community.jpg";
+import communityImg from "@/assets/community-rooftop.jpg.asset.json";
 import { subscribeEmail } from "@/lib/api/forms.functions";
 import { Section, SectionHeading } from "@/components/section";
 import { CtaBanner } from "@/components/cta-banner";
@@ -142,11 +142,11 @@ function CommunityPage() {
               className="overflow-hidden rounded-4xl border border-border bg-card shadow-lg"
             >
               <img
-                src={communityImg}
-                alt="Friends laughing together outdoors"
+                src={communityImg.url}
+                alt="A diverse group of friends taking a selfie together on a rooftop"
                 loading="lazy"
-                width={1536}
-                height={1024}
+                width={1920}
+                height={1080}
                 className="h-full w-full object-cover"
               />
             </motion.div>
