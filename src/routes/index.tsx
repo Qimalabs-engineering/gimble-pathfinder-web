@@ -9,9 +9,9 @@ import {
 } from "lucide-react";
 import { motion } from "framer-motion";
 
-import heroImg from "@/assets/hero-woman.jpg";
-import communityImg from "@/assets/community.jpg";
-import calmHands from "@/assets/calm-hands.jpg";
+import heroImg from "@/assets/hero-joy.jpg";
+import communityImg from "@/assets/community-circle.jpg";
+import calmHands from "@/assets/calm-cup.jpg";
 const oceanicBg = "/brand/oceanic-bg.jpg";
 import { Section, SectionEyebrow, SectionHeading } from "@/components/section";
 import { CtaBanner } from "@/components/cta-banner";
@@ -180,9 +180,9 @@ function Home() {
               >
                 <img
                   src={heroImg}
-                  alt="A young African woman smiling softly in golden sunlight"
-                  width={1536}
-                  height={1280}
+                  alt="A smiling woman with curly hair against a deep green backdrop"
+                  width={1280}
+                  height={1920}
                   className="h-full w-full object-cover"
                 />
               </motion.div>
@@ -348,9 +348,9 @@ function Home() {
             >
               <img
                 src={calmHands}
-                alt="Hands cradling a warm cup of tea in soft window light"
+                alt="Hands wrapped in a cozy blanket holding a warm cup of tea outdoors"
                 loading="lazy"
-                width={1280}
+                width={1920}
                 height={1280}
                 className="h-full w-full object-cover"
               />
@@ -366,10 +366,10 @@ function Home() {
             <div className="relative min-h-[320px] overflow-hidden lg:min-h-[480px]">
               <motion.img
                 src={communityImg}
-                alt="Group of African friends sitting and laughing together outdoors"
+                alt="A diverse group of young adults sitting together in a supportive circle"
                 loading="lazy"
-                width={1536}
-                height={1024}
+                width={1920}
+                height={1280}
                 initial={{ scale: 1.15 }}
                 whileInView={{ scale: 1 }}
                 viewport={{ once: true, margin: "-80px" }}
