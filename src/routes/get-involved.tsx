@@ -2,7 +2,6 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { HandHeart, Building2, Award } from "lucide-react";
 import { motion } from "framer-motion";
 
-import getInvolvedImg from "@/assets/join-us-dinner.jpg.asset.json";
 import { Section, SectionHeading } from "@/components/section";
 import { CtaBanner } from "@/components/cta-banner";
 import { FadeUp, StaggerGroup, StaggerItem, Parallax } from "@/components/motion";
@@ -73,7 +72,7 @@ function GetInvolvedPage() {
               className="overflow-hidden rounded-4xl border border-border bg-card shadow-lg"
             >
               <img
-                src={getInvolvedImg.url}
+                src="/brand/join-us-dinner.jpg"
                 alt="A group of friends enjoying a meal together and taking a selfie"
                 loading="lazy"
                 width={1920}
