@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { HandHeart, Building2, Award } from "lucide-react";
 import { motion } from "framer-motion";
 
-import workshopImg from "@/assets/workshop.jpg";
+import getInvolvedImg from "@/assets/join-us-dinner.jpg.asset.json";
 import { Section, SectionHeading } from "@/components/section";
 import { CtaBanner } from "@/components/cta-banner";
 import { FadeUp, StaggerGroup, StaggerItem, Parallax } from "@/components/motion";

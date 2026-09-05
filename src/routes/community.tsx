@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import { useServerFn } from "@tanstack/react-start";
 
-import communityImg from "@/assets/community.jpg";
+import communityImg from "@/assets/community-rooftop.jpg.asset.json";
 import { subscribeEmail } from "@/lib/api/forms.functions";
 import { Section, SectionHeading } from "@/components/section";
 import { CtaBanner } from "@/components/cta-banner";

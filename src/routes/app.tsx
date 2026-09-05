@@ -11,7 +11,7 @@ import {
 } from "lucide-react";
 import { motion } from "framer-motion";
 
-import appUserImg from "@/assets/app-user.jpg";
+import appUserImg from "@/assets/app-phone.jpg.asset.json";
 import { Section, SectionEyebrow, SectionHeading } from "@/components/section";
 import { CtaBanner } from "@/components/cta-banner";
 import {
