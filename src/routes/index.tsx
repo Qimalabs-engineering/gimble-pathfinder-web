@@ -366,10 +366,10 @@ function Home() {
             <div className="relative min-h-[320px] overflow-hidden lg:min-h-[480px]">
               <motion.img
                 src={communityImg}
-                alt="Group of African friends sitting and laughing together outdoors"
+                alt="A diverse group of young adults sitting together in a supportive circle"
                 loading="lazy"
-                width={1536}
-                height={1024}
+                width={1920}
+                height={1280}
                 initial={{ scale: 1.15 }}
                 whileInView={{ scale: 1 }}
                 viewport={{ once: true, margin: "-80px" }}
