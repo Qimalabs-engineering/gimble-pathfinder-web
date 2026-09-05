@@ -180,9 +180,9 @@ function Home() {
               >
                 <img
                   src={heroImg}
-                  alt="A young African woman smiling softly in golden sunlight"
-                  width={1536}
-                  height={1280}
+                  alt="A smiling woman with curly hair against a deep green backdrop"
+                  width={1280}
+                  height={1920}
                   className="h-full w-full object-cover"
                 />
               </motion.div>
