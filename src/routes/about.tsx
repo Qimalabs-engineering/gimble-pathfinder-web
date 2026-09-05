@@ -56,7 +56,7 @@ function AboutPage() {
   return (
     <>
       <Section className="!pb-12 !pt-20">
-        <div className="grid items-center gap-12 lg:grid-cols-12">
+        <div className="grid items-start gap-12 lg:grid-cols-12">
           <FadeUp className="lg:col-span-7">
             <SectionHeading
               as="h1"
