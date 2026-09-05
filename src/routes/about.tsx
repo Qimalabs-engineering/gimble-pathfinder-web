@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 
-import heroImg from "@/assets/hero-woman.jpg";
+import heroImg from "@/assets/about-joy.jpg";
 import { Section, SectionHeading } from "@/components/section";
 import { CtaBanner } from "@/components/cta-banner";
 import { FadeUp, StaggerGroup, StaggerItem, Parallax } from "@/components/motion";
