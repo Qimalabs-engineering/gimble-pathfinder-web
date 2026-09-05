@@ -9,9 +9,9 @@ import {
 } from "lucide-react";
 import { motion } from "framer-motion";
 
-import heroImg from "@/assets/hero-woman.jpg";
-import communityImg from "@/assets/community.jpg";
-import calmHands from "@/assets/calm-hands.jpg";
+import heroImg from "@/assets/hero-joy.jpg";
+import communityImg from "@/assets/community-circle.jpg";
+import calmHands from "@/assets/calm-cup.jpg";
 const oceanicBg = "/brand/oceanic-bg.jpg";
 import { Section, SectionEyebrow, SectionHeading } from "@/components/section";
 import { CtaBanner } from "@/components/cta-banner";
