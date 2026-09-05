@@ -110,7 +110,7 @@ function Home() {
         >
           <HexPattern className="h-[560px] w-[560px] text-primary/10" />
         </motion.div>
-        <div className="mx-auto grid max-w-7xl gap-12 px-4 pb-16 pt-12 sm:px-6 lg:grid-cols-12 lg:gap-8 lg:px-8 lg:pb-24 lg:pt-20">
+        <div className="mx-auto grid max-w-7xl items-start gap-12 px-4 pb-16 pt-12 sm:px-6 lg:grid-cols-12 lg:gap-8 lg:px-8 lg:pb-24 lg:pt-20">
           <div className="lg:col-span-7">
             <FadeUp>
               <SectionEyebrow>Gimble Foundation</SectionEyebrow>
