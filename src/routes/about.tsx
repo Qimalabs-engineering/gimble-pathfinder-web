@@ -56,7 +56,7 @@ function AboutPage() {
   return (
     <>
       <Section className="!pb-12 !pt-20">
-        <div className="grid items-end gap-12 lg:grid-cols-12">
+        <div className="grid items-center gap-12 lg:grid-cols-12">
           <FadeUp className="lg:col-span-7">
             <SectionHeading
               as="h1"
@@ -80,7 +80,7 @@ function AboutPage() {
                 loading="lazy"
                 width={1280}
                 height={1920}
-                className="h-full w-full object-cover"
+                className="aspect-[4/5] w-full object-cover lg:max-h-[520px]"
               />
             </motion.div>
           </Parallax>
