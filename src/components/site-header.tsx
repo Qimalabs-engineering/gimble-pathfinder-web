@@ -14,6 +14,7 @@ const nav = [
   { to: "/app", label: "The App" },
   { to: "/community", label: "Community" },
   { to: "/get-involved", label: "Join Us" },
+  { to: "/faq", label: "FAQ" },
   { to: "/contact", label: "Contact" },
 ] as const;
 

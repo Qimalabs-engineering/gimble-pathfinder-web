@@ -12,4 +12,6 @@ Gimble Foundation helps people understand how their minds work and build healthi
 - [The App](/app): Mental fitness in your pocket — features and download links.
 - [Community](/community): Conversations, virtual events, learning sessions, and challenges.
 - [Join Us](/get-involved): Volunteer, partner with us, or become an ambassador.
+- [FAQ](/faq): Answers to common questions about Gimble Foundation, the app, programs, and support.
+- [Terms of Service](/terms): Terms governing use of the website and mobile app.
 - [Contact](/contact): Reach the Gimble Foundation team.
