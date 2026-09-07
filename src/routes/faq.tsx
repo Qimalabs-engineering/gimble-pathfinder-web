@@ -78,6 +78,7 @@ interface FaqItem {
 
 interface FaqSection {
   title: string;
+  id?: string;
   items: FaqItem[];
 }
 
