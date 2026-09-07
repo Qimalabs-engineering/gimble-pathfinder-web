@@ -88,6 +88,7 @@ export function SiteFooter() {
             <li><Link to="/programs" className="hover:text-[color:var(--green)]">Programs</Link></li>
             <li><Link to="/app" className="hover:text-[color:var(--green)]">The App</Link></li>
             <li><Link to="/community" className="hover:text-[color:var(--green)]">Community</Link></li>
+            <li><Link to="/faq" className="hover:text-[color:var(--green)]">FAQ</Link></li>
           </ul>
         </div>
 
@@ -98,6 +99,7 @@ export function SiteFooter() {
             <li><Link to="/get-involved" className="hover:text-[color:var(--green)]">Volunteer</Link></li>
             <li><Link to="/get-involved" className="hover:text-[color:var(--green)]">Donate</Link></li>
             <li><Link to="/contact" className="hover:text-[color:var(--green)]">Contact</Link></li>
+            <li><Link to="/terms" className="hover:text-[color:var(--green)]">Terms of Service</Link></li>
             <li><Link to="/auth" rel="nofollow" className="text-white/50 hover:text-[color:var(--green)]">Admin</Link></li>
           </ul>
         </div>
