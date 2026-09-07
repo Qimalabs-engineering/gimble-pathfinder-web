@@ -101,7 +101,6 @@ export function SiteFooter() {
             <li><Link to="/contact" className="hover:text-[color:var(--green)]">Contact</Link></li>
             <li><Link to="/terms" className="hover:text-[color:var(--green)]">Terms of Service</Link></li>
             <li><Link to="/privacy" className="hover:text-[color:var(--green)]">Privacy Policy</Link></li>
-            <li><Link to="/auth" rel="nofollow" className="text-white/50 hover:text-[color:var(--green)]">Admin</Link></li>
           </ul>
         </div>
       </div>
