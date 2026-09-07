@@ -1,0 +1,15 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.gimble",
+      "sha256_cert_fingerprints": [
+        "45:02:64:BB:C0:F5:49:AD:8D:CF:72:AB:C4:E1:37:B9:66:88:5B:E0:81:2A:9A:FD:C8:8C:69:40:6C:DA:34:10",
+        "B7:5E:20:67:82:B4:2B:CF:B1:B2:34:04:DE:64:F0:7C:C5:DB:9A:79:AD:D6:B4:C6:DD:B5:0C:3B:BA:B5:A6:8F"
+      ]
+    }
+  }
+]
