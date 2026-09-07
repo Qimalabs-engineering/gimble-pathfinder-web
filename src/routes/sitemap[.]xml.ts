@@ -19,6 +19,7 @@ const PRIORITY: Record<string, string> = {
   "/get-involved": "0.8",
   "/faq": "0.7",
   "/terms": "0.5",
+  "/privacy": "0.5",
   "/contact": "0.6",
 };
 const DEFAULT_PRIORITY = "0.7";

@@ -125,7 +125,8 @@ const faqSections: FaqSection[] = [
         question: "Where is Gimble Foundation based?",
         answer: (
           <>
-            We work across Africa and serve the continent. You can reach us at{" "}
+            We are headquartered in Lagos, Nigeria, but work and serve the entire continent. You can
+            reach us at{" "}
             <a
               href="mailto:hello@gimblefoundation.org"
               className="text-primary underline underline-offset-4"
@@ -339,14 +340,9 @@ const faqSections: FaqSection[] = [
         answer: (
           <>
             Yes. You can read our{" "}
-            <a
-              href="https://www.usegimble.io/privacy-policy"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-primary underline underline-offset-4"
-            >
+            <Link to="/privacy" className="text-primary underline underline-offset-4">
               privacy policy
-            </a>{" "}
+            </Link>{" "}
             and our{" "}
             <Link to="/terms" className="text-primary underline underline-offset-4">
               terms of service
