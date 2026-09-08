@@ -45,11 +45,14 @@ function DeleteAccountPage() {
           <p>The fastest way to delete your account is directly in the Gimble app:</p>
           <ol>
             <li>Open the Gimble app and sign in.</li>
-            <li>Go to your profile or settings.</li>
-            <li>Select <strong>Delete account</strong>.</li>
+            <li>
+              Go to <strong>Profile</strong>, then <strong>Account and privacy</strong>.
+            </li>
+            <li>
+              Select <strong>Delete Account</strong>.
+            </li>
             <li>Confirm your choice when prompted.</li>
           </ol>
-          <p>Deletion starts immediately once you confirm.</p>
 
           <h2 className="font-display text-2xl font-semibold text-primary">2. Delete by email</h2>
           <p>
