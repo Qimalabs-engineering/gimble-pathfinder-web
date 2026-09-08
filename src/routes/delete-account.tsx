@@ -64,8 +64,8 @@ function DeleteAccountPage() {
               hello@gimblefoundation.org
             </a>{" "}
             with the subject line <strong>Account deletion request</strong> from the email address
-            linked to your account. We'll verify your identity and process the request, usually
-            within 7 days.
+            linked to your account. We'll verify your identity and process the request within 7 to
+            14 business days.
           </p>
 
           <h2 className="font-display text-2xl font-semibold text-primary">3. What gets deleted</h2>
@@ -91,8 +91,9 @@ function DeleteAccountPage() {
 
           <h2 className="font-display text-2xl font-semibold text-primary">5. Timing</h2>
           <p>
-            Your account is deactivated immediately and permanently deleted within 30 days. During
-            this window your data is no longer visible or accessible. Deletion cannot be undone.
+            Deletion takes 7 to 14 business days to complete. During that time you can still sign
+            in. Once it is done, your personal data is permanently removed and you will receive a
+            confirmation email. This cannot be undone.
           </p>
 
           <h2 className="font-display text-2xl font-semibold text-primary">6. Questions</h2>
