@@ -15,6 +15,7 @@ import { Route as ProgramsRouteImport } from './routes/programs'
 import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as GetInvolvedRouteImport } from './routes/get-involved'
 import { Route as FaqRouteImport } from './routes/faq'
+import { Route as DeleteAccountRouteImport } from './routes/delete-account'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as CommunityRouteImport } from './routes/community'
 import { Route as AuthRouteImport } from './routes/auth'
@@ -52,6 +53,11 @@ const GetInvolvedRoute = GetInvolvedRouteImport.update({
 const FaqRoute = FaqRouteImport.update({
   id: '/faq',
   path: '/faq',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DeleteAccountRoute = DeleteAccountRouteImport.update({
+  id: '/delete-account',
+  path: '/delete-account',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ContactRoute = ContactRouteImport.update({
@@ -101,6 +107,7 @@ export interface FileRoutesByFullPath {
   '/auth': typeof AuthRoute
   '/community': typeof CommunityRoute
   '/contact': typeof ContactRoute
+  '/delete-account': typeof DeleteAccountRoute
   '/faq': typeof FaqRoute
   '/get-involved': typeof GetInvolvedRoute
   '/privacy': typeof PrivacyRoute
@@ -116,6 +123,7 @@ export interface FileRoutesByTo {
   '/auth': typeof AuthRoute
   '/community': typeof CommunityRoute
   '/contact': typeof ContactRoute
+  '/delete-account': typeof DeleteAccountRoute
   '/faq': typeof FaqRoute
   '/get-involved': typeof GetInvolvedRoute
   '/privacy': typeof PrivacyRoute
@@ -133,6 +141,7 @@ export interface FileRoutesById {
   '/auth': typeof AuthRoute
   '/community': typeof CommunityRoute
   '/contact': typeof ContactRoute
+  '/delete-account': typeof DeleteAccountRoute
   '/faq': typeof FaqRoute
   '/get-involved': typeof GetInvolvedRoute
   '/privacy': typeof PrivacyRoute
@@ -150,6 +159,7 @@ export interface FileRouteTypes {
     | '/auth'
     | '/community'
     | '/contact'
+    | '/delete-account'
     | '/faq'
     | '/get-involved'
     | '/privacy'
@@ -165,6 +175,7 @@ export interface FileRouteTypes {
     | '/auth'
     | '/community'
     | '/contact'
+    | '/delete-account'
     | '/faq'
     | '/get-involved'
     | '/privacy'
@@ -181,6 +192,7 @@ export interface FileRouteTypes {
     | '/auth'
     | '/community'
     | '/contact'
+    | '/delete-account'
     | '/faq'
     | '/get-involved'
     | '/privacy'
@@ -198,6 +210,7 @@ export interface RootRouteChildren {
   AuthRoute: typeof AuthRoute
   CommunityRoute: typeof CommunityRoute
   ContactRoute: typeof ContactRoute
+  DeleteAccountRoute: typeof DeleteAccountRoute
   FaqRoute: typeof FaqRoute
   GetInvolvedRoute: typeof GetInvolvedRoute
   PrivacyRoute: typeof PrivacyRoute
@@ -248,6 +261,13 @@ declare module '@tanstack/react-router' {
       path: '/faq'
       fullPath: '/faq'
       preLoaderRoute: typeof FaqRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/delete-account': {
+      id: '/delete-account'
+      path: '/delete-account'
+      fullPath: '/delete-account'
+      preLoaderRoute: typeof DeleteAccountRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/contact': {
@@ -328,6 +348,7 @@ const rootRouteChildren: RootRouteChildren = {
   AuthRoute: AuthRoute,
   CommunityRoute: CommunityRoute,
   ContactRoute: ContactRoute,
+  DeleteAccountRoute: DeleteAccountRoute,
   FaqRoute: FaqRoute,
   GetInvolvedRoute: GetInvolvedRoute,
   PrivacyRoute: PrivacyRoute,
