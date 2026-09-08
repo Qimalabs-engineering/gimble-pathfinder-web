@@ -307,8 +307,21 @@ const faqSections: FaqSection[] = [
       },
       {
         question: "How do I delete my account?",
-        answer:
-          "Go to Profile, then Account and privacy, then Delete Account. Deletion takes 7 to 14 business days to complete. During that time you can still sign in. Once it is done, your personal data is permanently removed and you will receive a confirmation email. This cannot be undone.",
+        answer: (
+          <>
+            Go to Profile, then Account and privacy, then Delete Account. Deletion takes 7 to 14
+            business days to complete. During that time you can still sign in. Once it is done,
+            your personal data is permanently removed and you will receive a confirmation email.
+            This cannot be undone. Full details are on our{" "}
+            <Link
+              to="/delete-account"
+              className="text-primary underline underline-offset-4"
+            >
+              account deletion page
+            </Link>
+            .
+          </>
+        ),
       },
     ],
   },
