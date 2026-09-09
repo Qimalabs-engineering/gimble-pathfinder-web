@@ -6,8 +6,23 @@ import { useServerFn } from "@tanstack/react-start";
 import { subscribeEmail } from "@/lib/api/forms.functions";
 const wordmarkLight = "/brand/gimble-wordmark-light.png";
 
+// lucide passes these straight to React.createElement, so they must be React
+// DOM prop names. The kebab-case SVG spelling ("stroke-width") makes React log
+// an "Invalid DOM property" error on every page that renders the footer, and a
+// missing `key` warning for the array entry.
 const tiktokIconNode = [
-  ["path", { d: "M9 12a4 4 0 1 0 4 4V4c.5.3 1.2.5 2 .5a2.5 2.5 0 0 0 2.5-2.5V2h-2a4.5 4.5 0 0 1-4.5 4.5V12Z", fill: "none", stroke: "currentColor", "stroke-width": "2", "stroke-linecap": "round", "stroke-linejoin": "round" }],
+  [
+    "path",
+    {
+      key: "tiktok-body",
+      d: "M9 12a4 4 0 1 0 4 4V4c.5.3 1.2.5 2 .5a2.5 2.5 0 0 0 2.5-2.5V2h-2a4.5 4.5 0 0 1-4.5 4.5V12Z",
+      fill: "none",
+      stroke: "currentColor",
+      strokeWidth: "2",
+      strokeLinecap: "round",
+      strokeLinejoin: "round",
+    },
+  ],
 ] as import("lucide-react").IconNode;
 
 

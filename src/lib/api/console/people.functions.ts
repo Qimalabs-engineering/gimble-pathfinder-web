@@ -5,6 +5,7 @@ import { requireAdminSession } from "@/integrations/gimble/auth-middleware";
 import { gimbleFetch } from "@/integrations/gimble/client.server";
 import type {
   AdminUser,
+  DashboardOverview,
   ConsoleRole,
   ListResponse,
   MemberDetailResponse,
@@ -125,6 +126,16 @@ export const getMember = createServerFn({ method: "GET" })
   .handler(async ({ data }) => {
     const response = await gimbleFetch<SingleResponse<MemberDetailResponse>>(
       `/api/console/members/${encodeURIComponent(data.hashId)}`
+    );
+    return response.data;
+  });
+
+/** Everything the dashboard shows, in one round trip. */
+export const getOverview = createServerFn({ method: "GET" })
+  .middleware([requireAdminSession])
+  .handler(async () => {
+    const response = await gimbleFetch<SingleResponse<DashboardOverview>>(
+      "/api/console/overview"
     );
     return response.data;
   });
