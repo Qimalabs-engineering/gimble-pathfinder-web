@@ -4,6 +4,7 @@ import {
   Link,
   createRootRouteWithContext,
   useRouter,
+  useRouterState,
   HeadContent,
   Scripts,
 } from "@tanstack/react-router";
@@ -146,6 +147,25 @@ function RootShell({ children }: { children: ReactNode }) {
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
+  const pathname = useRouterState({ select: (state) => state.location.pathname });
+
+  // The admin console brings its own sidebar chrome and full-height layout. It
+  // must not sit inside the marketing header, footer and decorative backdrop —
+  // those belong to the public site and would frame an internal tool as a
+  // nonprofit landing page.
+  //
+  // /auth deliberately KEEPS the marketing chrome: it is a single centred card
+  // that already reads correctly there, and it is the page a member arrives at
+  // from a reset email.
+  const isConsole = pathname.startsWith("/admin");
+
+  if (isConsole) {
+    return (
+      <QueryClientProvider client={queryClient}>
+        <Outlet />
+      </QueryClientProvider>
+    );
+  }
 
   return (
     <QueryClientProvider client={queryClient}>
