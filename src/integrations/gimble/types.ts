@@ -35,6 +35,39 @@ export interface AdminSession {
   permissions: Record<string, unknown>;
 }
 
+export interface ConsoleRole {
+  name: string;
+  display_name: string;
+  description: string | null;
+  /** `{ all_data: true }` for super_admin; otherwise resource → actions. */
+  permissions: Record<string, unknown>;
+  is_system_role: boolean;
+}
+
+export interface AdminUser {
+  hash_id: string;
+  email: string;
+  user_type: 'member' | 'facilitator' | 'admin';
+  is_active: boolean;
+  email_confirmed: boolean;
+  last_login_at: string | null;
+  created_at: string;
+  roles: Array<{ name: string; display_name: string }>;
+}
+
+export interface MemberSummary {
+  hash_id: string;
+  first_name: string | null;
+  last_name: string | null;
+  email: string | null;
+  is_active: boolean;
+  timezone: string | null;
+  last_activity_at: string | null;
+  created_at: string;
+  morning_checkin_enabled: boolean;
+  push_notifications: boolean;
+}
+
 export type ContactStatus = 'new' | 'read' | 'replied' | 'spam' | 'archived';
 
 export interface ContactSubmission {

@@ -148,6 +148,8 @@ export function StatusBadge({ status }: { status: string }) {
       spam: "bg-destructive/10 text-destructive border-destructive/25",
       subscribed: "bg-primary/10 text-primary border-primary/25",
       unsubscribed: "bg-muted text-muted-foreground border-border",
+      active: "bg-primary/10 text-primary border-primary/25",
+      inactive: "bg-muted text-muted-foreground border-border",
       bounced: "bg-destructive/10 text-destructive border-destructive/25",
       complained: "bg-destructive/10 text-destructive border-destructive/25",
     }[status] ?? "bg-muted text-muted-foreground border-border";

@@ -6,6 +6,8 @@ import {
   LayoutDashboard,
   LogOut,
   Mail,
+  ShieldCheck,
+  Users,
   type LucideIcon,
 } from "lucide-react";
 import type { ReactNode } from "react";
@@ -35,6 +37,13 @@ const NAV_SECTIONS: Array<{ heading: string; items: NavItem[] }> = [
   {
     heading: "Overview",
     items: [{ to: "/admin", label: "Dashboard", icon: LayoutDashboard }],
+  },
+  {
+    heading: "People",
+    items: [
+      { to: "/admin/members", label: "Members", icon: Users },
+      { to: "/admin/admins", label: "Admins", icon: ShieldCheck },
+    ],
   },
   {
     heading: "Site",
