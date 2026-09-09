@@ -7,6 +7,8 @@ import type {
   AdminUser,
   ConsoleRole,
   ListResponse,
+  MemberDetailResponse,
+  MemberStats,
   MemberSummary,
   SingleResponse,
 } from "@/integrations/gimble/types";
@@ -46,6 +48,8 @@ export const inviteAdmin = createServerFn({ method: "POST" })
   .inputValidator(
     z.object({
       email: z.string().trim().email().max(255),
+      first_name: z.string().trim().max(100).optional(),
+      last_name: z.string().trim().max(100).optional(),
       role: z.enum(["super_admin", "gimble_admin"]).default("gimble_admin"),
     })
   )
@@ -97,4 +101,30 @@ export const listMembers = createServerFn({ method: "GET" })
   .inputValidator(listParamsSchema.extend({ is_active: z.boolean().optional() }))
   .handler(async ({ data }) => {
     return gimbleFetch<ListResponse<MemberSummary>>("/api/console/members", { query: data });
+  });
+
+/** Headline member counts — one query, rather than several lists read for totals. */
+export const getMemberStats = createServerFn({ method: "GET" })
+  .middleware([requireAdminSession])
+  .handler(async () => {
+    const response = await gimbleFetch<SingleResponse<MemberStats>>(
+      "/api/console/members/stats"
+    );
+    return response.data;
+  });
+
+/**
+ * One member: profile, engagement counts and a merged activity timeline.
+ *
+ * The backend audits this call with the member's id — opening someone's record
+ * is a logged action, not a silent one.
+ */
+export const getMember = createServerFn({ method: "GET" })
+  .middleware([requireAdminSession])
+  .inputValidator(z.object({ hashId: z.string().min(1).max(64) }))
+  .handler(async ({ data }) => {
+    const response = await gimbleFetch<SingleResponse<MemberDetailResponse>>(
+      `/api/console/members/${encodeURIComponent(data.hashId)}`
+    );
+    return response.data;
   });

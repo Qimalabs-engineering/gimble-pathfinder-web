@@ -28,6 +28,8 @@ export interface AdminSession {
   user: {
     hash_id: string;
     email: string;
+    first_name: string | null;
+    last_name: string | null;
     user_type: 'admin';
   };
   roles: string[];
@@ -47,6 +49,8 @@ export interface ConsoleRole {
 export interface AdminUser {
   hash_id: string;
   email: string;
+  first_name: string | null;
+  last_name: string | null;
   user_type: 'member' | 'facilitator' | 'admin';
   is_active: boolean;
   email_confirmed: boolean;
@@ -104,4 +108,59 @@ export interface ListParams {
   limit?: number;
   q?: string;
   sort?: string;
+}
+
+export interface MemberStats {
+  total: number;
+  active: number;
+  inactive: number;
+  new_7d: number;
+  new_30d: number;
+  active_30d: number;
+  checkin_enabled: number;
+  push_enabled: number;
+}
+
+export interface EngagementSummary {
+  assessments: number;
+  journals: number;
+  habits: number;
+  goals: number;
+  homework_assigned: number;
+  homework_completed: number;
+  check_ins: number;
+  points_total: number;
+  current_streak: number;
+  longest_streak: number;
+  last_assessment_at: string | null;
+  latest_phq9: number | null;
+  latest_gad7: number | null;
+}
+
+export interface TimelineEntry {
+  kind: 'assessment' | 'journal' | 'check_in' | 'homework' | 'points' | 'goal';
+  at: string;
+  label: string;
+  value: string | null;
+}
+
+/** Full member record. Fields beyond these exist but the console does not use them. */
+export interface MemberDetail extends MemberSummary {
+  phone_number: string | null;
+  birthdate: string | null;
+  gender: string | null;
+  locale: string | null;
+  invitation_status: string | null;
+  wellness_coach_slug: string | null;
+  morning_checkin_time: string | null;
+  journey_session_enabled: boolean;
+  journey_session_time: string | null;
+  email_notifications: boolean;
+  sms_notifications: boolean;
+}
+
+export interface MemberDetailResponse {
+  member: MemberDetail;
+  engagement: EngagementSummary;
+  timeline: TimelineEntry[];
 }

@@ -110,7 +110,10 @@ function AdminsPage() {
       header: "Admin",
       render: (row) => (
         <div>
-          <p className="font-medium text-foreground">{row.email}</p>
+          <p className="font-medium text-foreground">
+            {[row.first_name, row.last_name].filter(Boolean).join(" ") || row.email}
+          </p>
+          <p className="text-xs text-muted-foreground">{row.email}</p>
           <p className="text-xs text-muted-foreground">
             {row.last_login_at
               ? `Last signed in ${new Date(row.last_login_at).toLocaleDateString()}`

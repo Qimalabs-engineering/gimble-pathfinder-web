@@ -145,6 +145,10 @@ export function ConsoleShell({
 
         <div className="border-t border-border px-4 py-4">
           <p className="truncate text-xs font-medium text-foreground" title={session.user.email}>
+            {[session.user.first_name, session.user.last_name].filter(Boolean).join(" ") ||
+              session.user.email}
+          </p>
+          <p className="mt-0.5 truncate text-xs text-muted-foreground" title={session.user.email}>
             {session.user.email}
           </p>
           <p className="mt-0.5 text-xs text-muted-foreground">
