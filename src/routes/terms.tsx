@@ -44,8 +44,10 @@ function TermsPage() {
           <h2 className="font-display text-2xl font-semibold text-primary">1. About Gimble Foundation</h2>
           <p>
             Gimble Foundation is a nonprofit organisation making mental fitness part of everyday life
-            across Africa. Our website and mobile app provide educational content, practical tools,
-            and community resources to support everyday mental fitness.
+            across Africa. We are registered with the Corporate Affairs Commission of Nigeria (CAC
+            incorporated trustees registration number 9874034). Our website and mobile app provide
+            educational content, practical tools, and community resources to support everyday mental
+            fitness.
           </p>
 
           <h2 className="font-display text-2xl font-semibold text-primary">2. Not medical or clinical advice</h2>

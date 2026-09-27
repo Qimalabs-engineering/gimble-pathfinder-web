@@ -44,7 +44,9 @@ function PrivacyPage() {
           <h2 className="font-display text-2xl font-semibold text-primary">1. Who we are</h2>
           <p>
             Gimble Foundation is a nonprofit organisation headquartered in Lagos, Nigeria, working to
-            make mental fitness part of everyday life across Africa. We operate the website at{" "}
+            make mental fitness part of everyday life across Africa. We are registered with the
+            Corporate Affairs Commission of Nigeria (CAC incorporated trustees registration number
+            9874034). We operate the website at{" "}
             <a
               href="https://www.gimblefoundation.org"
               className="text-primary underline underline-offset-4"
